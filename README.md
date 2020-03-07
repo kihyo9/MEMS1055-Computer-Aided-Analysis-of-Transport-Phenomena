@@ -10,3 +10,7 @@ Some numerical methods taught include:
 - Spectral methods
 
 I'm making this repository because this course is really hard. This is by far the most difficult course I've taken in my undergraduate career. At the same time, I'm really enjoying this course. I'm proud of the code I write for each homework assignment and kinda wanna show it off. If you are a current student of this course who is looking for homework answers online - you probably won't find it here. Dr. Givi seems to assignment homework assignments on a whim and the problems differ every semester.
+
+I'm writing all my code in Python now, but I hope to pick C++ and use that for later assignments.
+
+If you want to run the Python scripts, you will need Numpy and Matplotlib packages.
