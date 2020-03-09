@@ -15,16 +15,22 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
 
     # calculate coeffs
     calculatedCoeffs = coeffs.copy()
+    newA = []
     newB = []
-    for i,func in enumerate(coeffs[1]):
-        newB.append(func(initialGuess[i]))
+    newC = []
+    for i,func in enumerate(list(zip(*coeffs))):
+        newA.append(func[0](initialGuess, i))
+        newB.append(func[1](initialGuess, i))
+        newC.append(func[2](initialGuess, i))
+    calculatedCoeffs[0] = newA
     calculatedCoeffs[1] = newB
+    calculatedCoeffs[2] = newC
 
     # calculate new result
     newResult = triDiagSubSolver(calculatedCoeffs,initialGuess)
 
     # initialError
-    error = errorDef(initialGuess, newResult)
+    error = errorDef(coeffs[3], newResult)
     errorHistory.append(error)
 
     #first try!
@@ -40,21 +46,29 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
     iterHistory.append(newIter)
 
     #calculate coeffs
+    calculatedCoeffs = coeffs.copy()
+    newA = []
     newB = []
-    for i,func in enumerate(coeffs[1]):
-        newB.append(func(newIter[i]))
+    newC = []
+    for i,func in enumerate(list(zip(*coeffs))):
+        newA.append(func[0](newIter, i))
+        newB.append(func[1](newIter, i))
+        newC.append(func[2](newIter, i))
+    calculatedCoeffs[0] = newA
     calculatedCoeffs[1] = newB
+    calculatedCoeffs[2] = newC
 
     # calculate new result
     newResult = triDiagSubSolver(calculatedCoeffs,newIter)
 
     #calculate error
-    error = errorDef(newIter, newResult)
+    error = errorDef(coeffs[3], newResult)
     errorHistory.append(error)
 
+    maxIterations = 1000
     #iterations of gradient descent
     # while(error > errorThreshold):
-    for i in range(250):
+    for i in range(maxIterations):
         count += 1
         print("Iteration: " + str(count) + ", error: " + str(error))
         oldIter = newIter.copy()
@@ -65,33 +79,40 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
             newIter.append(oldIter[i] - alpha*partial(coeffs, oldIter, i))
         iterHistory.append(newIter)
 
-        # newResult
+        # new coeffs
+        calculatedCoeffs = coeffs.copy()
+        newA = []
         newB = []
-        for i, func in enumerate(coeffs[1]):
-            newB.append(func(newIter[i]))
+        newC = []
+        for i, func in enumerate(list(zip(*coeffs))):
+            newA.append(func[0](newIter, i))
+            newB.append(func[1](newIter, i))
+            newC.append(func[2](newIter, i))
+        calculatedCoeffs[0] = newA
         calculatedCoeffs[1] = newB
+        calculatedCoeffs[2] = newC
+
+        # new result
         newResult = triDiagSubSolver(calculatedCoeffs,newIter)
 
         # calculate new error
-        error = errorDef(newIter, newResult)
+        error = errorDef(coeffs[3], newResult)
         errorHistory.append(error)
 
     plt.figure()
     plt.title('Iteration history of grid points')
     y = zip(*iterHistory)
     z = list(y)
-    for i in range(10):
-        plt.plot(list(range(252)),z[i])
+    for i in range(len(z)):
+        plt.plot(list(range(maxIterations+2)),z[i])
     plt.xlabel('iteration')
     plt.ylabel('Temperature [K]')
 
     plt.figure()
     plt.title('Error history of grid points')
-    plt.plot(list(range(252)),errorHistory)
+    plt.plot(list(range(maxIterations+2)),errorHistory)
     plt.xlabel('iteration')
     plt.ylabel('Error')
-    plt.show()
-
 
     return newIter
 
@@ -147,10 +168,10 @@ def triDiagSubSolver(coeffs, guess):
     x = []
     for i in range(len(guess)):
         if i == 0:
-            x.append(coeffs[1][i]+coeffs[2][i])
+            x.append(coeffs[1][i]*guess[i]+coeffs[2][i]*guess[i+1])
         elif i == len(guess) - 1:
-            x.append(coeffs[0][i]+coeffs[1][i])
+            x.append(coeffs[0][i]*guess[i-1]+coeffs[1][i]*guess[i])
         else:
-            x.append(coeffs[0][i]+coeffs[1][i]+coeffs[2][i])
+            x.append(coeffs[0][i]*guess[i-1]+coeffs[1][i]+coeffs[2][i]*guess[i+1])
 
     return x
