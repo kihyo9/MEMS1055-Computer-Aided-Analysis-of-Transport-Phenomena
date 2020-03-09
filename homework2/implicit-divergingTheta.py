@@ -26,14 +26,18 @@ for theta_start in theta_starts:
         # next_theta = theta + next_theta_dot * dt
         # next_theta_dot = theta_dot + (g / l) * np.sin(next_theta) * dt
 
-        theta_func = lambda x: theta[-1] + x[1] * dt
-        theta_dot_func = lambda x: theta_dot[-1] + (g/l) * x[0] * dt
-        soe = [theta_func, theta_dot_func]
+        # theta_func = lambda x: theta[-1] + x[1] * dt
+        # theta_dot_func = lambda x: theta_dot[-1] + (g/l) * x[0] * dt
+        # soe = [theta_func, theta_dot_func]
+        #
+        # dtheta_func = lambda x: 2*(x[0] - theta_func(x)) + 2*(x[1] - theta_dot_func(x))*(-1*(g/l) * dt)
+        # dtheta_func_dot = lambda x: 2*(x[0] - theta_func(x))*(-1*dt) + 2*(x[1] - theta_dot_func(x))
+        # partials = [dtheta_func, dtheta_func_dot]
+        # [next_theta, next_theta_dot] = hp.gradientDescent(soe, [theta[-1], theta_dot[-1]], hp.errorDef1, partials, 0.01, 0.0000001)
 
-        dtheta_func = lambda x: 2*(x[0] - theta_func(x)) + 2*(x[1] - theta_dot_func(x))*(-1*(g/l) * dt)
-        dtheta_func_dot = lambda x: 2*(x[0] - theta_func(x))*(-1*dt) + 2*(x[1] - theta_dot_func(x))
-        partials = [dtheta_func, dtheta_func_dot]
-        [next_theta, next_theta_dot] = hp.gradientDescent(soe, [theta[-1], theta_dot[-1]], hp.errorDef1, partials, 0.01, 0.0000001)
+        coeffs = np.array([[1, -dt], [-dt * g / l, 1]])
+        const = np.array([theta[-1], theta_dot[-1]])
+        [next_theta, next_theta_dot] = np.linalg.solve(coeffs, const)
 
         theta_dot.append(next_theta_dot)
         theta.append(next_theta)
