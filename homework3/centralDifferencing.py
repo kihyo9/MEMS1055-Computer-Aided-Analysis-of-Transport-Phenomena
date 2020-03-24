@@ -15,9 +15,9 @@ T_L = 400
 C = (-1 / k) * (h * T_inf + sigma * T_inf ** 4)  # -14.32
 
 # numerical solution parameters
-nodes = 4  # grid points between BCs
+nodes = 100  # grid points between BCs
 dx = 10/(nodes+1)
-initialGuess = [3]*nodes
+initialGuess = [1]*nodes
 
 # creation of coefficient functions and their partial derivatives
 a = []
@@ -83,9 +83,9 @@ deq1_dx2 = lambda coeffs,x,i: -1*dbfunc(x,i)
 deq1_dx3 = lambda coeffs,x,i: -1*dafunc(x,i)
 for pNum in range(nodes):
     if pNum == 0:
-        fist_part2 = lambda coeffs,x,i: 2*(eq1(coeffs, x, i))*deq1_dx2(coeffs,x,i)  # i
+        first_part2 = lambda coeffs,x,i: 2*(eq1(coeffs, x, i))*deq1_dx2(coeffs,x,i)  # i
         first_part3 = lambda coeffs,x,i: 2*(eq1(coeffs, x, i+1))*deq1_dx3(coeffs,x,i)  # i+1
-        first_func = lambda coeffs,x,i: fist_part2(coeffs,x,i)+first_part3(coeffs,x,i)
+        first_func = lambda coeffs,x,i: first_part2(coeffs,x,i)+first_part3(coeffs,x,i)
         partials.append(first_func)
     elif pNum == nodes - 1:
         last_part1 = lambda coeffs,x,i: 2*(eq1(coeffs, x, i-1))*deq1_dx1(coeffs,x,i)  # i-1
@@ -104,7 +104,5 @@ for pNum in range(nodes):
 alpha = 0.0001
 errorThreshold = 0.0000001*nodes
 answer = hp.gradientDescent2([a,b,c,d], initialGuess, hp.errorDef1, partials, alpha, errorThreshold)
-
-print(answer)
 
 plt.show()

@@ -14,7 +14,7 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
     iterHistory.append(initialGuess)
 
     # calculate coeffs
-    calculatedCoeffs = coeffs.copy()
+    calculatedCoeffs = [0,0,0]
     newA = []
     newB = []
     newC = []
@@ -32,6 +32,7 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
     # initialError
     error = errorDef(coeffs[3], newResult)
     errorHistory.append(error)
+    lowestError = [error,0]
 
     #first try!
     if(error < errorThreshold):
@@ -46,7 +47,6 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
     iterHistory.append(newIter)
 
     #calculate coeffs
-    calculatedCoeffs = coeffs.copy()
     newA = []
     newB = []
     newC = []
@@ -61,12 +61,16 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
     # calculate new result
     newResult = triDiagSubSolver(calculatedCoeffs,newIter)
 
-    #calculate error
+    # calculate error
     error = errorDef(coeffs[3], newResult)
     errorHistory.append(error)
+    if error < lowestError[0]:
+        lowestError = [error,count]
+
 
     maxIterations = 1000
-    #iterations of gradient descent
+
+    # iterations of gradient descent
     # while(error > errorThreshold):
     for i in range(maxIterations):
         count += 1
@@ -98,6 +102,8 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
         # calculate new error
         error = errorDef(coeffs[3], newResult)
         errorHistory.append(error)
+        if error < lowestError[0]:
+            lowestError = [error, count]
 
     plt.figure()
     plt.title('Iteration history of grid points')
@@ -114,6 +120,13 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
     plt.xlabel('iteration')
     plt.ylabel('Error')
 
+    plt.figure()
+    plt.title('Lowest error plot')
+    plt.plot(np.linspace(0,10,len(iterHistory[lowestError[1]])),iterHistory[lowestError[1]])
+    plt.xlabel('position [m]')
+    plt.ylabel('Temperature [K]')
+    print(lowestError[1])
+    print(iterHistory[lowestError[1]])
     return newIter
 
 def errorDef1(initials, newIter):
