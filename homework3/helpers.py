@@ -111,6 +111,7 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
     z = list(y)
     for i in range(len(z)):
         plt.plot(list(range(maxIterations+2)),z[i])
+    plt.legend(['point 1','point 2','point 3','point 4','point 5','point 6','point 7','point 8','point 9','point 10',],loc=(0.3,0))
     plt.xlabel('iteration')
     plt.ylabel('Temperature [K]')
 
@@ -122,7 +123,7 @@ def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThres
 
     plt.figure()
     plt.title('Lowest error plot')
-    plt.plot(np.linspace(0,10,len(iterHistory[lowestError[1]])),iterHistory[lowestError[1]])
+    plt.plot(np.linspace(0,10,len(iterHistory[lowestError[1]])+2),[300]+iterHistory[lowestError[1]]+[400])
     plt.xlabel('position [m]')
     plt.ylabel('Temperature [K]')
     print(lowestError[1])

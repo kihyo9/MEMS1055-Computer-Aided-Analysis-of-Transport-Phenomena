@@ -82,6 +82,7 @@ plt.ylabel('Boundary condition T(L) error [K]')
 plt.xlabel('s')
 plt.title('Approximation of T\'(0) = s')
 
+secondPoints = []
 #plotting solutions for roots of s plot
 for s in [root[1] for root in roots]:
     print(s)
@@ -90,13 +91,18 @@ for s in [root[1] for root in roots]:
     Tprime = [s]  # dT/dx
 
     # rk4 reiterations
+    count = 0
     for step in range(int(L / dx)):
         [new_T, new_Tprime] = rk4(T[-1], Tprime[-1])
         T.append(new_T)
         Tprime.append(new_Tprime)
+        if count % 5 == 2 and s == -41.7:
+            secondPoints.append(new_T)
+        count += 1
 
     plt.figure()
     plt.plot(np.linspace(0,L,int((L/dx)+1)), T)
+
     # plt.legend(['0.2','0.05'])
     plt.ylabel('Temperature [K]')
     plt.xlabel('Position [m]')
