@@ -7,126 +7,76 @@ def analyticalSol(x, theta_start):
         y.append(theta_start*np.cos(4.04351*x[i]))
     return y
 
-def gradientDescent2(coeffs, initialGuess, errorDef, partials, alpha, errorThreshold):
-
-    errorHistory = []
+def gradientDescent2(coeffs, initialGuess, partials, alpha, errorThreshold):
+    # iterations of guesses
     iterHistory = []
+    shortiterHistory = []
     iterHistory.append(initialGuess)
+    shortiterHistory.append(initialGuess)
 
-    # calculate coeffs
-    calculatedCoeffs = [0,0,0]
-    newA = []
-    newB = []
-    newC = []
-    for i,func in enumerate(list(zip(*coeffs))):
-        newA.append(func[0](initialGuess, i))
-        newB.append(func[1](initialGuess, i))
-        newC.append(func[2](initialGuess, i))
-    calculatedCoeffs[0] = newA
-    calculatedCoeffs[1] = newB
-    calculatedCoeffs[2] = newC
-
-    # calculate new result
-    newResult = triDiagSubSolver(calculatedCoeffs,initialGuess)
-
-    # initialError
-    error = errorDef(coeffs[3], newResult)
+    # history of errors
+    errorHistory = []
+    shortErrorHistory = []
+    error = newGuessToError(coeffs,initialGuess)
     errorHistory.append(error)
-    lowestError = [error,0]
+    shortErrorHistory.append(error)
 
-    #first try!
-    if(error < errorThreshold):
-        return initialGuess
-    count = 1
-    print("Iteration: " + str(count) + ", error: " + str(error))
+    #newIter variable
+    newIter = initialGuess.copy()
+    count = 0
 
-    #first new guess with partials
-    newIter = []
-    for i, partial in enumerate(partials):
-        newIter.append(initialGuess[i] - alpha * partial(coeffs, initialGuess, i))
-    iterHistory.append(newIter)
-
-    #calculate coeffs
-    newA = []
-    newB = []
-    newC = []
-    for i,func in enumerate(list(zip(*coeffs))):
-        newA.append(func[0](newIter, i))
-        newB.append(func[1](newIter, i))
-        newC.append(func[2](newIter, i))
-    calculatedCoeffs[0] = newA
-    calculatedCoeffs[1] = newB
-    calculatedCoeffs[2] = newC
-
-    # calculate new result
-    newResult = triDiagSubSolver(calculatedCoeffs,newIter)
-
-    # calculate error
-    error = errorDef(coeffs[3], newResult)
-    errorHistory.append(error)
-    if error < lowestError[0]:
-        lowestError = [error,count]
-
-
-    maxIterations = 1000
-
-    # iterations of gradient descent
-    # while(error > errorThreshold):
-    for i in range(maxIterations):
-        count += 1
-        print("Iteration: " + str(count) + ", error: " + str(error))
-        oldIter = newIter.copy()
-
-        # new guess with partials
-        newIter = []
+    #while (error > errorThreshold):
+    for num in range(132):
+        # determine grid point with largest dError/dx
+        largestPartial = [0, 0]
         for i, partial in enumerate(partials):
-            newIter.append(oldIter[i] - alpha*partial(coeffs, oldIter, i))
+            currentPartial = partial(coeffs, initialGuess, i)
+            if i == 0:
+                largestPartial[0] = currentPartial
+                largestPartial[1] = i
+            else:
+                if abs(largestPartial[0]) > abs(currentPartial):
+                    largestPartial[0] = currentPartial
+                    largestPartial[1] = i
+
+        # find error of new guess
+        newIter[largestPartial[1]] -= alpha * largestPartial[0]
         iterHistory.append(newIter)
+        subError = newGuessToError(coeffs, newIter)
+        errorHistory.append(subError)
+        prevSubError = errorHistory[-1]
 
-        # new coeffs
-        calculatedCoeffs = coeffs.copy()
-        newA = []
-        newB = []
-        newC = []
-        for i, func in enumerate(list(zip(*coeffs))):
-            newA.append(func[0](newIter, i))
-            newB.append(func[1](newIter, i))
-            newC.append(func[2](newIter, i))
-        calculatedCoeffs[0] = newA
-        calculatedCoeffs[1] = newB
-        calculatedCoeffs[2] = newC
+        while(1 - subError/prevSubError > 0.001):
+            prevSubError = subError
+            newIter[largestPartial[1]] -= alpha * largestPartial[0]
+            iterHistory.append(newIter)
+            subError = newGuessToError(coeffs, newIter)
+            errorHistory.append(subError)
 
-        # new result
-        newResult = triDiagSubSolver(calculatedCoeffs,newIter)
+        count += 1
+        print("Iteration " + str(count) + "... " + "Moving grid point: " + str(largestPartial[1]) + "... " + "Error: " + str(errorHistory[-1]))
+        shortiterHistory.append(iterHistory[-1])
+        shortErrorHistory.append(errorHistory[-1])
 
-        # calculate new error
-        error = errorDef(coeffs[3], newResult)
-        errorHistory.append(error)
-        if error < lowestError[0]:
-            lowestError = [error, count]
+    x = []
+    for i, partial in enumerate(partials):
+        x.append(partial(coeffs, iterHistory[-1], i))
 
     plt.figure()
     plt.title('Iteration history of grid points')
     y = zip(*iterHistory)
     z = list(y)
     for i in range(len(z)):
-        plt.plot(list(range(maxIterations+2)),z[i])
+        plt.plot(list(range(len(iterHistory))),z[i])
     plt.xlabel('iteration')
     plt.ylabel('Temperature [K]')
 
     plt.figure()
     plt.title('Error history of grid points')
-    plt.plot(list(range(maxIterations+2)),errorHistory)
+    plt.plot(list(range(len(errorHistory))),errorHistory)
     plt.xlabel('iteration')
     plt.ylabel('Error')
 
-    plt.figure()
-    plt.title('Lowest error plot')
-    plt.plot(np.linspace(0,10,len(iterHistory[lowestError[1]])),iterHistory[lowestError[1]])
-    plt.xlabel('position [m]')
-    plt.ylabel('Temperature [K]')
-    print(lowestError[1])
-    print(iterHistory[lowestError[1]])
     return newIter
 
 def errorDef1(initials, newIter):
@@ -134,6 +84,28 @@ def errorDef1(initials, newIter):
     for i, initial in enumerate(initials):
         errorSum = errorSum + (initials[i] - newIter[i])**2
     return errorSum
+
+def newGuessToError(coeffs, guess):
+    # calculate coeffs
+    calculatedCoeffs = calculateCoeffs(coeffs, guess)
+
+    # calculate new result
+    newResult = triDiagSubSolver(calculatedCoeffs,guess)
+
+    # error
+    error = errorDef1(coeffs[3], newResult)
+
+    return error
+
+def calculateCoeffs(coeffs, guess):
+    newA = []
+    newB = []
+    newC = []
+    for i,func in enumerate(list(zip(*coeffs))):
+        newA.append(func[0](guess, i))
+        newB.append(func[1](guess, i))
+        newC.append(func[2](guess, i))
+    return [newA, newB, newC]
 
 def thomasAlgorithmSolver(matrix):
     a = matrix[0]
@@ -148,26 +120,26 @@ def thomasAlgorithmSolver(matrix):
 
     # cc
     for i in range(n-1):
-        if i == 1:
+        if i == 0:
             cc.append(c[i]/b[i])
         else:
             cc.append(c[i] / (b[i] - a[i]*cc[i-1]))
 
     # dd
     for i in range(n):
-        if i == 1:
+        if i == 0:
             dd.append(d[i]/b[i])
         else:
             dd.append((d[i]-a[i]*dd[i-1])/(b[i]-a[i]*cc[i-1]))
 
     # x
     for i in range(n):
-        i = n - i
+        i = n - i - 1
 
-        if i == n:
-            x.append(dd[n])
+        if i == n-1:
+            x.append(dd[i])
         else:
-            x.append(dd[i]/(cc[i]*x[i+1]))
+            x = [dd[i]/(cc[i]*x[0])] + x
 
     return x
 

@@ -7,17 +7,17 @@ import helpers as hp
 #constants
 k = 1
 L = 10
-sigma = 2.7e-9
+sigma = 5.67e-8
 h = 0.05
 T_inf = 200
 T_0 = 300
 T_L = 400
-C = (-1 / k) * (h * T_inf + sigma * T_inf ** 4)  # -14.32
+C = (-1 / k) * (h * T_inf + sigma * T_inf ** 4)  # -100.72
 
 # numerical solution parameters
-nodes = 100  # grid points between BCs
+nodes = 10  # grid points between BCs
 dx = 10/(nodes+1)
-initialGuess = [1]*nodes
+initialGuess = [350]*nodes
 
 # creation of coefficient functions and their partial derivatives
 a = []
@@ -25,7 +25,7 @@ b = []
 c = []
 d = []
 
-'''
+
 # __Change these functions to change the system__
 # these are the coefficients - the terms are multiplied by x[i]
 afuncCoeff = lambda x,i: 1
@@ -66,6 +66,7 @@ for i in range(nodes):
     d.append(10)
 a[0] = lambda x,i: 0
 c[-1] = lambda x,i: 0
+'''
 
 # __partial derivative generation__
 def checkIndex(val, index):
@@ -73,7 +74,6 @@ def checkIndex(val, index):
         return 0
     else:
         return val[i]
-
 
 partials = []
 f = lambda coeffs,x,i: coeffs[0][i](x,i)*checkIndex(x,i-1) + coeffs[1][i](x,i)*x[i] + coeffs[2][i](x,i)*checkIndex(x,i+1)
@@ -101,8 +101,8 @@ for pNum in range(nodes):
 
 
 #####
-alpha = 0.0001
+alpha = 0.001
 errorThreshold = 0.0000001*nodes
-answer = hp.gradientDescent2([a,b,c,d], initialGuess, hp.errorDef1, partials, alpha, errorThreshold)
+answer = hp.gradientDescent2([a,b,c,d], initialGuess, partials, alpha, errorThreshold)
 
 plt.show()
