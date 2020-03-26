@@ -7,6 +7,8 @@ def analyticalSol(x, theta_start):
         y.append(theta_start*np.cos(4.04351*x[i]))
     return y
 
+# this gradient descent algorithm updates one parameter until its value is where the error is minimized
+# then the parameter with the largest partial derivative wrt to itself is updated next in the method above
 def gradientDescent2(coeffs, initialGuess, partials, alpha, errorThreshold):
     # iterations of guesses
     iterHistory = []

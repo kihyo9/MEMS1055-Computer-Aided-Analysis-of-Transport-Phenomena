@@ -17,7 +17,7 @@ C = (-1 / k) * (h * T_inf + sigma * T_inf ** 4)  # -100.72
 # numerical solution parameters
 nodes = 20  # grid points between BCs
 dx = 10/(nodes+1)
-initialGuess = [350]*nodes
+initialGuess = [288.44468701595093, 272.8251336882552, 260.80531321836077, 251.60785201362503, 244.69399663252256, 239.68840676585356, 236.33430401333365, 234.46636004650043, 233.99477435422673, 234.8971284964111, 237.21640766080782, 241.06481349800134, 246.63409815863497, 254.2145045792014, 264.22651154158746, 277.2733997040173, 294.23023889992146, 316.40122284074255, 345.81554787956543, 385.83138937614757]
 
 # creation of coefficient functions and their partial derivatives
 a = []
@@ -66,8 +66,10 @@ plt.yscale('log')
 plt.title("Error history")
 
 plt.figure()
-plt.plot(answer)
-plt.title("final answer")
+plt.plot(np.linspace(0,10, len(answer) + 2),[T_0] + answer + [T_L])
+plt.title("Simple iterative solution, 20 grid points")
+plt.ylabel('Temperature [K]')
+plt.xlabel('Position [m]')
 
 plt.figure()
 plt.yscale('log')
