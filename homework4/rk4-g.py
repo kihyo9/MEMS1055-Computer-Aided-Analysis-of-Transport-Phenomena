@@ -110,6 +110,7 @@ for num,s in enumerate(roots):
     plt.ylabel('value')
     plt.xlabel('eta')
     print("Pr = " + str(Pr) + ", magic eta  = " + str(magicEta(G, t_axis)))
+    print("s = " + str(roots[num][0]) + "\n")
 
 print("s = " + str(roots[0]))
 

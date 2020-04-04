@@ -96,6 +96,8 @@ plt.legend(legend)
 plt.ylabel('value')
 plt.xlabel('eta')
 
+# shear stress
+
 ### for what eta does F'(eta) = 0.99*F'(inf)? ###
 def magicEta(fG,ft_axis):
     first = True
