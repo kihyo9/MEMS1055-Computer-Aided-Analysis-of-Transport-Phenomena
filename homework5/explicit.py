@@ -2,28 +2,27 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Simulation params
-dt = 0.00001
-dr = 0.05
-t_inf = 10.
-R = 1.
+dr = 0.005
+t_inf = 40000.
+R = 0.25
 L = R/2.
 T_0 = 400.
 T_inf = 300.
 dr_steps = int(round(R/dr, 0))
-dt_steps = int(round(t_inf/dt, 0))
 
 # Graphing params - water fluid, iron cylinder
 k = 5. # of cylinder
 h = 30.
 cp = 4.18 # of water
 rho = 1000. # of water
-alpha = 23 # of cylinder #k_fluid/(cp*rho)
+alpha = 23e-6 # of cylinder #k_fluid/(cp*rho)
 Bi = h*L/k
 # t = dt*i
 # Fo = alpha*t/L
 
 # Stability check
-G = alpha*dt/dr**2
+G = 0.20 # set this
+dt = G*dr**2/alpha
 
 ### save F value to file ###
 f = open("Tdata-explicit.txt", "w")
@@ -50,14 +49,16 @@ legend = []
 # Data
 T = []
 t_0_step = [T_0 for i in range(dr_steps)]
+last_step = t_0_step.copy()
+n = -1
 
-for n in range(dt_steps):
-    print(str(n) + " out of " + str(dt_steps - 1) + " timesteps")
+while(last_step[0] > 301):
+    n += 1
+    print("timestep " + str(n) + ": " + str(round(dt*n,1)) + "s")
     t_step = []
 
     # initial condition of temp distribution
     if(n == 0):
-        last_step = t_0_step.copy()
         t_step = t_0_step.copy()
     else:
         # second-order central-differencing
@@ -79,18 +80,23 @@ for n in range(dt_steps):
                 t_step.append(nextstep)
 
     # only add the data every so often
-    if n < 100 and n % 15 == 0:
+    # if n < 100 and n % 15 == 0:
+    #     T.append(t_step)
+    #     legend.append(str(round(dt * n, 5)) + "s")
+    # elif n < 400 and n % 80 == 0:
+    #     T.append(t_step)
+    #     legend.append(str(round(dt * n, 5)) + "s")
+    # elif n < 2000 and n % 400 == 0:
+    #     T.append(t_step)
+    #     legend.append(str(round(dt * n, 5)) + "s")
+    # elif n % 500 == 0:
+    #     T.append(t_step)
+    #     legend.append(str(round(dt * n, 5)) + "s")
+
+    if n % 500 == 0:
         T.append(t_step)
-        legend.append(str(round(dt * n, 5)) + "s")
-    elif n < 400 and n % 80 == 0:
-        T.append(t_step)
-        legend.append(str(round(dt * n, 5)) + "s")
-    elif n < 2000 and n % 400 == 0:
-        T.append(t_step)
-        legend.append(str(round(dt * n, 5)) + "s")
-    elif n % 500 == 0:
-        T.append(t_step)
-        legend.append(str(round(dt * n, 5)) + "s")
+        legend.append(str(round(dt * n, 0)) + "s")
+
     last_step = t_step.copy()
 
     # write to file
@@ -101,10 +107,12 @@ for n in range(dt_steps):
             f.write(str(round(num,5)) + ", ")
 
     # it's pretty much steady state after this many timesteps
-    if n >= 3000:
-        break
+    # if n >= 3000:
+    #     break
 
 print("Stability criterion: " + str(round(G,3)))
+print("End time: " + str(n*dt))
+print("Timestep size: " + str(round(dt,2)) + "s")
 f.close()
 
 ### end simulation ###
@@ -113,11 +121,10 @@ plt.figure()
 ax = plt.subplot(111)
 box = ax.get_position()
 ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
-selected_timesteps = [0, 1, 2, 3]
-for i in range(len(T)):
-    plt.plot([j*dr for j in range(dr_steps)], T[i])
+for T_element in T:
+    plt.plot([j*dr for j in range(dr_steps)], T_element)
 plt.legend(legend)
-plt.title('Plots of selected timesteps')
+plt.title('Plots of selected timesteps (explicit)')
 plt.legend(legend,loc='center left',bbox_to_anchor=(1, 0.5))
 plt.ylabel('Temperature [K]')
 plt.xlabel('r [m]')
