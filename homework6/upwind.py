@@ -1,7 +1,7 @@
 import solver
 import time
 
-def solve(dt, dx, gamma, u, t_0,fileName, dx_steps, dt_steps):
+def solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps):
     solverType = "Upwind"
 
     ### clear file ###
@@ -47,7 +47,7 @@ def solve(dt, dx, gamma, u, t_0,fileName, dx_steps, dt_steps):
         last_step = t_step.copy()
 
     # performance
-    solver.performanceTime(starttime, solverType, gamma, dt_steps)
+    solver.performanceTime(starttime, solverType, gamma, dt_steps,u,L)
 
     # result info
     print('\nThat took {} seconds'.format(time.time() - starttime))

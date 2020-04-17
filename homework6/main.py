@@ -65,89 +65,81 @@ while choice not in ['1','2','3']:
     print('Invalid input.')
     choice = input('Explicit (1), implicit (2), upwind (3): ')
 
+# Choose gamma value
+goodValue = False
+gamma = 0
+while not goodValue:
+    try:
+        gamma = float(input('Gamma value: '))
+        goodValue = True
+    except Exception:
+        print("Not a valid value.")
+
+
 # Solve
 if choice is '1':
     fileName = 'explicit-data.txt'
-    for gamma in gammas:
-        r = 0.25
-        if gamma == 0:
-            dt = 2.5e-5
-        else:
-            dt = r*dx**2/gamma
-        dt_steps = int(np.ceil(t_last/dt))+1
-        dt_data = [i*dt for i in range(dt_steps)]
+    r = 0.25
+    if gamma == 0:
+        dt = 2.5e-4
+    else:
+        dt = r*dx**2/gamma
+    dt_steps = int(np.ceil(t_last/dt))+1
+    dt_data = [i*dt for i in range(dt_steps)]
 
-        solver.printStability(dx, dt, u, gamma)
-        s = input("Continue? ")
-        if s == 'n':
-            sys.exit()
+    solver.printStability(dx, dt, u, gamma)
+    s = input("Continue? ")
+    if s == 'n':
+        sys.exit()
 
-        explicit.solve(dt, dx, gamma, u, t_0,fileName, dx_steps, dt_steps)
-        solver.plotting(fileName, dt_data, gamma)
+    explicit.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
+    solver.plotting(fileName, dx_data, dt_data, gamma)
 elif choice is '2':
     fileName = 'implicit-data.txt'
-    for gamma in gammas:
-        r = 0.25
-        if gamma == 0:
-            dt = 2.5e-5
-            continue
-        else:
-            dt = r*dx**2/gamma
-        dt_steps = int(np.ceil(t_last/dt))+1
-        dt_data = [i*dt for i in range(dt_steps)]
+    r = 0.25
+    if gamma == 0:
+        dt = 2.5e-4
+    else:
+        dt = r*dx**2/gamma
+    dt_steps = int(np.ceil(t_last/dt))+1
+    dt_data = [i*dt for i in range(dt_steps)]
 
-        solver.printStability(dx, dt, u, gamma)
-        s = input("Continue? ")
-        if s == 'n':
-            sys.exit()
+    solver.printStability(dx, dt, u, gamma)
+    s = input("Continue? ")
+    if s == 'n':
+        sys.exit()
 
-        implicit.solve(dt, dx, gamma, u, t_0,fileName, dx_steps, dt_steps)
-        solver.plotting(fileName, dt_data, gamma)
+    implicit.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
+    solver.plotting(fileName, dx_data, dt_data, gamma)
 elif choice is '3':
     fileName = 'upwind-data.txt'
-    for gamma in gammas:
-        r = 0.25
-        if gamma == 0:
-            dt = 2.5e-5
-        else:
-            dt = r*dx**2/gamma
-        dt_steps = int(np.ceil(t_last/dt))+1
-        dt_data = [i*dt for i in range(dt_steps)]
+    r = 0.25
+    if gamma == 0:
+        dt = 2.5e-4
+    else:
+        dt = r*dx**2/gamma
+    dt_steps = int(np.ceil(t_last/dt))+1
+    dt_data = [i*dt for i in range(dt_steps)]
 
-        solver.printStability(dx, dt, u, gamma)
-        s = input("Continue? ")
-        if s == 'n':
-            sys.exit()
+    solver.printStability(dx, dt, u, gamma)
+    s = input("Continue? ")
+    if s == 'n':
+        sys.exit()
 
-        upwind.solve(dt, dx, gamma, u, t_0,fileName, dx_steps, dt_steps)
-        solver.plotting(fileName, dt_data, gamma)
+    upwind.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
+    solver.plotting(fileName, dx_data, dt_data, gamma)
 else:
     print('How did you get here?')
 
-'''
-for gamma in gammas:
-
-    fileName = 'explicit-data.txt'
-    explicit.solve(dt, dx, L, u, gamma, t_0,fileName)
-    solver.plotting(fileName,[0,1,2,3], dt_data)
-
-    fileName = 'implicit-data.txt'
-    implicit.solve(dt, dx, L, u, gamma, t_0,fileName)
-    solver.plotting(fileName,[0,1,2,3], dt_data)
-
-    fileName = 'upwind-data.txt'
-    upwind.solve(dt, dx, L, u, gamma, t_0,fileName)
-    solver.plotting(fileName,[0,1,2,3], dt_data)
-'''
-
 
 '''
-'import ...' gets a module object with can be used to call its methods but not its classes
-'from A import B' gets a class object as B. You cannot directly call methods from A
+'import ...' gets a module object with can be used to call its methods and its classes
+'from A import B' gets a class object as B. You cannot directly call class methods from A - call with A.B.method()
 default class methods require a 'self' argument
 class methods with decorators @classmethod and @staticmethod do not need 'self'
+class methods have their class objects as its first argument
 calling methods default class methods via a class object requires a 'self' input
 instances of a class from a class object can call the class methods without a 'self' argument
 'myclass = MyClass()' means instance = classObj() <- the 'constructor' __init__ is called
-@classmethod can access the calling subclass but not a calling instance
+@classmethod can access a calling subclass but not a calling instance
 '''

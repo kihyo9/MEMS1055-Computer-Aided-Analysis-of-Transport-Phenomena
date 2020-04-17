@@ -3,10 +3,7 @@ import time
 from datetime import datetime
 
 
-def plotting(fileName,dt_data, gamma):
-    dx= 0.01
-    dx_steps = 101 # 101 steps
-    dx_data = [round(i*dx, 2) for i in range(dx_steps)]
+def plotting(fileName, dx_data, dt_data, gamma):
 
     f = open(fileName, "r")
     fileContent = f.readlines()
@@ -83,10 +80,10 @@ def writeToFile(fileName, t_step, n, linesWritten, dt_steps):
     else:
         return False
 
-def performanceTime(starttime, solverType, gamma, dt_steps):
+def performanceTime(starttime, solverType, gamma, dt_steps,u,L):
     g = open("performance.txt","a")
     g.write("Start time: {}\n".format(datetime.now()))
-    g.write("{}: gamma = {}, timesteps = {}\n".format(solverType,gamma,dt_steps))
+    g.write("{}: gamma = {}, timesteps = {}, u = {}, L = {}\n".format(solverType,gamma,dt_steps,u,L))
     g.write(str('{}s\n\n'.format(time.time() - starttime)))
     g.close()
 
@@ -94,3 +91,7 @@ if __name__ == "__main__":
     f = open("sequence.txt","w")
     for i in range(50):
         f.write("%d\n" % (sequenceGenerator(i, 1e7)))
+
+class cat:
+    def yeeet(self, yeet):
+        print(yeet)

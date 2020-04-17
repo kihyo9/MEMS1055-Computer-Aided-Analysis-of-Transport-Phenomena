@@ -2,7 +2,7 @@ import solver
 import time
 import numpy as np
 
-def solve(dt, dx, gamma, u, t_0,fileName, dx_steps, dt_steps):
+def solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps):
     solverType = "Implicit"
 
     ### clear file ###
@@ -53,7 +53,7 @@ def solve(dt, dx, gamma, u, t_0,fileName, dx_steps, dt_steps):
         last_step = t_step.copy()
 
     # performance
-    solver.performanceTime(starttime, solverType, gamma, dt_steps)
+    solver.performanceTime(starttime, solverType, gamma, dt_steps,u,L)
 
     # result info
     print('\nThat took {} seconds'.format(time.time() - starttime))
@@ -120,39 +120,3 @@ def vectorMath(v,y,z):
     term1 = sum([f*g for f,g in zip(v,y)]) # scalar
     term2 = 1. + sum([f*g for f,g in zip(v,z)]) # scalar
     return [f - (term1/term2)*g for f,g in zip(y,z)]
-
-
-if __name__ == "__main__":
-    n = 6
-    a = [1. for _ in range(n)]
-    b = [2. for _ in range(n)]
-    c = [3. for _ in range(n)]
-    d = [10. for _ in range(n)]
-
-
-    alpha = 2.
-    beta = 2.
-    gamma = -1*b[0]
-
-    a[0] = beta
-    c[-1] = alpha
-
-    print("Direct inverse")
-    AA = np.array([[2,3,0,0,0,2],[1,2,3,0,0,0],[0,1,2,3,0,0],[0,0,1,2,3,0],[0,0,0,1,2,3],[2,0,0,0,1,2]])
-    BB = np.array([10,10,10,10,10,10])
-    direct = np.linalg.solve(AA,BB)
-    print(direct)
-
-
-    print("\nSherman Morrison")
-
-    y = thomasAlgorithmSolver2([a,b,c,d],alpha, beta, gamma)
-    for i,x in enumerate(y):
-        if i == 0:
-            print("%f, diff is %f" % (x, a[i]*y[-1]+b[i]*y[i]+c[i]*y[1] - d[i]))
-        elif i == n - 1:
-            print("%f, diff is %f" % (x, a[i]*y[i-1]+b[i]*y[i]+c[i]*y[0] - d[i]))
-        else:
-            print("%f, diff is %f" % (x, a[i]*y[i-1]+b[i]*y[i]+c[i]*y[i+1] - d[i]))
-
-    print(np.allclose(np.dot(AA, y), BB))
