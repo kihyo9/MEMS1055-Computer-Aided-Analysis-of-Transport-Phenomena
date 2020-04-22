@@ -67,7 +67,7 @@ def lastGridpoint(T_first):
 
 
 def nextGridpoint(Tm1, T0, T1, dx, dt, u, gamma):
-    coeffTm1 = gamma*dt/(dx**2)
-    coeffT0 = 1 + u*dt/dx- 2*gamma*dt/dx**2
-    coeffT1 = gamma*dt/dx**2 - u*dt/dx
+    coeffTm1 = gamma*dt/(dx**2) + u*dt/dx
+    coeffT0 = 1 - u*dt/dx- 2*gamma*dt/dx**2
+    coeffT1 = gamma*dt/dx**2
     return coeffTm1 * Tm1 + coeffT0 * T0 + coeffT1 * T1

@@ -59,77 +59,82 @@ t_0 = [initialCondition(i*dx, L) for i in range(dx_steps)]
 # Solving
 ################################################################
 
-# Choose solver
-choice = input('Explicit (1), implicit (2), upwind (3): ')
-while choice not in ['1','2','3']:
-    print('Invalid input.')
+again = 'y'
+
+while again == 'y':
+    # Choose solver
     choice = input('Explicit (1), implicit (2), upwind (3): ')
+    while choice not in ['1','2','3']:
+        print('Invalid input.')
+        choice = input('Explicit (1), implicit (2), upwind (3): ')
 
-# Choose gamma value
-goodValue = False
-gamma = 0
-while not goodValue:
-    try:
-        gamma = float(input('Gamma value: '))
-        goodValue = True
-    except Exception:
-        print("Not a valid value.")
+    # Choose gamma value
+    goodValue = False
+    gamma = 0
+    while not goodValue:
+        try:
+            gamma = float(input('Gamma value: '))
+            goodValue = True
+        except Exception:
+            print("Not a valid value.")
 
 
-# Solve
-if choice is '1':
-    fileName = 'explicit-data.txt'
-    r = 0.25
-    if gamma == 0:
-        dt = 2.5e-4
+    # Solve
+    if choice is '1':
+        fileName = 'explicit-data.txt'
+        r = 0.25
+        if gamma == 0:
+            dt = 2.5e-4
+        else:
+            dt = r*dx**2/gamma
+        dt_steps = int(np.ceil(t_last/dt))+1
+        dt_data = [i*dt for i in range(dt_steps)]
+
+        solver.printStability(dx, dt, u, gamma)
+        s = input("Continue? ")
+        if s == 'n':
+            sys.exit()
+
+        explicit.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
+        solver.plotting(fileName, dx_data, dt_data, gamma)
+    elif choice is '2':
+        fileName = 'implicit-data.txt'
+        r = 0.25
+        if gamma == 0:
+            dt = 2.5e-4
+        else:
+            dt = r*dx**2/gamma
+        dt_steps = int(np.ceil(t_last/dt))+1
+        dt_data = [i*dt for i in range(dt_steps)]
+
+        solver.printStability(dx, dt, u, gamma)
+        s = input("Continue? ")
+        if s == 'n':
+            sys.exit()
+
+        implicit.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
+        solver.plotting(fileName, dx_data, dt_data, gamma)
+    elif choice is '3':
+        fileName = 'upwind-data.txt'
+        r = 0.25
+        if gamma == 0:
+            dt = 2.5e-4
+        else:
+            dt = r*dx**2/gamma
+        dt_steps = int(np.ceil(t_last/dt))+1
+        dt_data = [i*dt for i in range(dt_steps)]
+
+        solver.printStability(dx, dt, u, gamma)
+        s = input("Continue? ")
+        if s == 'n':
+            sys.exit()
+
+        upwind.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
+        solver.plotting(fileName, dx_data, dt_data, gamma)
     else:
-        dt = r*dx**2/gamma
-    dt_steps = int(np.ceil(t_last/dt))+1
-    dt_data = [i*dt for i in range(dt_steps)]
+        print('How did you get here?')
 
-    solver.printStability(dx, dt, u, gamma)
-    s = input("Continue? ")
-    if s == 'n':
-        sys.exit()
-
-    explicit.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
-    solver.plotting(fileName, dx_data, dt_data, gamma)
-elif choice is '2':
-    fileName = 'implicit-data.txt'
-    r = 0.25
-    if gamma == 0:
-        dt = 2.5e-4
-    else:
-        dt = r*dx**2/gamma
-    dt_steps = int(np.ceil(t_last/dt))+1
-    dt_data = [i*dt for i in range(dt_steps)]
-
-    solver.printStability(dx, dt, u, gamma)
-    s = input("Continue? ")
-    if s == 'n':
-        sys.exit()
-
-    implicit.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
-    solver.plotting(fileName, dx_data, dt_data, gamma)
-elif choice is '3':
-    fileName = 'upwind-data.txt'
-    r = 0.25
-    if gamma == 0:
-        dt = 2.5e-4
-    else:
-        dt = r*dx**2/gamma
-    dt_steps = int(np.ceil(t_last/dt))+1
-    dt_data = [i*dt for i in range(dt_steps)]
-
-    solver.printStability(dx, dt, u, gamma)
-    s = input("Continue? ")
-    if s == 'n':
-        sys.exit()
-
-    upwind.solve(dt, dx, gamma, u, L, t_0,fileName, dx_steps, dt_steps)
-    solver.plotting(fileName, dx_data, dt_data, gamma)
-else:
-    print('How did you get here?')
+    again = input('Run again (y/n)? ')
 
 
 '''
