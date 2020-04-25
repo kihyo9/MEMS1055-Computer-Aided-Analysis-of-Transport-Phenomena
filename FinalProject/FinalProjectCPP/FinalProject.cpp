@@ -5,6 +5,7 @@
 #include <fstream>
 #include <cmath>
 #include "homework6.h"
+#include "twoDimFlow.h"
 using namespace std;
 double* initialCondition(double*, double*, double);
 
@@ -43,69 +44,34 @@ void testWriting() {
 	myfile.close();
 }
 
-void solve() {
-	homework6 hw6;
-
-	double u = 1;
-	double gamma = 1;
-	double L = 1;
-	double dx = 0.01;
-	double t_last = L / u;
-	const int dx_steps = 101;
-	double dx_data[dx_steps];
-	double t_0[dx_steps];
-	string fileName = "explicit-data.txt";
-
-	//make dx_data (x-axis)
-	for (int i = 0; i < dx_steps; i++) {
-		dx_data[i] = i * dx;
-	}
-
-	//make initial condition timestep
-	initialCondition(dx_data, t_0, L);
-
-	//calculate dt
-	double r = 0.25;
-	double dt;
-	if (gamma == 0.) {
-		dt = 2.5e-4;
-	}
-	else {
-		dt = r * pow(dx,2) / gamma;
-	}
-	const int dt_steps = int(ceil(t_last / dt)) + 1;
-
-	//print simulation conditions
-	hw6.printStability(dx, dt, u, gamma, r);
-
-	//solve
-	hw6.solveExplicit(dt, dx, gamma, u, L, t_0, dx_steps, dt_steps);
-
-}
-
-double* initialCondition(double* dx_data, double* t_0, double L) {
-	for (int i = 0; i < 101; i++) {
-		if (dx_data[i] <= L / 4 || dx_data[i] >= 3 * L / 4) {
-			t_0[i] = 0;
-		}
-		else if (dx_data[i] > L / 4 && dx_data[i] < L / 2) {
-			t_0[i] = dx_data[i] * 4. / L + -1;
-		}
-		else {
-			t_0[i] = -dx_data[i] * 4. / L + 3;
-		}
-	}
-
-	return t_0;
-}
-
 int main()
 {
 	cout << "___Starting simulation___\n\n";
 
 	//testWriting();
+	//homework6 hw6;
+	//hw6.solve();
 
-	solve();
+	twoDimFlow tdf;
+
+	//initial conditions
+	double dummy;
+	double init = tdf.initialConditions(dummy);
+
+	//solve
+	double nu = 0.15;
+	double u_m = 0.03;
+	double Re = u_m*1.5/nu;
+
+	double dx = 0.1;
+	double dy = 0.1;
+	double maxu = u_m;
+	double maxv = 0;
+
+	double dt_crit = tdf.maxdt(Re, dx, dy, maxu, maxv);
+	double dt = 0.8 * dt_crit;
+
+	tdf.mainSolver(init, init, init, init, init);
 
 
 	// exit
