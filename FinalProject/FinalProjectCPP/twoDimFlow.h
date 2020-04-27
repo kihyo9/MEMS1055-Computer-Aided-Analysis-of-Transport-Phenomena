@@ -15,8 +15,11 @@ public:
 		solverA(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps);
 
 		//hard-coded
-		double answer[1100] = {};
-		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer); //get vorticities for timestep 0
+		const int size = 1100;
+
+		//calculate the initial stream function
+		double answer[size] = {};
+		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer, size); //get vorticities for timestep 0
 		//solverB(u, v);
 		int x = 0;
 
@@ -227,14 +230,9 @@ public:
 	Equation: Successive over-relaxtion iterative method (SOR)
 	Notes: convergence criteria is (new+old)/(new) < 0.001; not necessary for timestep 0
 	*/
-	double* solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer) {
-		double w = 0.5;
-		int count = 0;
-		double threshold = 0.0001;
-
-		//hard-coded
-		const int size = 1100;
-		double b[size] = {};
+	void solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer, const int size) {
+		
+		double* b = new double[size] {};
 		//double coeff[900][900] = {};
 		//double* coeff[900];
 		//for (int i = 0; i < 900; i++)
@@ -251,6 +249,7 @@ public:
 		ifstream vort;
 		vort.open("vort.txt");
 
+		//write out coefficients
 		int gridpoints = dx_steps * dy_steps;
 		for (int i = 0; i < gridpoints; i++) {
 			int x = i/ dy_steps;
@@ -260,59 +259,66 @@ public:
 			if (x == 0 && y <= dy_steps - block_ysteps) {				
 				vort >> b[i];
 				//hard-coded
-				b[i] = -(9 / 25) * ((2 / 3) * pow(y, 3) - (1 / 2) * pow(y, 2));
-				coeff[i][i] = 1;
+				b[i] = -(9. / 25.) * ((2. / 3.) * pow(y*dy, 3) - (1. / 2.) * pow(y*dy, 2));
+				coeff[i][i] = 1.;
 			}
 			//black wall
 			else if(y == 0){
+
 				vort >> b[i];
 				b[i] = 0;
-				coeff[i][i] = 1;
+				coeff[i][i] = 1.;
 			}
 			//red wall A
 			else if (y == dy_steps - block_ysteps && x < block_xsteps) {
 				vort >> b[i];
 				//hard-coded
 				b[i] = 0.015;
-				coeff[i][i] = 1;
+				coeff[i][i] = 1.;
 			}
 			//red wall B
-			else if (y == dy_steps && x >= block_xsteps - 1) {
+			else if (y == dy_steps-1 && x >= block_xsteps - 1) {
 				vort >> b[i];
 				//hard-coded
 				b[i] = 0.015;
-				coeff[i][i] = 1;
+				coeff[i][i] = 1.;
 			}
 			//red wall cliff
 			else if (x == block_xsteps - 1 && y >= dy_steps - block_ysteps) {
 				vort >> b[i];
 				//hard-coded
 				b[i] = 0.015;
-				coeff[i][i] = 1;
+				coeff[i][i] = 1.;
 			}
 			//outlet
-			else if (x == dy_steps - 1) {
+			else if (x == dx_steps - 1) {
 				vort >> b[i];
 				//hard-coded
-				b[i] = -(9/100)*((1/3)*pow(y,3) - (1/2)*pow(y,2));
+				b[i] = -(9./100.)*((1./3.)*pow(y * dy,3) - (1./2.)*pow(y * dy,2));
 				coeff[i][i] = 1;
 			}
 			//interior points
 			else if(x >= block_xsteps - 1 || y <= dy_steps - block_ysteps){
 				vort >> b[i];
-				coeff[i][i] = -(1 / dx + 1 / dy);
-				coeff[i][i + dy_steps] = -(1 / (2 * dx));
-				coeff[i][i - dy_steps] = -(1 / (2 * dx));
-				coeff[i][i + 1] = -(1 / (2 * dy));
-				coeff[i][i - 1] = -(1 / (2 * dy));
+				double dx2 = pow(dx, 2);
+				double dy2 = pow(dy, 2);
+				coeff[i][i] = (2. / dx2 + 2. / dy2);
+				coeff[i][i + dy_steps] = -(1. / (dx2));
+				coeff[i][i - dy_steps] = -(1. / (dx2));
+				coeff[i][i + 1] = -(1. / (dy2));
+				coeff[i][i - 1] = -(1. / (dy2));
 			}
 			//wall
 			else {
-				coeff[i][i] = 1;
+				coeff[i][i] = 1.;
 			}
 		}
+		vort.close();
 
-
+		double w = 1.3;
+		int count = 0;
+		double threshold = 0.0001 / size;
+		//SOR
 		while (!converged(coeff, answer, b, gridpoints, threshold, count)) {
 			count++;
 			for (int i = 0; i < gridpoints; i++) {
@@ -327,19 +333,27 @@ public:
 			}
 		}
 
-		return answer;
+		//write to file
+		ofstream stream;
+		stream.open("stream.txt");
+		for (int i = 0; i < size; i++) {
+			stream << answer[i];
+			if ((i+1) % dy_steps == 0) {
+				stream << "\n";
+			}
+			else {
+				stream << " ";
+			}
+		}
+		stream.close();
 	}
 
-	//hard-coded
 	bool converged(double** coeff, double answer[], double b[], int size, double threshold, int count) {
 		double bigsum = 0;
 		for (int i = 0; i < size; i++) {
 			double sum = 0;
 			for (int j = 0; j < size; j++) {
 				sum += answer[j] * coeff[i][j];
-				if (j == 999) {
-					int fun = 0;
-				}
 			}
 			bigsum += sum - b[i];
 		}
