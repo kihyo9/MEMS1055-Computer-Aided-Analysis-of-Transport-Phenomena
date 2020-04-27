@@ -6,6 +6,7 @@
 #include <cmath>
 #include "homework6.h"
 #include "twoDimFlow.h"
+#include <algorithm>
 using namespace std;
 double* initialCondition(double*, double*, double);
 
@@ -54,24 +55,45 @@ int main()
 
 	twoDimFlow tdf;
 
-	//initial conditions
-	double dummy;
-	double init = tdf.initialConditions(dummy);
+	//geometry
+	const double aLength = 1.5;
+	const double bLength = 7.5;
+	double totalLength = aLength + bLength;
+	const double aHeight = 0.5;
+	const double bHeight = 0.5;
+	double totalHeight = aHeight + bHeight;
+
+
 
 	//solve
-	double nu = 0.15;
-	double u_m = 0.03;
-	double Re = u_m*1.5/nu;
+	const double nu = 0.15;
+	const double u_m = 0.03;
+	double Re = u_m*(aLength + bLength)/nu;
+	cout << "Re is " << Re << "\n";
 
-	double dx = 0.1;
-	double dy = 0.1;
+	const double dx = 0.1;
+	const double dy = 0.1;
 	double maxu = u_m;
 	double maxv = 0;
 
 	double dt_crit = tdf.maxdt(Re, dx, dy, maxu, maxv);
 	double dt = 0.8 * dt_crit;
+	cout << "dt is " << dt << "\n";
 
-	tdf.mainSolver(init, init, init, init, init);
+	double CFL = nu * dt / min(dx, dy);
+	cout << "CFL is " << CFL << "\n";
+
+		//write initial conditions to file
+		tdf.initialConditions(u_m, aLength, bLength, aHeight, bHeight, dx, dy);
+		double dummy = 0;
+
+	//number of gridponts
+	int dx_steps = int(round(totalLength / dx)) + 1;
+	int dy_steps = int(round(totalHeight / dy)) + 1;
+	int block_xsteps = int(round(aLength / dx)) + 1;
+	int block_ysteps = int(round(aHeight / dy)) + 1;
+
+	tdf.mainSolver(dx, dy, dt, dx_steps, dy_steps, block_xsteps, block_ysteps);
 
 
 	// exit
