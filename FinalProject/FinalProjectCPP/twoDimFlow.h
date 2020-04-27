@@ -3,6 +3,8 @@
 #include <fstream>
 #include <cmath>
 #include <algorithm>
+#include <stdlib.h>
+#define MAX_SIZE 7000000
 using namespace std;
 class twoDimFlow
 {
@@ -10,26 +12,32 @@ public:
 	void mainSolver(double dx, double dy, double dt, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps) {
 
 		//calculate initial vorticies
-		solverA(w);
+		solverA(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps);
 
-		//retained data
-		double wm1=0;
-		double phim1=0;
+		//hard-coded
+		double answer[1100] = {};
+		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer); //get vorticities for timestep 0
+		//solverB(u, v);
+		int x = 0;
 
 		/*
 		Start of timestep iterations
 		*/		
-		while (!isConverged(w,phi,wm1,phim1)) {
-			//new vorticies
-			solverB(u, v);
+		//while (!isConverged(w,phi,wm1,phim1)) {
+		//	//retained data
+		//	double wm1 = 0;
+		//	double phim1 = 0;
 
-			//new stream function
-			solverC(w);
+		//	//new vorticies
+		//	solverB(u, v);
 
-			//new velocities
-			solverDu(phi);
-			solverDv(phi);
-		}
+		//	//new stream function
+		//	solverC(dx_steps, dy_steps);
+
+		//	//new velocities
+		//	solverDu(phi);
+		//	solverDv(phi);
+		//}
 		/*
 		End of timestep iterations
 		*/
@@ -50,11 +58,12 @@ public:
 		vfile.open("v.txt");
 		vort.open("vort.txt");
 
-
+		//hard-coded
 		double u1[11] = {};
 		double u2[11] = {};
 		double u3[11] = {};
 
+		//hard-coded
 		double v1[11] = {};
 		double v2[11] = {};
 		double v3[11] = {};
@@ -62,7 +71,7 @@ public:
 
 		//walls: i = 0, i = block_xsteps, i = dx_steps, j = 0, j = block_ysteps, j = dy_steps
 		for (int i = 0; i < dx_steps; i++) {
-			int stop = i >= block_xsteps - 1 ? dy_steps : block_ysteps;
+			int stop = i < block_xsteps - 1 ? block_ysteps : dy_steps;
 
 			//inlet
 			if (i == 0) {
@@ -78,13 +87,13 @@ public:
 				//calculate and write the vorticities
 				for (int j = 0; j < stop; j++) {
 					if (j == stop - 1) {
-						vort << (u2[j] - u2[j - 1]) / (dy);
+						vort << -(3 * u2[j] - 4 * u2[j - 1] + u2[j - 2]) / (2 * dy);
 					}
 					else if (j == 0) {
-						vort << (u2[j + 1] - u2[j]) / (dy);
+						vort << -(-3 * u2[j] + 4 * u2[j + 1] - u2[j + 2]) / (2 * dy);
 					}
 					else {
-						vort << (v2[j] + v3[j]) / (dx)+(u2[j + 1] + u2[j - 1]) / (2 * dy);
+						vort << (v3[j] - v2[j]) / (dx) - (u2[j + 1] - u2[j - 1]) / (2 * dy);
 					}
 
 					if (j < stop - 1) {
@@ -100,13 +109,13 @@ public:
 				//calculate and write the vorticities
 				for (int j = 0; j < stop; j++) {
 					if (j == stop - 1) {
-						vort << (u3[j] - u3[j-1]) / (dy);
+						vort << -(u3[j] - u3[j-1]) / (dy);
 					}
 					else if (j == 0) {
-						vort << (u3[j + 1] - u3[j]) / (dy);
+						vort << -(u3[j + 1] - u3[j]) / (dy);
 					}
 					else {
-						vort << (v2[j] + v3[j]) / (dx) + (u3[j + 1] + u3[j - 1]) / (2 * dy);
+						vort << (v3[j] - v2[j]) / (dx) - (u3[j + 1] - u3[j - 1]) / (2 * dy);
 					}
 
 					if (j < stop - 1) {
@@ -118,26 +127,39 @@ public:
 				}
 			}
 			//cliff
-			else if (i == block_xsteps - 1) {
+			else if (i == block_xsteps - 1 || i == block_xsteps - 2) {
 				for (int a = 0; a < stop; a++) {
 					u1[a] = u2[a];
 					u2[a] = u3[a];
 					v1[a] = v2[a];
 					v2[a] = v3[a];
-
 					ufile >> u3[a];
 					vfile >> v3[a];
 				}
+
+				//line before cliff needs the u3 and v3 to read extra elements
+				if (i == block_xsteps - 2) {
+					for (int a = stop; a < dy_steps; a++) {
+						ufile >> u3[a];
+						vfile >> v3[a];
+					}
+				}
+
+
 				//calculate and write the vorticities
 				for (int j = 0; j < stop; j++) {
-					if (j >= dx_steps - block_ysteps - 1) {
-						vort << (v2[j] - v3[j]) / (dx);
+					if (j > dy_steps - block_ysteps + 1) {
+						vort << (v3[j] - v2[j]) / (dx);
+					}
+					//corner
+					else if (j == dy_steps - block_ysteps + 1) {
+						vort << (v3[j] - v2[j]) / (dx) - (u2[j] - u2[j-1]) / (dy);
 					}
 					else if (j == 0) {
-						vort << (-3 * u2[j] + 4 * u2[j + 1] - u2[j + 2]) / (2 * dy);
+						vort << -(-3 * u2[j] + 4 * u2[j + 1] - u2[j + 2]) / (2 * dy);
 					}
 					else {
-						vort << (v3[j] + v1[j]) / (2 * dx) + (u2[j + 1] + u2[j - 1]) / (2 * dy);
+						vort << (v3[j] - v1[j]) / (2 * dx) - (u2[j + 1] - u2[j - 1]) / (2 * dy);
 					}
 
 					if (j < stop - 1) {
@@ -163,13 +185,13 @@ public:
 				//calculate and write the vorticities
 				for (int j = 0; j < stop; j++) {
 					if (j == stop - 1) {
-						vort << (-3 * u2[j] + 4 * u2[j - 1] - u2[j - 2]) / (2 * dy);
+						vort << -(3 * u2[j] - 4 * u2[j - 1] + u2[j - 2]) / (2 * dy);
 					}
 					else if (j == 0) {
-						vort << (-3 * u2[j] + 4 * u2[j + 1] - u2[j + 2]) / (2 * dy);
+						vort << -(-3 * u2[j] + 4 * u2[j + 1] - u2[j + 2]) / (2 * dy);
 					}
 					else {
-						vort << (v3[j] + v1[j]) / (2 * dx) + (u2[j + 1] + u2[j - 1]) / (2 * dy);
+						vort << (v3[j] - v1[j]) / (2 * dx) - (u2[j + 1] - u2[j - 1]) / (2 * dy);
 					}
 
 					if (j < stop - 1) {
@@ -185,17 +207,6 @@ public:
 		vfile.close();
 		vort.close();
 
-
-	}
-
-	double solverA_InteriorPoint(int j, double dx, double dy, double * u1, double * u2, double* u3, double* v1, double* v2, double* v3) {
-	}
-
-	double solverA_LWall() {
-
-	}
-
-	double solverA_RWall() {
 
 	}
 
@@ -216,36 +227,124 @@ public:
 	Equation: Successive over-relaxtion iterative method (SOR)
 	Notes: convergence criteria is (new+old)/(new) < 0.001; not necessary for timestep 0
 	*/
-	double* solverC(double coeff[][4], double * answer, double * arrayb) {
+	double* solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer) {
 		double w = 0.5;
 		int count = 0;
 		double threshold = 0.0001;
-		while (converge(coeff, answer, arrayb, 4, threshold)) {
+
+		//hard-coded
+		const int size = 1100;
+		double b[size] = {};
+		//double coeff[900][900] = {};
+		//double* coeff[900];
+		//for (int i = 0; i < 900; i++)
+		//	coeff[i] = (double*)malloc(900 * sizeof(double));
+
+		double** coeff = new double* [size];
+		for (int i = 0; i < size; i++)
+			coeff[i] = new double[size];
+		for (int i = 0; i < size; i++)
+			for (int j = 0; j < size; j++)
+				coeff[i][j] = 0.;
+
+		//vorticity data
+		ifstream vort;
+		vort.open("vort.txt");
+
+		int gridpoints = dx_steps * dy_steps;
+		for (int i = 0; i < gridpoints; i++) {
+			int x = i/ dy_steps;
+			int y = i % dy_steps;
+
+			//inlet wall
+			if (x == 0 && y <= dy_steps - block_ysteps) {				
+				vort >> b[i];
+				//hard-coded
+				b[i] = -(9 / 25) * ((2 / 3) * pow(y, 3) - (1 / 2) * pow(y, 2));
+				coeff[i][i] = 1;
+			}
+			//black wall
+			else if(y == 0){
+				vort >> b[i];
+				b[i] = 0;
+				coeff[i][i] = 1;
+			}
+			//red wall A
+			else if (y == dy_steps - block_ysteps && x < block_xsteps) {
+				vort >> b[i];
+				//hard-coded
+				b[i] = 0.015;
+				coeff[i][i] = 1;
+			}
+			//red wall B
+			else if (y == dy_steps && x >= block_xsteps - 1) {
+				vort >> b[i];
+				//hard-coded
+				b[i] = 0.015;
+				coeff[i][i] = 1;
+			}
+			//red wall cliff
+			else if (x == block_xsteps - 1 && y >= dy_steps - block_ysteps) {
+				vort >> b[i];
+				//hard-coded
+				b[i] = 0.015;
+				coeff[i][i] = 1;
+			}
+			//outlet
+			else if (x == dy_steps - 1) {
+				vort >> b[i];
+				//hard-coded
+				b[i] = -(9/100)*((1/3)*pow(y,3) - (1/2)*pow(y,2));
+				coeff[i][i] = 1;
+			}
+			//interior points
+			else if(x >= block_xsteps - 1 || y <= dy_steps - block_ysteps){
+				vort >> b[i];
+				coeff[i][i] = -(1 / dx + 1 / dy);
+				coeff[i][i + dy_steps] = -(1 / (2 * dx));
+				coeff[i][i - dy_steps] = -(1 / (2 * dx));
+				coeff[i][i + 1] = -(1 / (2 * dy));
+				coeff[i][i - 1] = -(1 / (2 * dy));
+			}
+			//wall
+			else {
+				coeff[i][i] = 1;
+			}
+		}
+
+
+		while (!converged(coeff, answer, b, gridpoints, threshold, count)) {
 			count++;
-			for (int i = 0; i < 4; i++) {
+			for (int i = 0; i < gridpoints; i++) {
 				double sigma = 0;
-				for (int j = 0; j < 4; j++) {
+				for (int j = 0; j < gridpoints; j++) {
 					if (i != j) {
 						sigma += coeff[i][j] * answer[j];
 					}
 				}
-				answer[i] = (1 - w) * answer[i] + (w / coeff[i][i]) * (arrayb[i] - sigma);
+				answer[i] = (1 - w) * answer[i] + (w / coeff[i][i]) * (b[i] - sigma);
+				//cout << "answer[" << i << "]: " << answer[i] << "\n";
 			}
-			cout << count << ": " << answer[0] << " " << answer[1] << " " << answer[2] << " " << answer[3] << " " << "\n";
 		}
+
+		return answer;
 	}
 
-	bool converge(double coeff[][4], double answer[], double b[], int size, double threshold) {
+	//hard-coded
+	bool converged(double** coeff, double answer[], double b[], int size, double threshold, int count) {
 		double bigsum = 0;
 		for (int i = 0; i < size; i++) {
 			double sum = 0;
 			for (int j = 0; j < size; j++) {
 				sum += answer[j] * coeff[i][j];
+				if (j == 999) {
+					int fun = 0;
+				}
 			}
 			bigsum += sum - b[i];
 		}
-
-		return abs(bigsum) > threshold;
+		cout << "Iteration " << count << ": " << bigsum << "\n";
+		return bigsum < threshold && bigsum > -1*(threshold);
 	}
 
 
