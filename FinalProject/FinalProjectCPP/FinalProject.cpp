@@ -93,7 +93,7 @@ int main()
 	int block_xsteps = int(round(aLength / dx)) + 1;
 	int block_ysteps = int(round(bHeight / dy)) + 1;
 
-	tdf.mainSolver(dx, dy, dt, dx_steps, dy_steps, block_xsteps, block_ysteps);
+	tdf.mainSolver(dx, dy, dt, dx_steps, dy_steps, block_xsteps, block_ysteps, Re);
 
 
 	// exit

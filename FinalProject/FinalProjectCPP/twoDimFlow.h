@@ -9,18 +9,19 @@ using namespace std;
 class twoDimFlow
 {
 public:
-	void mainSolver(double dx, double dy, double dt, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps) {
+	void mainSolver(double dx, double dy, double dt, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double Re) {
+
+		int size = dx_steps * dy_steps;
 
 		//calculate initial vorticies
 		solverA(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps);
 
-		//hard-coded
-		const int size = 1100;
-
 		//calculate the initial stream function
-		double answer[size] = {};
-		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer, size); //get vorticities for timestep 0
-		//solverB(u, v);
+		double* answer = new double[size]{};
+		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer); //get vorticities for timestep 0
+
+		//first iteration
+		solverB(dt, dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, Re);
 		int x = 0;
 
 		/*
@@ -215,12 +216,114 @@ public:
 
 
 	/*
-	Purpose: Uses current vorticies and velocities to step forward in time to new vorticities
+	Purpose: Uses current vorticies, strea, function and velocities to step forward in time to new vorticities
 	Complexity: O(xy), second-order central scheme for diffusion, and first-order upwind for advective terms
 	Equation: dw/dt + duw/dx + dvw/dy = (nu)(d2w/dx2 + d2w/dy2)
 	*/
-	void solverB(double u, double v) {
+	void solverB(double dt, double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double Re) {
+		int size = dx_steps * dy_steps;
 
+		ifstream ufile;
+		ufile.open("u.txt");
+		double** udata = new double* [dx_steps];
+		for (int i = 0; i < dx_steps; i++)
+			udata[i] = new double[dy_steps] {};		
+
+		ifstream vfile;
+		vfile.open("v.txt");
+		double** vdata = new double* [dx_steps];
+		for (int i = 0; i < dx_steps; i++)
+			vdata[i] = new double[dy_steps] {};
+
+		ifstream vortfile;
+		vortfile.open("vort.txt");
+		double** vortdata = new double* [dx_steps];
+		for (int i = 0; i < dx_steps; i++)
+			vortdata[i] = new double[dy_steps] {};
+
+		ifstream streamfile;
+		streamfile.open("stream.txt");
+		double** streamdata = new double* [dx_steps];
+		for (int i = 0; i < dx_steps; i++)
+			streamdata[i] = new double[dy_steps] {};
+
+		for (int i = 0; i < size; i++) {
+			int x = i / dy_steps;
+			int y = i % dy_steps;
+			int stop = x < block_xsteps - 1 ? block_ysteps : dy_steps;
+			if ((x >= block_xsteps - 1 || y <= dy_steps - block_ysteps) && (x < dx_steps)) {
+				ufile >> udata[x][y];
+				vfile >> vdata[x][y];
+				vortfile >> vortdata[x][y];
+				streamfile >> streamdata[x][y];
+			}
+		}
+		ufile.close();
+		vfile.close();
+		vortfile.close();
+		streamfile.close();
+		
+		ofstream new_w;
+		new_w.open("new_w.txt");
+		//write out coefficients
+		int gridpoints = dx_steps * dy_steps;
+		for (int i = 0; i < gridpoints; i++) {
+			int x = i / dy_steps;
+			int y = i % dy_steps;
+
+			//inlet wall
+			if (x == 0 && y < dy_steps - block_ysteps && y > 0) {
+				new_w << -2 * (streamdata[x+1][y] - streamdata[x][y]) / pow(dx, 2);
+			}
+			//black wall
+			else if (y == 0) {
+				new_w << -2 * (streamdata[x][y+1] - streamdata[x][y]) / pow(dx, 2);
+			}
+			//red wall A
+			else if (y == dy_steps - block_ysteps && x < block_xsteps) {
+				new_w << -2 * (streamdata[x][y-1] - streamdata[x][y]) / pow(dx, 2);
+			}
+			//red wall B
+			else if (y == dy_steps - 1 && x >= block_xsteps - 1) {
+				new_w << -2 * (streamdata[x][y-1] - streamdata[x][y]) / pow(dx, 2);
+			}
+			//red wall cliff
+			else if (x == block_xsteps - 1 && y >= dy_steps - block_ysteps) {
+				new_w << -2 * (streamdata[x + 1][y] - streamdata[x][y]) / pow(dx, 2);
+			}
+			//outlet
+			else if (x == dx_steps - 1) {
+				new_w << -2 * (streamdata[x-1][y] - streamdata[x][y]) / pow(dx, 2);
+			}
+			//interior points
+			else if (x >= block_xsteps - 1 || y <= dy_steps - block_ysteps) {
+				double term1 = udata[x][y] >= 0 ? (udata[x+1][y] * vortdata[x+1][y] - udata[x][y] * vortdata[x][y]) / dx \
+					: (udata[x][y] * vortdata[x][y] - udata[x-1][y] * vortdata[x-1][y]/dx);
+
+				double term2 = vdata[x][y] >= 0 ? (vdata[x][y+1] * vortdata[x][y+1] - vdata[x][y] * vortdata[x][y]) / dy \
+					: (vdata[x][y] * vortdata[x][y] - vdata[x][y-1] * vortdata[x][y-1] / dy);
+
+				double term3 = (vortdata[x + 1][y] - 2 * vortdata[x][y] + vortdata[x - 1][y]) / pow(dx,2);
+
+				double term4 = (vortdata[x][y + 1] - 2 * vortdata[x][y] + vortdata[x][y - 1]) / pow(dy,2);
+
+				new_w << vortdata[x][y] + dt * (-term1 - term2 + term3 + term4);
+			}
+			//wall
+			else {
+			}
+
+			int stop = x < block_xsteps - 1 ? block_ysteps : dy_steps;
+			if ((x >= block_xsteps - 1 || y <= dy_steps - block_ysteps) && (x < dx_steps)) {
+				if (y == stop - 1) {
+					new_w << "\n";
+				}
+				else {
+					new_w << " ";
+				}
+			}
+		}
+		new_w.close();
 	}
 
 
@@ -230,8 +333,9 @@ public:
 	Equation: Successive over-relaxtion iterative method (SOR)
 	Notes: convergence criteria is (new+old)/(new) < 0.001; not necessary for timestep 0
 	*/
-	void solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer, const int size) {
-		
+	void solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer) {
+		int size = dx_steps * dy_steps;
+		//const int size = 1100;
 		double* b = new double[size] {};
 		//double coeff[900][900] = {};
 		//double* coeff[900];
@@ -240,10 +344,10 @@ public:
 
 		double** coeff = new double* [size];
 		for (int i = 0; i < size; i++)
-			coeff[i] = new double[size];
-		for (int i = 0; i < size; i++)
-			for (int j = 0; j < size; j++)
-				coeff[i][j] = 0.;
+			coeff[i] = new double[size] {};
+		//for (int i = 0; i < size; i++)
+		//	for (int j = 0; j < size; j++)
+		//		coeff[i][j] = 0.;
 
 		//vorticity data
 		ifstream vort;
@@ -307,6 +411,7 @@ public:
 				coeff[i][i - dy_steps] = -(1. / (dx2));
 				coeff[i][i + 1] = -(1. / (dy2));
 				coeff[i][i - 1] = -(1. / (dy2));
+
 			}
 			//wall
 			else {
@@ -336,13 +441,19 @@ public:
 		//write to file
 		ofstream stream;
 		stream.open("stream.txt");
+
 		for (int i = 0; i < size; i++) {
-			stream << answer[i];
-			if ((i+1) % dy_steps == 0) {
-				stream << "\n";
-			}
-			else {
-				stream << " ";
+			int x = i / dy_steps;
+			int y = i % dy_steps;
+			int stop = x < block_xsteps - 1 ? block_ysteps : dy_steps;
+			if ((x >= block_xsteps - 1 || y <= dy_steps - block_ysteps) && (x < dx_steps)) {
+				stream << answer[i];
+				if (y == stop - 1) {
+					stream << "\n";
+				}
+				else {
+					stream << " ";
+				}
 			}
 		}
 		stream.close();
