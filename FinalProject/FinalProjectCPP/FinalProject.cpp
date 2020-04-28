@@ -27,7 +27,7 @@ int main()
 	myfile.open(histfile);
 	cout << "___Starting simulation___\n\n";
 	myfile << "___Starting simulation___\n\n";
-	myfile.close();
+	
 
 	twoDimFlow tdf;
 
@@ -44,9 +44,10 @@ int main()
 	//solve
 	auto start = std::chrono::system_clock::now();
 	const double nu = 0.15;
-	const double u_m = 0.03;
+	const double u_m = 0.3;
 	double Re = u_m*(aLength + bLength)/nu;
 	cout << "Re is " << Re << "\n";
+	myfile << "Re is " << Re << "\n";
 
 	const double dx = 0.1;
 	const double dy = 0.1;
@@ -56,9 +57,12 @@ int main()
 	double dt_crit = tdf.maxdt(Re, dx, dy, maxu, maxv);
 	double dt = 0.8 * dt_crit;
 	cout << "dt is " << dt << "\n";
+	myfile << "dt is " << dt << "\n";
 
 	double CFL = nu * dt / min(dx, dy);
 	cout << "CFL is " << CFL << "\n";
+	myfile << "CFL is " << CFL << "\n";
+	myfile.close();
 
 		//write initial conditions to file
 		tdf.initialConditions(u_m, aLength, bLength, aHeight, bHeight, dx, dy);
