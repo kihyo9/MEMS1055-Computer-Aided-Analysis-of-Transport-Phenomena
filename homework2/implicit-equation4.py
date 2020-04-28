@@ -8,8 +8,8 @@ g = -9.81
 theta_start = 0.1
 #####################################################################
 # implicit residuals
-# dts = np.linspace(0.50, 0.01, 50)
-dts = np.linspace(0.02, 0.001, 20)
+dts = np.linspace(0.50, 0.01, 50)
+# dts = np.linspace(0.02, 0.001, 20)
 
 sums = []
 
@@ -21,18 +21,22 @@ for dt in dts:
     for x in range(int(10. / dt)):
         x_dt.append(dt * x)
 
-        # The system of equations to solve
-        # next_theta = theta + next_theta_dot * dt
-        # next_theta_dot = theta_dot + (g / l) * np.sin(next_theta) * dt
+        ## The system of equations to solve
+        ## next_theta = theta + next_theta_dot * dt
+        ## next_theta_dot = theta_dot + (g / l) * np.sin(next_theta) * dt
 
-        theta_func = lambda x: theta[-1] + x[1] * dt
-        theta_dot_func = lambda x: theta_dot[-1] + (g/l) * x[0] * dt
-        soe = [theta_func, theta_dot_func]
+        # theta_func = lambda x: theta[-1] + x[1] * dt
+        # theta_dot_func = lambda x: theta_dot[-1] + (g/l) * x[0] * dt
+        # soe = [theta_func, theta_dot_func]
+        #
+        # dtheta_func = lambda x: 2*(x[0] - theta_func(x)) + 2*(x[1] - theta_dot_func(x))*(-1*(g/l) * dt)
+        # dtheta_func_dot = lambda x: 2*(x[0] - theta_func(x))*(-1*dt) + 2*(x[1] - theta_dot_func(x))
+        # partials = [dtheta_func, dtheta_func_dot]
+        # [next_theta, next_theta_dot] = hp.gradientDescent(soe, [theta[-1], theta_dot[-1]], hp.errorDef1, partials, 0.01, 0.0000001)
 
-        dtheta_func = lambda x: 2*(x[0] - theta_func(x)) + 2*(x[1] - theta_dot_func(x))*(-1*(g/l) * dt)
-        dtheta_func_dot = lambda x: 2*(x[0] - theta_func(x))*(-1*dt) + 2*(x[1] - theta_dot_func(x))
-        partials = [dtheta_func, dtheta_func_dot]
-        [next_theta, next_theta_dot] = hp.gradientDescent(soe, [theta[-1], theta_dot[-1]], hp.errorDef1, partials, 0.01, 0.0000001)
+        coeffs = np.array([[1, -dt], [-dt * g / l, 1]])
+        const = np.array([theta[-1], theta_dot[-1]])
+        [next_theta, next_theta_dot] = np.linalg.solve(coeffs, const)
 
         theta_dot.append(next_theta_dot)
         theta.append(next_theta)
@@ -46,13 +50,14 @@ for dt in dts:
     sums.append((1 / len(theta)) * sum)
 
     # plotting
-    if dt == 0.020 or dt == 0.008:
-    # if dt == 0.2 or dt == 0.01:
+    # if dt == 0.020 or dt == 0.008:
+    if dt == 0.2 or dt == 0.01:
         plt.plot(x_dt, theta)
 
 plt.title('Timestep vs Residuals')
 plt.plot(np.linspace(0,10,1001), hp.analyticalSol(np.linspace(0,10,1001), theta_start))
-plt.legend(['0.02[s]','0.008[s]','Analytic'])
+# plt.legend(['0.02[s]','0.008[s]','Analytic'])
+plt.legend(['0.2[s]','0.01[s]','Analytic'])
 plt.ylabel('Amplititude')
 plt.xlabel('time [s]')
 
