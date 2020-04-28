@@ -61,6 +61,10 @@ public:
 	Criterion: (new+old)/(new) < threshold
 	*/
 	bool FileAndConvergenceCheck(double dt, int& timestep, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, string histfile, double threshold = 0.001) {
+		if (timestep > 10000) {
+			return true;
+		}
+		
 		if (timestep != 0) {
 			//check if files exist
 			if (!(exists_test0("u2.txt") && exists_test0("v2.txt") && exists_test0("stream2.txt") && exists_test0("vort2.txt")))
@@ -501,7 +505,7 @@ public:
 			if (x == 0 && y <= dy_steps - block_ysteps) {				
 				vort >> b[i];
 				//hard-coded - affected by pipe geometry and mean intial velocity
-				b[i] = -(9. / 25.) * ((2. / 3.) * pow(y*dy, 3) - (1. / 2.) * pow(y*dy, 2));
+				b[i] = -(90. / 25.) * ((2. / 3.) * pow(y*dy, 3) - (1. / 2.) * pow(y*dy, 2));
 				coeff[i][i] = 1.;
 			}
 			//black wall
@@ -515,28 +519,28 @@ public:
 			else if (y == dy_steps - block_ysteps && x < block_xsteps) {
 				vort >> b[i];
 				//hard-coded - affected by pipe geometry and mean intial velocity
-				b[i] = 0.015;
+				b[i] = 0.15;
 				coeff[i][i] = 1.;
 			}
 			//red wall B
 			else if (y == dy_steps-1 && x >= block_xsteps - 1) {
 				vort >> b[i];
 				//hard-coded - affected by pipe geometry and mean intial velocity
-				b[i] = 0.015;
+				b[i] = 0.15;
 				coeff[i][i] = 1.;
 			}
 			//red wall cliff
 			else if (x == block_xsteps - 1 && y >= dy_steps - block_ysteps) {
 				vort >> b[i];
 				//hard-coded - affected by pipe geometry and mean intial velocity
-				b[i] = 0.015;
+				b[i] = 0.15;
 				coeff[i][i] = 1.;
 			}
 			//outlet
 			else if (x == dx_steps - 1) {
 				vort >> b[i];
 				//hard-coded - affected by pipe geometry and mean intial velocity
-				b[i] = -(9./100.)*((1./3.)*pow(y * dy,3) - (1./2.)*pow(y * dy,2));
+				b[i] = -(90./100.)*((1./3.)*pow(y * dy,3) - (1./2.)*pow(y * dy,2));
 				coeff[i][i] = 1;
 			}
 			//interior points
@@ -611,11 +615,11 @@ public:
 			}
 
 			bigsum /= size;
-			if (count % 20 == 0) {
-				cout << "SOR iterations: " << count << "\n";
-				cout << "Avg diff between iter per element: " << diffsum / size << "\n";
-				cout << "bigsum: " << bigsum << " ? " << "threshold: " << threshold << "\n\n";
-			}
+			//if (count % 20 == 0) {
+			//	cout << "SOR iterations: " << count << "\n";
+			//	cout << "Avg diff between iter per element: " << diffsum / size << "\n";
+			//	cout << "bigsum: " << bigsum << " ? " << "threshold: " << threshold << "\n\n";
+			//}
 		}
 		ofstream hist;
 		hist.open(histfile, std::ios_base::app);
@@ -813,11 +817,11 @@ public:
 		vfile.close();
 	}
 
-	double init1(double y, double u_m = 0.03, double aHeight = 0.5){
+	double init1(double y, double u_m = 0.3, double aHeight = 0.5){
 		return -(6 * u_m) * (y - aHeight) * (y) / pow(aHeight, 2);
 	}
 
-	double init2(double y, double u_m = 0.03, double aHeight = 0.5, double yLimit = 1) {
+	double init2(double y, double u_m = 0.3, double aHeight = 0.5, double yLimit = 1) {
 		return -(6 * u_m * aHeight/yLimit) * (y - yLimit) * (y) / pow(yLimit,2);
 	}
 

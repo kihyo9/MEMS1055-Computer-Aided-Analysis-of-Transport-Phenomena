@@ -1,0 +1,4640 @@
+___Starting simulation___
+
+Re is 18
+dt is 0.000111065
+CFL is 0.000166597
+
+Timestep #0: 0s
+Writing initial stream function...
+SOR iterations: 84
+
+Timestep #1: 0.000111065s
+SOR iterations: 84
+u-change: 0.443095, v-change: 0.568432, streamfunc-change: 0.00168679, vorticity-change: 0.200876
+
+Timestep #2: 0.00022213s
+SOR iterations: 84
+u-change: 0.00198484, v-change: 0.118912, streamfunc-change: 7.43181e-06, vorticity-change: 0.066968
+
+Timestep #3: 0.000333195s
+SOR iterations: 84
+u-change: 1.22325e-05, v-change: 0.0148154, streamfunc-change: 0.0026494, vorticity-change: 0.0486984
+
+Timestep #4: 0.000444259s
+SOR iterations: 84
+u-change: 0.00324639, v-change: 0.0309365, streamfunc-change: 0.00265834, vorticity-change: 0.0437333
+
+Timestep #5: 0.000555324s
+SOR iterations: 84
+u-change: 0.00322348, v-change: 0.0392597, streamfunc-change: 0.00266116, vorticity-change: 0.0385683
+
+Timestep #6: 0.000666389s
+SOR iterations: 84
+u-change: 0.00320145, v-change: 0.0392633, streamfunc-change: 0.00261632, vorticity-change: 0.0353576
+
+Timestep #7: 0.000777454s
+SOR iterations: 84
+u-change: 0.00312396, v-change: 0.0399152, streamfunc-change: 0.00257164, vorticity-change: 0.0383747
+
+Timestep #8: 0.000888519s
+SOR iterations: 84
+u-change: 0.00304836, v-change: 0.045563, streamfunc-change: 0.00252642, vorticity-change: 0.0305269
+
+Timestep #9: 0.000999584s
+SOR iterations: 84
+u-change: 0.00297515, v-change: 0.0334265, streamfunc-change: 0.00248187, vorticity-change: 0.0282558
+
+Timestep #10: 0.00111065s
+SOR iterations: 84
+u-change: 0.00290022, v-change: 0.0422003, streamfunc-change: 0.00243828, vorticity-change: 0.0268076
+
+Timestep #11: 0.00122171s
+SOR iterations: 84
+u-change: 0.00283138, v-change: 0.0451314, streamfunc-change: 0.00239536, vorticity-change: 0.026
+
+Timestep #12: 0.00133278s
+SOR iterations: 84
+u-change: 0.00276539, v-change: 0.0418695, streamfunc-change: 0.00235339, vorticity-change: 0.0256862
+
+Timestep #13: 0.00144384s
+SOR iterations: 84
+u-change: 0.00269972, v-change: 0.03425, streamfunc-change: 0.00231192, vorticity-change: 0.0435667
+
+Timestep #14: 0.00155491s
+SOR iterations: 84
+u-change: 0.00263635, v-change: 0.041236, streamfunc-change: 0.00227106, vorticity-change: 0.0272798
+
+Timestep #15: 0.00166597s
+SOR iterations: 84
+u-change: 0.00257488, v-change: 0.0377545, streamfunc-change: 0.00223114, vorticity-change: 0.0244479
+
+Timestep #16: 0.00177704s
+SOR iterations: 84
+u-change: 0.00251527, v-change: 0.0378762, streamfunc-change: 0.002192, vorticity-change: 0.0225893
+
+Timestep #17: 0.0018881s
+SOR iterations: 84
+u-change: 0.00245984, v-change: 0.0331094, streamfunc-change: 0.00215341, vorticity-change: 0.0285448
+
+Timestep #18: 0.00199917s
+SOR iterations: 84
+u-change: 0.00240294, v-change: 0.0428738, streamfunc-change: 0.00211525, vorticity-change: 0.0213459
+
+Timestep #19: 0.00211023s
+SOR iterations: 84
+u-change: 0.00234787, v-change: 0.0312173, streamfunc-change: 0.00207807, vorticity-change: 0.0203808
+
+Timestep #20: 0.0022213s
+SOR iterations: 84
+u-change: 0.00229798, v-change: 0.0444489, streamfunc-change: 0.00204149, vorticity-change: 0.0199222
+
+Timestep #21: 0.00233236s
+SOR iterations: 84
+u-change: 0.00224612, v-change: 0.0420784, streamfunc-change: 0.00200579, vorticity-change: 0.0199932
+
+Timestep #22: 0.00244343s
+SOR iterations: 84
+u-change: 0.00219725, v-change: 0.0352911, streamfunc-change: 0.00197043, vorticity-change: 0.0246414
+
+Timestep #23: 0.00255449s
+SOR iterations: 84
+u-change: 0.00214857, v-change: 0.0429873, streamfunc-change: 0.00193571, vorticity-change: 0.0199841
+
+Timestep #24: 0.00266556s
+SOR iterations: 84
+u-change: 0.00210268, v-change: 0.0334808, streamfunc-change: 0.00190181, vorticity-change: 0.0184212
+
+Timestep #25: 0.00277662s
+SOR iterations: 84
+u-change: 0.00205831, v-change: 0.0912863, streamfunc-change: 0.00186858, vorticity-change: 0.0716776
+
+Timestep #26: 0.00288769s
+SOR iterations: 84
+u-change: 0.00201575, v-change: 0.0422445, streamfunc-change: 0.00183562, vorticity-change: 0.0314615
+
+Timestep #27: 0.00299875s
+SOR iterations: 84
+u-change: 0.00197164, v-change: 0.0349738, streamfunc-change: 0.00180362, vorticity-change: 0.0174156
+
+Timestep #28: 0.00310982s
+SOR iterations: 84
+u-change: 0.00193126, v-change: 0.0381724, streamfunc-change: 0.00177208, vorticity-change: 0.0167617
+
+Timestep #29: 0.00322088s
+SOR iterations: 84
+u-change: 0.00189135, v-change: 0.030894, streamfunc-change: 0.00174107, vorticity-change: 0.015749
+
+Timestep #30: 0.00333195s
+SOR iterations: 84
+u-change: 0.0018518, v-change: 0.0428801, streamfunc-change: 0.00171061, vorticity-change: 0.0153586
+
+Timestep #31: 0.00344301s
+SOR iterations: 84
+u-change: 0.00181394, v-change: 0.032687, streamfunc-change: 0.0016811, vorticity-change: 0.0152607
+
+Timestep #32: 0.00355407s
+SOR iterations: 84
+u-change: 0.00177734, v-change: 0.0451189, streamfunc-change: 0.00165159, vorticity-change: 0.0148644
+
+Timestep #33: 0.00366514s
+SOR iterations: 84
+u-change: 0.00174164, v-change: 0.041486, streamfunc-change: 0.00162313, vorticity-change: 0.0145194
+
+Timestep #34: 0.0037762s
+SOR iterations: 84
+u-change: 0.0017075, v-change: 0.0351557, streamfunc-change: 0.00159466, vorticity-change: 0.0142022
+
+Timestep #35: 0.00388727s
+SOR iterations: 84
+u-change: 0.00167172, v-change: 0.0462986, streamfunc-change: 0.00156749, vorticity-change: 0.0139327
+
+Timestep #36: 0.00399833s
+SOR iterations: 84
+u-change: 0.00164078, v-change: 0.0504001, streamfunc-change: 0.00154039, vorticity-change: 0.0139146
+
+Timestep #37: 0.0041094s
+SOR iterations: 84
+u-change: 0.00160713, v-change: 0.0397328, streamfunc-change: 0.00151371, vorticity-change: 0.0134358
+
+Timestep #38: 0.00422046s
+SOR iterations: 84
+u-change: 0.00157615, v-change: 0.0460205, streamfunc-change: 0.0014879, vorticity-change: 0.0132189
+
+Timestep #39: 0.00433153s
+SOR iterations: 84
+u-change: 0.00154675, v-change: 0.031865, streamfunc-change: 0.00146233, vorticity-change: 0.0129954
+
+Timestep #40: 0.00444259s
+SOR iterations: 84
+u-change: 0.00151654, v-change: 0.0358417, streamfunc-change: 0.00143745, vorticity-change: 0.0127914
+
+Timestep #41: 0.00455366s
+SOR iterations: 84
+u-change: 0.00148716, v-change: 0.0278234, streamfunc-change: 0.00141272, vorticity-change: 0.0126021
+
+Timestep #42: 0.00466472s
+SOR iterations: 84
+u-change: 0.00145974, v-change: 0.0516989, streamfunc-change: 0.0013888, vorticity-change: 0.0124178
+
+Timestep #43: 0.00477579s
+SOR iterations: 84
+u-change: 0.00143139, v-change: 0.0421438, streamfunc-change: 0.00136516, vorticity-change: 0.0122808
+
+Timestep #44: 0.00488685s
+SOR iterations: 84
+u-change: 0.00140441, v-change: 0.054773, streamfunc-change: 0.00134205, vorticity-change: 0.0121524
+
+Timestep #45: 0.00499792s
+SOR iterations: 84
+u-change: 0.00137818, v-change: 0.0505403, streamfunc-change: 0.00131959, vorticity-change: 0.0122433
+
+Timestep #46: 0.00510898s
+SOR iterations: 84
+u-change: 0.00135364, v-change: 0.0494349, streamfunc-change: 0.0012974, vorticity-change: 0.0120084
+
+Timestep #47: 0.00522005s
+SOR iterations: 84
+u-change: 0.00132994, v-change: 0.0417379, streamfunc-change: 0.00127553, vorticity-change: 0.0121701
+
+Timestep #48: 0.00533111s
+SOR iterations: 84
+u-change: 0.00130599, v-change: 0.0471304, streamfunc-change: 0.00125451, vorticity-change: 0.014244
+
+Timestep #49: 0.00544218s
+SOR iterations: 84
+u-change: 0.00128887, v-change: 0.0408503, streamfunc-change: 0.00123371, vorticity-change: 0.012691
+
+Timestep #50: 0.00555324s
+SOR iterations: 84
+u-change: 0.00127063, v-change: 0.0306458, streamfunc-change: 0.00121264, vorticity-change: 0.0116614
+
+Timestep #51: 0.00566431s
+SOR iterations: 84
+u-change: 0.00125493, v-change: 0.0471491, streamfunc-change: 0.00119332, vorticity-change: 0.011294
+
+Timestep #52: 0.00577537s
+SOR iterations: 84
+u-change: 0.00124375, v-change: 0.0535518, streamfunc-change: 0.00117353, vorticity-change: 0.0110702
+
+Timestep #53: 0.00588644s
+SOR iterations: 84
+u-change: 0.00122645, v-change: 0.0564221, streamfunc-change: 0.00115421, vorticity-change: 0.010913
+
+Timestep #54: 0.0059975s
+SOR iterations: 84
+u-change: 0.00121316, v-change: 0.0589571, streamfunc-change: 0.00113522, vorticity-change: 0.0107773
+
+Timestep #55: 0.00610857s
+SOR iterations: 84
+u-change: 0.00119755, v-change: 0.0487435, streamfunc-change: 0.00111677, vorticity-change: 0.0106733
+
+Timestep #56: 0.00621963s
+SOR iterations: 84
+u-change: 0.00118441, v-change: 0.0456401, streamfunc-change: 0.00109893, vorticity-change: 0.0106147
+
+Timestep #57: 0.0063307s
+SOR iterations: 84
+u-change: 0.0011723, v-change: 0.0388664, streamfunc-change: 0.00108096, vorticity-change: 0.0108076
+
+Timestep #58: 0.00644176s
+SOR iterations: 84
+u-change: 0.00115851, v-change: 0.0472382, streamfunc-change: 0.00106388, vorticity-change: 0.0112338
+
+Timestep #59: 0.00655283s
+SOR iterations: 84
+u-change: 0.00114341, v-change: 0.0506339, streamfunc-change: 0.00104661, vorticity-change: 0.167264
+
+Timestep #60: 0.00666389s
+SOR iterations: 84
+u-change: 0.00113203, v-change: 0.0473092, streamfunc-change: 0.00103007, vorticity-change: 0.0110848
+
+Timestep #61: 0.00677495s
+SOR iterations: 84
+u-change: 0.00111865, v-change: 0.0515517, streamfunc-change: 0.0010136, vorticity-change: 0.0105118
+
+Timestep #62: 0.00688602s
+SOR iterations: 84
+u-change: 0.00110621, v-change: 0.0631899, streamfunc-change: 0.000997714, vorticity-change: 0.0103064
+
+Timestep #63: 0.00699708s
+SOR iterations: 84
+u-change: 0.00109536, v-change: 0.0733683, streamfunc-change: 0.000982111, vorticity-change: 0.0100053
+
+Timestep #64: 0.00710815s
+SOR iterations: 84
+u-change: 0.00108007, v-change: 0.0517289, streamfunc-change: 0.000966454, vorticity-change: 0.0099568
+
+Timestep #65: 0.00721921s
+SOR iterations: 84
+u-change: 0.00106882, v-change: 0.0535608, streamfunc-change: 0.000951535, vorticity-change: 0.0099492
+
+Timestep #66: 0.00733028s
+SOR iterations: 84
+u-change: 0.00105557, v-change: 0.0527784, streamfunc-change: 0.00093681, vorticity-change: 0.0101728
+
+Timestep #67: 0.00744134s
+SOR iterations: 84
+u-change: 0.001044, v-change: 0.0560834, streamfunc-change: 0.000922296, vorticity-change: 0.0106663
+
+Timestep #68: 0.00755241s
+SOR iterations: 84
+u-change: 0.00103466, v-change: 0.0402422, streamfunc-change: 0.000908173, vorticity-change: 0.0148904
+
+Timestep #69: 0.00766347s
+SOR iterations: 84
+u-change: 0.00102042, v-change: 0.0495996, streamfunc-change: 0.000894423, vorticity-change: 0.0129203
+
+Timestep #70: 0.00777454s
+SOR iterations: 84
+u-change: 0.00101111, v-change: 0.0595144, streamfunc-change: 0.00088074, vorticity-change: 0.0102478
+
+Timestep #71: 0.0078856s
+SOR iterations: 84
+u-change: 0.000998985, v-change: 0.053285, streamfunc-change: 0.000867493, vorticity-change: 0.00969974
+
+Timestep #72: 0.00799667s
+SOR iterations: 84
+u-change: 0.000988984, v-change: 0.0408842, streamfunc-change: 0.000854039, vorticity-change: 0.00947543
+
+Timestep #73: 0.00810773s
+SOR iterations: 84
+u-change: 0.000976196, v-change: 0.045431, streamfunc-change: 0.000841738, vorticity-change: 0.00947569
+
+Timestep #74: 0.0082188s
+SOR iterations: 84
+u-change: 0.00096699, v-change: 0.0591527, streamfunc-change: 0.000828981, vorticity-change: 0.0102725
+
+Timestep #75: 0.00832986s
+SOR iterations: 84
+u-change: 0.000955428, v-change: 0.0638275, streamfunc-change: 0.000816645, vorticity-change: 0.01237
+
+Timestep #76: 0.00844093s
+SOR iterations: 84
+u-change: 0.000944823, v-change: 0.0536774, streamfunc-change: 0.000804553, vorticity-change: 0.00927199
+
+Timestep #77: 0.00855199s
+SOR iterations: 84
+u-change: 0.00093384, v-change: 0.0568037, streamfunc-change: 0.000792532, vorticity-change: 0.0090016
+
+Timestep #78: 0.00866306s
+SOR iterations: 84
+u-change: 0.000924472, v-change: 0.042496, streamfunc-change: 0.000781258, vorticity-change: 0.00879383
+
+Timestep #79: 0.00877412s
+SOR iterations: 84
+u-change: 0.000914551, v-change: 0.0426206, streamfunc-change: 0.000770015, vorticity-change: 0.00868491
+
+Timestep #80: 0.00888519s
+SOR iterations: 84
+u-change: 0.000903754, v-change: 0.0298315, streamfunc-change: 0.000758653, vorticity-change: 0.00903924
+
+Timestep #81: 0.00899625s
+SOR iterations: 84
+u-change: 0.000894759, v-change: 0.0503461, streamfunc-change: 0.000747826, vorticity-change: 0.00910137
+
+Timestep #82: 0.00910732s
+SOR iterations: 84
+u-change: 0.000885495, v-change: 0.0462933, streamfunc-change: 0.000736809, vorticity-change: 0.00974284
+
+Timestep #83: 0.00921838s
+SOR iterations: 84
+u-change: 0.000874089, v-change: 0.0614566, streamfunc-change: 0.000726574, vorticity-change: 0.0270401
+
+Timestep #84: 0.00932945s
+SOR iterations: 84
+u-change: 0.000864353, v-change: 0.0518589, streamfunc-change: 0.000716483, vorticity-change: 0.0160315
+
+Timestep #85: 0.00944051s
+SOR iterations: 84
+u-change: 0.000858806, v-change: 0.0535657, streamfunc-change: 0.000706025, vorticity-change: 0.0101412
+
+Timestep #86: 0.00955158s
+SOR iterations: 84
+u-change: 0.000845097, v-change: 0.0501271, streamfunc-change: 0.000696393, vorticity-change: 0.00963135
+
+Timestep #87: 0.00966264s
+SOR iterations: 84
+u-change: 0.000838016, v-change: 0.0376, streamfunc-change: 0.000686791, vorticity-change: 0.0135484
+
+Timestep #88: 0.00977371s
+SOR iterations: 84
+u-change: 0.000830838, v-change: 0.0626238, streamfunc-change: 0.00067691, vorticity-change: 0.00974248
+
+Timestep #89: 0.00988477s
+SOR iterations: 84
+u-change: 0.000819621, v-change: 0.0435854, streamfunc-change: 0.000667578, vorticity-change: 0.00905901
+
+Timestep #90: 0.00999584s
+SOR iterations: 84
+u-change: 0.000811194, v-change: 0.0446863, streamfunc-change: 0.000658537, vorticity-change: 0.00900097
+
+Timestep #91: 0.0101069s
+SOR iterations: 84
+u-change: 0.000803694, v-change: 0.0533193, streamfunc-change: 0.000649648, vorticity-change: 0.00952376
+
+Timestep #92: 0.010218s
+SOR iterations: 84
+u-change: 0.000794135, v-change: 0.0730113, streamfunc-change: 0.000640703, vorticity-change: 0.0210538
+
+Timestep #93: 0.010329s
+SOR iterations: 84
+u-change: 0.000785936, v-change: 0.0598284, streamfunc-change: 0.000632136, vorticity-change: 0.0102132
+
+Timestep #94: 0.0104401s
+SOR iterations: 84
+u-change: 0.000777723, v-change: 0.0506147, streamfunc-change: 0.00062354, vorticity-change: 0.0222473
+
+Timestep #95: 0.0105512s
+SOR iterations: 84
+u-change: 0.0007705, v-change: 0.0565522, streamfunc-change: 0.000615152, vorticity-change: 0.0101688
+
+Timestep #96: 0.0106622s
+SOR iterations: 84
+u-change: 0.000758906, v-change: 0.0468958, streamfunc-change: 0.000606947, vorticity-change: 0.00876821
+
+Timestep #97: 0.0107733s
+SOR iterations: 84
+u-change: 0.000753933, v-change: 0.0561276, streamfunc-change: 0.000599147, vorticity-change: 0.00912707
+
+Timestep #98: 0.0108844s
+SOR iterations: 84
+u-change: 0.000747334, v-change: 0.0539353, streamfunc-change: 0.000591147, vorticity-change: 0.0322103
+
+Timestep #99: 0.0109954s
+SOR iterations: 84
+u-change: 0.000737222, v-change: 0.0461338, streamfunc-change: 0.000583377, vorticity-change: 0.00898644
+
+Timestep #100: 0.0111065s
+SOR iterations: 84
+u-change: 0.00072971, v-change: 0.0627046, streamfunc-change: 0.00057569, vorticity-change: 0.00864854
+
+Timestep #101: 0.0112175s
+SOR iterations: 84
+u-change: 0.000722317, v-change: 0.0417338, streamfunc-change: 0.000568164, vorticity-change: 0.00868244
+
+Timestep #102: 0.0113286s
+SOR iterations: 84
+u-change: 0.000715205, v-change: 0.0628034, streamfunc-change: 0.000560936, vorticity-change: 0.0103214
+
+Timestep #103: 0.0114397s
+SOR iterations: 84
+u-change: 0.000707835, v-change: 0.0342356, streamfunc-change: 0.000553798, vorticity-change: 0.0124023
+
+Timestep #104: 0.0115507s
+SOR iterations: 84
+u-change: 0.000699422, v-change: 0.0616537, streamfunc-change: 0.000546624, vorticity-change: 0.00954403
+
+Timestep #105: 0.0116618s
+SOR iterations: 84
+u-change: 0.000694292, v-change: 0.0557659, streamfunc-change: 0.000539918, vorticity-change: 0.00847747
+
+Timestep #106: 0.0117729s
+SOR iterations: 84
+u-change: 0.000686365, v-change: 0.0612198, streamfunc-change: 0.000532698, vorticity-change: 0.00822319
+
+Timestep #107: 0.0118839s
+SOR iterations: 84
+u-change: 0.00067819, v-change: 0.0384398, streamfunc-change: 0.000526384, vorticity-change: 0.00858467
+
+Timestep #108: 0.011995s
+SOR iterations: 84
+u-change: 0.000671285, v-change: 0.0521908, streamfunc-change: 0.000519604, vorticity-change: 0.00915791
+
+Timestep #109: 0.0121061s
+SOR iterations: 84
+u-change: 0.000665608, v-change: 0.0322579, streamfunc-change: 0.000513158, vorticity-change: 0.013796
+
+Timestep #110: 0.0122171s
+SOR iterations: 84
+u-change: 0.000658102, v-change: 0.0551687, streamfunc-change: 0.000506657, vorticity-change: 0.0117475
+
+Timestep #111: 0.0123282s
+SOR iterations: 84
+u-change: 0.000651959, v-change: 0.0377205, streamfunc-change: 0.0005008, vorticity-change: 0.0168516
+
+Timestep #112: 0.0124393s
+SOR iterations: 84
+u-change: 0.000644703, v-change: 0.0616892, streamfunc-change: 0.000494219, vorticity-change: 0.01849
+
+Timestep #113: 0.0125503s
+SOR iterations: 84
+u-change: 0.000637313, v-change: 0.0514112, streamfunc-change: 0.000488264, vorticity-change: 0.010545
+
+Timestep #114: 0.0126614s
+SOR iterations: 84
+u-change: 0.000633327, v-change: 0.0486427, streamfunc-change: 0.000482522, vorticity-change: 0.0107135
+
+Timestep #115: 0.0127725s
+SOR iterations: 84
+u-change: 0.000625318, v-change: 0.0584528, streamfunc-change: 0.000476763, vorticity-change: 0.00934905
+
+Timestep #116: 0.0128835s
+SOR iterations: 84
+u-change: 0.000620565, v-change: 0.0461536, streamfunc-change: 0.000470652, vorticity-change: 0.0269496
+
+Timestep #117: 0.0129946s
+SOR iterations: 84
+u-change: 0.000611754, v-change: 0.0476413, streamfunc-change: 0.000465213, vorticity-change: 0.0120732
+
+Timestep #118: 0.0131057s
+SOR iterations: 84
+u-change: 0.000605771, v-change: 0.0415923, streamfunc-change: 0.000459691, vorticity-change: 0.0131109
+
+Timestep #119: 0.0132167s
+SOR iterations: 84
+u-change: 0.000602555, v-change: 0.0403321, streamfunc-change: 0.000454462, vorticity-change: 0.015071
+
+Timestep #120: 0.0133278s
+SOR iterations: 84
+u-change: 0.000595071, v-change: 0.059467, streamfunc-change: 0.000448835, vorticity-change: 0.00802103
+
+Timestep #121: 0.0134388s
+SOR iterations: 84
+u-change: 0.000589124, v-change: 0.0461628, streamfunc-change: 0.000443346, vorticity-change: 0.00727298
+
+Timestep #122: 0.0135499s
+SOR iterations: 84
+u-change: 0.000582958, v-change: 0.0420456, streamfunc-change: 0.000438546, vorticity-change: 0.00699896
+
+Timestep #123: 0.013661s
+SOR iterations: 84
+u-change: 0.00057726, v-change: 0.065934, streamfunc-change: 0.000433228, vorticity-change: 0.00687083
+
+Timestep #124: 0.013772s
+SOR iterations: 84
+u-change: 0.000572868, v-change: 0.0521496, streamfunc-change: 0.000428119, vorticity-change: 0.00716676
+
+Timestep #125: 0.0138831s
+SOR iterations: 84
+u-change: 0.000565234, v-change: 0.0480335, streamfunc-change: 0.0004231, vorticity-change: 0.0199074
+
+Timestep #126: 0.0139942s
+SOR iterations: 84
+u-change: 0.0005584, v-change: 0.0458611, streamfunc-change: 0.000418599, vorticity-change: 0.007151
+
+Timestep #127: 0.0141052s
+SOR iterations: 84
+u-change: 0.00055641, v-change: 0.0395891, streamfunc-change: 0.000413686, vorticity-change: 0.00658141
+
+Timestep #128: 0.0142163s
+SOR iterations: 84
+u-change: 0.00054906, v-change: 0.0432673, streamfunc-change: 0.000408796, vorticity-change: 0.00652921
+
+Timestep #129: 0.0143274s
+SOR iterations: 84
+u-change: 0.000543453, v-change: 0.0572523, streamfunc-change: 0.000404247, vorticity-change: 0.00702871
+
+Timestep #130: 0.0144384s
+SOR iterations: 84
+u-change: 0.000538935, v-change: 0.050785, streamfunc-change: 0.000399717, vorticity-change: 0.0133446
+
+Timestep #131: 0.0145495s
+SOR iterations: 84
+u-change: 0.000534133, v-change: 0.0537828, streamfunc-change: 0.000395223, vorticity-change: 0.00703206
+
+Timestep #132: 0.0146606s
+SOR iterations: 84
+u-change: 0.000527539, v-change: 0.04977, streamfunc-change: 0.000390756, vorticity-change: 0.121828
+
+Timestep #133: 0.0147716s
+SOR iterations: 84
+u-change: 0.000521423, v-change: 0.049083, streamfunc-change: 0.000386544, vorticity-change: 0.00651773
+
+Timestep #134: 0.0148827s
+SOR iterations: 84
+u-change: 0.000520472, v-change: 0.0660159, streamfunc-change: 0.000381994, vorticity-change: 0.00578974
+
+Timestep #135: 0.0149938s
+SOR iterations: 84
+u-change: 0.000511873, v-change: 0.0493314, streamfunc-change: 0.000378141, vorticity-change: 0.00562358
+
+Timestep #136: 0.0151048s
+SOR iterations: 84
+u-change: 0.000507884, v-change: 0.041042, streamfunc-change: 0.000373697, vorticity-change: 0.00548146
+
+Timestep #137: 0.0152159s
+SOR iterations: 84
+u-change: 0.000503289, v-change: 0.0562118, streamfunc-change: 0.000369334, vorticity-change: 0.00540692
+
+Timestep #138: 0.0153269s
+SOR iterations: 84
+u-change: 0.000497263, v-change: 0.0560556, streamfunc-change: 0.000365764, vorticity-change: 0.00527299
+
+Timestep #139: 0.015438s
+SOR iterations: 84
+u-change: 0.000494106, v-change: 0.0490867, streamfunc-change: 0.000361647, vorticity-change: 0.00544713
+
+Timestep #140: 0.0155491s
+SOR iterations: 84
+u-change: 0.000488152, v-change: 0.0302288, streamfunc-change: 0.000357766, vorticity-change: 0.0056466
+
+Timestep #141: 0.0156601s
+SOR iterations: 84
+u-change: 0.000485658, v-change: 0.0460516, streamfunc-change: 0.000353666, vorticity-change: 0.00614804
+
+Timestep #142: 0.0157712s
+SOR iterations: 84
+u-change: 0.000477345, v-change: 0.0541002, streamfunc-change: 0.00034991, vorticity-change: 0.0122508
+
+Timestep #143: 0.0158823s
+SOR iterations: 84
+u-change: 0.000474194, v-change: 0.0397406, streamfunc-change: 0.000346247, vorticity-change: 0.00661535
+
+Timestep #144: 0.0159933s
+SOR iterations: 84
+u-change: 0.000470775, v-change: 0.0544521, streamfunc-change: 0.000342606, vorticity-change: 0.0263195
+
+Timestep #145: 0.0161044s
+SOR iterations: 84
+u-change: 0.000465416, v-change: 0.0442143, streamfunc-change: 0.000338955, vorticity-change: 0.00626443
+
+Timestep #146: 0.0162155s
+SOR iterations: 84
+u-change: 0.000462108, v-change: 0.0352209, streamfunc-change: 0.000335225, vorticity-change: 0.00533797
+
+Timestep #147: 0.0163265s
+SOR iterations: 84
+u-change: 0.000456979, v-change: 0.0439145, streamfunc-change: 0.000331648, vorticity-change: 0.00516441
+
+Timestep #148: 0.0164376s
+SOR iterations: 84
+u-change: 0.000453466, v-change: 0.0536896, streamfunc-change: 0.000328165, vorticity-change: 0.00650655
+
+Timestep #149: 0.0165487s
+SOR iterations: 84
+u-change: 0.000445509, v-change: 0.0531279, streamfunc-change: 0.000324915, vorticity-change: 0.00640473
+
+Timestep #150: 0.0166597s
+SOR iterations: 84
+u-change: 0.000445254, v-change: 0.0517628, streamfunc-change: 0.00032143, vorticity-change: 0.00832671
+
+Timestep #151: 0.0167708s
+SOR iterations: 84
+u-change: 0.000440273, v-change: 0.0487118, streamfunc-change: 0.000317963, vorticity-change: 0.00527147
+
+Timestep #152: 0.0168819s
+SOR iterations: 84
+u-change: 0.000434394, v-change: 0.0405871, streamfunc-change: 0.000314824, vorticity-change: 0.00497842
+
+Timestep #153: 0.0169929s
+SOR iterations: 84
+u-change: 0.000431569, v-change: 0.0496868, streamfunc-change: 0.000311398, vorticity-change: 0.0051129
+
+Timestep #154: 0.017104s
+SOR iterations: 84
+u-change: 0.00042795, v-change: 0.0401329, streamfunc-change: 0.000308491, vorticity-change: 0.00468277
+
+Timestep #155: 0.017215s
+SOR iterations: 84
+u-change: 0.000424577, v-change: 0.0361425, streamfunc-change: 0.000304803, vorticity-change: 0.0047345
+
+Timestep #156: 0.0173261s
+SOR iterations: 84
+u-change: 0.00041857, v-change: 0.0486659, streamfunc-change: 0.000302178, vorticity-change: 0.00492692
+
+Timestep #157: 0.0174372s
+SOR iterations: 84
+u-change: 0.000415093, v-change: 0.0548904, streamfunc-change: 0.000298651, vorticity-change: 0.00582097
+
+Timestep #158: 0.0175482s
+SOR iterations: 84
+u-change: 0.000410871, v-change: 0.0573904, streamfunc-change: 0.000295957, vorticity-change: 0.0139149
+
+Timestep #159: 0.0176593s
+SOR iterations: 84
+u-change: 0.000410522, v-change: 0.0553244, streamfunc-change: 0.000292904, vorticity-change: 0.0199769
+
+Timestep #160: 0.0177704s
+SOR iterations: 84
+u-change: 0.000403634, v-change: 0.104969, streamfunc-change: 0.000289899, vorticity-change: 0.00522591
+
+Timestep #161: 0.0178814s
+SOR iterations: 84
+u-change: 0.000400387, v-change: 0.0518447, streamfunc-change: 0.000286913, vorticity-change: 0.00461596
+
+Timestep #162: 0.0179925s
+SOR iterations: 84
+u-change: 0.000395095, v-change: 0.0527204, streamfunc-change: 0.000283966, vorticity-change: 0.00454063
+
+Timestep #163: 0.0181036s
+SOR iterations: 84
+u-change: 0.000392938, v-change: 0.0595527, streamfunc-change: 0.000281309, vorticity-change: 0.0042279
+
+Timestep #164: 0.0182146s
+SOR iterations: 84
+u-change: 0.000390446, v-change: 0.0487535, streamfunc-change: 0.000278271, vorticity-change: 0.0040788
+
+Timestep #165: 0.0183257s
+SOR iterations: 84
+u-change: 0.000385968, v-change: 0.0373068, streamfunc-change: 0.000275681, vorticity-change: 0.00425866
+
+Timestep #166: 0.0184368s
+SOR iterations: 84
+u-change: 0.000380711, v-change: 0.0482975, streamfunc-change: 0.000272822, vorticity-change: 0.00454611
+
+Timestep #167: 0.0185478s
+SOR iterations: 84
+u-change: 0.00037883, v-change: 0.0568656, streamfunc-change: 0.000270078, vorticity-change: 0.00650381
+
+Timestep #168: 0.0186589s
+SOR iterations: 84
+u-change: 0.000374836, v-change: 0.0499478, streamfunc-change: 0.00026784, vorticity-change: 0.00544287
+
+Timestep #169: 0.01877s
+SOR iterations: 84
+u-change: 0.000372706, v-change: 0.043186, streamfunc-change: 0.000264836, vorticity-change: 0.00462472
+
+Timestep #170: 0.018881s
+SOR iterations: 84
+u-change: 0.000368459, v-change: 0.0409157, streamfunc-change: 0.000262318, vorticity-change: 0.00472447
+
+Timestep #171: 0.0189921s
+SOR iterations: 84
+u-change: 0.000364586, v-change: 0.0431676, streamfunc-change: 0.000259553, vorticity-change: 0.00990071
+
+Timestep #172: 0.0191032s
+SOR iterations: 84
+u-change: 0.000361381, v-change: 0.0385799, streamfunc-change: 0.00025726, vorticity-change: 0.00477968
+
+Timestep #173: 0.0192142s
+SOR iterations: 84
+u-change: 0.000360445, v-change: 0.0451178, streamfunc-change: 0.000254599, vorticity-change: 0.00404019
+
+Timestep #174: 0.0193253s
+SOR iterations: 84
+u-change: 0.00035259, v-change: 0.0431152, streamfunc-change: 0.000252312, vorticity-change: 0.00380585
+
+Timestep #175: 0.0194363s
+SOR iterations: 84
+u-change: 0.000352093, v-change: 0.0450693, streamfunc-change: 0.000249623, vorticity-change: 0.00370847
+
+Timestep #176: 0.0195474s
+SOR iterations: 84
+u-change: 0.000350109, v-change: 0.040323, streamfunc-change: 0.000247521, vorticity-change: 0.00356055
+
+Timestep #177: 0.0196585s
+SOR iterations: 84
+u-change: 0.000344963, v-change: 0.047739, streamfunc-change: 0.000244592, vorticity-change: 0.00358261
+
+Timestep #178: 0.0197695s
+SOR iterations: 84
+u-change: 0.000340782, v-change: 0.0501668, streamfunc-change: 0.000242912, vorticity-change: 0.0035663
+
+Timestep #179: 0.0198806s
+SOR iterations: 84
+u-change: 0.000339948, v-change: 0.0401066, streamfunc-change: 0.000240077, vorticity-change: 0.00367918
+
+Timestep #180: 0.0199917s
+SOR iterations: 84
+u-change: 0.000336443, v-change: 0.0510006, streamfunc-change: 0.000237933, vorticity-change: 0.00378475
+
+Timestep #181: 0.0201027s
+SOR iterations: 84
+u-change: 0.000332372, v-change: 0.0364772, streamfunc-change: 0.000235675, vorticity-change: 0.00403251
+
+Timestep #182: 0.0202138s
+SOR iterations: 84
+u-change: 0.000330978, v-change: 0.0455936, streamfunc-change: 0.000233448, vorticity-change: 0.00510481
+
+Timestep #183: 0.0203249s
+SOR iterations: 84
+u-change: 0.000327517, v-change: 0.0442777, streamfunc-change: 0.000231028, vorticity-change: 0.00563984
+
+Timestep #184: 0.0204359s
+SOR iterations: 84
+u-change: 0.000321819, v-change: 0.0349327, streamfunc-change: 0.000229184, vorticity-change: 0.00445211
+
+Timestep #185: 0.020547s
+SOR iterations: 84
+u-change: 0.000324196, v-change: 0.0435358, streamfunc-change: 0.000226777, vorticity-change: 0.00513152
+
+Timestep #186: 0.0206581s
+SOR iterations: 84
+u-change: 0.000317065, v-change: 0.0391226, streamfunc-change: 0.000224717, vorticity-change: 0.00647175
+
+Timestep #187: 0.0207691s
+SOR iterations: 84
+u-change: 0.000314067, v-change: 0.0418124, streamfunc-change: 0.000222522, vorticity-change: 0.00454564
+
+Timestep #188: 0.0208802s
+SOR iterations: 84
+u-change: 0.000312614, v-change: 0.0410348, streamfunc-change: 0.00022045, vorticity-change: 0.00491881
+
+Timestep #189: 0.0209913s
+SOR iterations: 84
+u-change: 0.00031069, v-change: 0.0421616, streamfunc-change: 0.000218572, vorticity-change: 0.00745785
+
+Timestep #190: 0.0211023s
+SOR iterations: 84
+u-change: 0.000307539, v-change: 0.0585932, streamfunc-change: 0.000216202, vorticity-change: 0.00431712
+
+Timestep #191: 0.0212134s
+SOR iterations: 84
+u-change: 0.000304455, v-change: 0.0492868, streamfunc-change: 0.000214144, vorticity-change: 0.00424671
+
+Timestep #192: 0.0213244s
+SOR iterations: 84
+u-change: 0.000299753, v-change: 0.0549521, streamfunc-change: 0.000212402, vorticity-change: 0.00739646
+
+Timestep #193: 0.0214355s
+SOR iterations: 84
+u-change: 0.000300521, v-change: 0.0476581, streamfunc-change: 0.000210322, vorticity-change: 0.00442751
+
+Timestep #194: 0.0215466s
+SOR iterations: 84
+u-change: 0.00029516, v-change: 0.0396848, streamfunc-change: 0.000208277, vorticity-change: 0.00361601
+
+Timestep #195: 0.0216576s
+SOR iterations: 84
+u-change: 0.000293611, v-change: 0.0292272, streamfunc-change: 0.000206242, vorticity-change: 0.00336446
+
+Timestep #196: 0.0217687s
+SOR iterations: 84
+u-change: 0.000290944, v-change: 0.0523073, streamfunc-change: 0.000204575, vorticity-change: 0.00379492
+
+Timestep #197: 0.0218798s
+SOR iterations: 84
+u-change: 0.000290363, v-change: 0.0446722, streamfunc-change: 0.00020263, vorticity-change: 0.00373193
+
+Timestep #198: 0.0219908s
+SOR iterations: 84
+u-change: 0.000287254, v-change: 0.0524762, streamfunc-change: 0.000200805, vorticity-change: 0.00379082
+
+Timestep #199: 0.0221019s
+SOR iterations: 84
+u-change: 0.000281254, v-change: 0.0569219, streamfunc-change: 0.000198927, vorticity-change: 0.00452839
+
+Timestep #200: 0.022213s
+SOR iterations: 84
+u-change: 0.000280773, v-change: 0.0409176, streamfunc-change: 0.000196902, vorticity-change: 0.00632653
+
+Timestep #201: 0.022324s
+SOR iterations: 84
+u-change: 0.000279448, v-change: 0.0278781, streamfunc-change: 0.000195361, vorticity-change: 0.00394154
+
+Timestep #202: 0.0224351s
+SOR iterations: 84
+u-change: 0.000274556, v-change: 0.0382769, streamfunc-change: 0.000193554, vorticity-change: 0.00350803
+
+Timestep #203: 0.0225462s
+SOR iterations: 84
+u-change: 0.000274625, v-change: 0.0341294, streamfunc-change: 0.00019172, vorticity-change: 0.00336955
+
+Timestep #204: 0.0226572s
+SOR iterations: 84
+u-change: 0.000271847, v-change: 0.0623026, streamfunc-change: 0.000189782, vorticity-change: 0.00321758
+
+Timestep #205: 0.0227683s
+SOR iterations: 84
+u-change: 0.000265255, v-change: 0.0485936, streamfunc-change: 0.000188343, vorticity-change: 0.00320542
+
+Timestep #206: 0.0228794s
+SOR iterations: 84
+u-change: 0.000269368, v-change: 0.0430145, streamfunc-change: 0.000186464, vorticity-change: 0.00321151
+
+Timestep #207: 0.0229904s
+SOR iterations: 84
+u-change: 0.000261281, v-change: 0.0517319, streamfunc-change: 0.000184984, vorticity-change: 0.00326141
+
+Timestep #208: 0.0231015s
+SOR iterations: 84
+u-change: 0.000263638, v-change: 0.0512778, streamfunc-change: 0.000182997, vorticity-change: 0.0035475
+
+Timestep #209: 0.0232126s
+SOR iterations: 84
+u-change: 0.00025835, v-change: 0.0463824, streamfunc-change: 0.000181423, vorticity-change: 0.00428014
+
+Timestep #210: 0.0233236s
+SOR iterations: 84
+u-change: 0.000257874, v-change: 0.0363609, streamfunc-change: 0.000179815, vorticity-change: 0.0332543
+
+Timestep #211: 0.0234347s
+SOR iterations: 84
+u-change: 0.000254487, v-change: 0.0418313, streamfunc-change: 0.000178105, vorticity-change: 0.00507522
+
+Timestep #212: 0.0235457s
+SOR iterations: 84
+u-change: 0.00025083, v-change: 0.0603571, streamfunc-change: 0.000176722, vorticity-change: 0.0036745
+
+Timestep #213: 0.0236568s
+SOR iterations: 84
+u-change: 0.00025297, v-change: 0.0503865, streamfunc-change: 0.000174754, vorticity-change: 0.00332693
+
+Timestep #214: 0.0237679s
+SOR iterations: 84
+u-change: 0.000245762, v-change: 0.0291928, streamfunc-change: 0.000173814, vorticity-change: 0.00313887
+
+Timestep #215: 0.0238789s
+SOR iterations: 84
+u-change: 0.000246214, v-change: 0.0492164, streamfunc-change: 0.000171765, vorticity-change: 0.00337395
+
+Timestep #216: 0.02399s
+SOR iterations: 84
+u-change: 0.000245358, v-change: 0.0547953, streamfunc-change: 0.000170368, vorticity-change: 0.00328813
+
+Timestep #217: 0.0241011s
+SOR iterations: 84
+u-change: 0.000242169, v-change: 0.0432472, streamfunc-change: 0.000168659, vorticity-change: 0.00369995
+
+Timestep #218: 0.0242121s
+SOR iterations: 84
+u-change: 0.000238858, v-change: 0.0390853, streamfunc-change: 0.000167182, vorticity-change: 0.0161544
+
+Timestep #219: 0.0243232s
+SOR iterations: 84
+u-change: 0.00023583, v-change: 0.0257331, streamfunc-change: 0.000165897, vorticity-change: 0.00339464
+
+Timestep #220: 0.0244343s
+SOR iterations: 84
+u-change: 0.000238039, v-change: 0.0443386, streamfunc-change: 0.000164245, vorticity-change: 0.00285886
+
+Timestep #221: 0.0245453s
+SOR iterations: 84
+u-change: 0.000232897, v-change: 0.0406314, streamfunc-change: 0.000162886, vorticity-change: 0.00268745
+
+Timestep #222: 0.0246564s
+SOR iterations: 84
+u-change: 0.000231637, v-change: 0.03705, streamfunc-change: 0.000161271, vorticity-change: 0.00255042
+
+Timestep #223: 0.0247675s
+SOR iterations: 84
+u-change: 0.000228345, v-change: 0.0357471, streamfunc-change: 0.000160047, vorticity-change: 0.00251862
+
+Timestep #224: 0.0248785s
+SOR iterations: 84
+u-change: 0.000227003, v-change: 0.0526787, streamfunc-change: 0.000158586, vorticity-change: 0.0024634
+
+Timestep #225: 0.0249896s
+SOR iterations: 84
+u-change: 0.000226224, v-change: 0.034857, streamfunc-change: 0.000156984, vorticity-change: 0.00253387
+
+Timestep #226: 0.0251007s
+SOR iterations: 84
+u-change: 0.000222244, v-change: 0.0353562, streamfunc-change: 0.000155692, vorticity-change: 0.00266961
+
+Timestep #227: 0.0252117s
+SOR iterations: 84
+u-change: 0.000220914, v-change: 0.0532702, streamfunc-change: 0.000154205, vorticity-change: 0.00375158
+
+Timestep #228: 0.0253228s
+SOR iterations: 84
+u-change: 0.000220909, v-change: 0.0565846, streamfunc-change: 0.000153243, vorticity-change: 0.00548981
+
+Timestep #229: 0.0254338s
+SOR iterations: 84
+u-change: 0.000217751, v-change: 0.0458024, streamfunc-change: 0.000151691, vorticity-change: 0.00320097
+
+Timestep #230: 0.0255449s
+SOR iterations: 84
+u-change: 0.000216801, v-change: 0.0468201, streamfunc-change: 0.000150078, vorticity-change: 0.00322221
+
+Timestep #231: 0.025656s
+SOR iterations: 84
+u-change: 0.000213545, v-change: 0.0579555, streamfunc-change: 0.000148944, vorticity-change: 0.00872027
+
+Timestep #232: 0.025767s
+SOR iterations: 84
+u-change: 0.000211545, v-change: 0.0377209, streamfunc-change: 0.000147572, vorticity-change: 0.00425085
+
+Timestep #233: 0.0258781s
+SOR iterations: 84
+u-change: 0.000210868, v-change: 0.0547114, streamfunc-change: 0.000146457, vorticity-change: 0.00382865
+
+Timestep #234: 0.0259892s
+SOR iterations: 84
+u-change: 0.000208844, v-change: 0.048991, streamfunc-change: 0.000145076, vorticity-change: 0.00601939
+
+Timestep #235: 0.0261002s
+SOR iterations: 84
+u-change: 0.000205801, v-change: 0.0383197, streamfunc-change: 0.000143851, vorticity-change: 0.00409568
+
+Timestep #236: 0.0262113s
+SOR iterations: 84
+u-change: 0.000203907, v-change: 0.0394631, streamfunc-change: 0.00014262, vorticity-change: 0.00313926
+
+Timestep #237: 0.0263224s
+SOR iterations: 84
+u-change: 0.00020538, v-change: 0.0370351, streamfunc-change: 0.000141347, vorticity-change: 0.00279213
+
+Timestep #238: 0.0264334s
+SOR iterations: 84
+u-change: 0.000199916, v-change: 0.0500656, streamfunc-change: 0.000140063, vorticity-change: 0.00266438
+
+Timestep #239: 0.0265445s
+SOR iterations: 84
+u-change: 0.00020117, v-change: 0.052944, streamfunc-change: 0.000138794, vorticity-change: 0.00252788
+
+Timestep #240: 0.0266556s
+SOR iterations: 84
+u-change: 0.000195802, v-change: 0.0389125, streamfunc-change: 0.000137714, vorticity-change: 0.00248665
+
+Timestep #241: 0.0267666s
+SOR iterations: 84
+u-change: 0.00019527, v-change: 0.0483803, streamfunc-change: 0.000136373, vorticity-change: 0.00249703
+
+Timestep #242: 0.0268777s
+SOR iterations: 84
+u-change: 0.000195422, v-change: 0.0470588, streamfunc-change: 0.000135244, vorticity-change: 0.00244694
+
+Timestep #243: 0.0269888s
+SOR iterations: 84
+u-change: 0.000191703, v-change: 0.0272936, streamfunc-change: 0.000134109, vorticity-change: 0.00248508
+
+Timestep #244: 0.0270998s
+SOR iterations: 84
+u-change: 0.000193661, v-change: 0.0518621, streamfunc-change: 0.000133042, vorticity-change: 0.00250197
+
+Timestep #245: 0.0272109s
+SOR iterations: 84
+u-change: 0.000190629, v-change: 0.0417945, streamfunc-change: 0.000131842, vorticity-change: 0.00262295
+
+Timestep #246: 0.0273219s
+SOR iterations: 84
+u-change: 0.000186344, v-change: 0.0482735, streamfunc-change: 0.000130555, vorticity-change: 0.00292528
+
+Timestep #247: 0.027433s
+SOR iterations: 84
+u-change: 0.00018658, v-change: 0.0358984, streamfunc-change: 0.000129662, vorticity-change: 0.00433098
+
+Timestep #248: 0.0275441s
+SOR iterations: 84
+u-change: 0.000187258, v-change: 0.036324, streamfunc-change: 0.000128045, vorticity-change: 0.00447318
+
+Timestep #249: 0.0276551s
+SOR iterations: 84
+u-change: 0.000179522, v-change: 0.0365144, streamfunc-change: 0.000127275, vorticity-change: 0.00347217
+
+Timestep #250: 0.0277662s
+SOR iterations: 84
+u-change: 0.000182903, v-change: 0.042949, streamfunc-change: 0.000126143, vorticity-change: 0.00779103
+
+Timestep #251: 0.0278773s
+SOR iterations: 84
+u-change: 0.000178871, v-change: 0.0459956, streamfunc-change: 0.000125308, vorticity-change: 0.00909511
+
+Timestep #252: 0.0279883s
+SOR iterations: 84
+u-change: 0.000180835, v-change: 0.0442386, streamfunc-change: 0.000123775, vorticity-change: 0.00367796
+
+Timestep #253: 0.0280994s
+SOR iterations: 84
+u-change: 0.000176868, v-change: 0.0390871, streamfunc-change: 0.000122883, vorticity-change: 0.00307652
+
+Timestep #254: 0.0282105s
+SOR iterations: 84
+u-change: 0.000173541, v-change: 0.053428, streamfunc-change: 0.000121931, vorticity-change: 0.00293679
+
+Timestep #255: 0.0283215s
+SOR iterations: 84
+u-change: 0.000177931, v-change: 0.0336116, streamfunc-change: 0.00012084, vorticity-change: 0.00300832
+
+Timestep #256: 0.0284326s
+SOR iterations: 84
+u-change: 0.000171569, v-change: 0.0415883, streamfunc-change: 0.000119887, vorticity-change: 0.00376335
+
+Timestep #257: 0.0285437s
+SOR iterations: 84
+u-change: 0.000171819, v-change: 0.0243408, streamfunc-change: 0.00011875, vorticity-change: 0.0086334
+
+Timestep #258: 0.0286547s
+SOR iterations: 84
+u-change: 0.000169025, v-change: 0.0567395, streamfunc-change: 0.000117503, vorticity-change: 0.00834616
+
+Timestep #259: 0.0287658s
+SOR iterations: 84
+u-change: 0.000164402, v-change: 0.0352529, streamfunc-change: 0.000116667, vorticity-change: 0.00328492
+
+Timestep #260: 0.0288769s
+SOR iterations: 84
+u-change: 0.000170233, v-change: 0.0553815, streamfunc-change: 0.000115765, vorticity-change: 0.00249972
+
+Timestep #261: 0.0289879s
+SOR iterations: 84
+u-change: 0.000164421, v-change: 0.0521013, streamfunc-change: 0.000114785, vorticity-change: 0.00221226
+
+Timestep #262: 0.029099s
+SOR iterations: 84
+u-change: 0.000164893, v-change: 0.0496671, streamfunc-change: 0.000113779, vorticity-change: 0.00212383
+
+Timestep #263: 0.0292101s
+SOR iterations: 84
+u-change: 0.000160128, v-change: 0.0525402, streamfunc-change: 0.000112723, vorticity-change: 0.00202661
+
+Timestep #264: 0.0293211s
+SOR iterations: 84
+u-change: 0.00016164, v-change: 0.0488959, streamfunc-change: 0.000112094, vorticity-change: 0.00190968
+
+Timestep #265: 0.0294322s
+SOR iterations: 84
+u-change: 0.000162259, v-change: 0.0427104, streamfunc-change: 0.00011057, vorticity-change: 0.00184478
+
+Timestep #266: 0.0295432s
+SOR iterations: 84
+u-change: 0.000157145, v-change: 0.0477194, streamfunc-change: 0.000110201, vorticity-change: 0.0017726
+
+Timestep #267: 0.0296543s
+SOR iterations: 84
+u-change: 0.000156871, v-change: 0.0368868, streamfunc-change: 0.00010889, vorticity-change: 0.00175861
+
+Timestep #268: 0.0297654s
+SOR iterations: 84
+u-change: 0.000158197, v-change: 0.0446974, streamfunc-change: 0.000108151, vorticity-change: 0.00168
+
+Timestep #269: 0.0298764s
+SOR iterations: 84
+u-change: 0.00015318, v-change: 0.0456427, streamfunc-change: 0.000107159, vorticity-change: 0.00164855
+
+Timestep #270: 0.0299875s
+SOR iterations: 84
+u-change: 0.000152382, v-change: 0.0335049, streamfunc-change: 0.000106283, vorticity-change: 0.00225446
+
+Timestep #271: 0.0300986s
+SOR iterations: 84
+u-change: 0.000154093, v-change: 0.0415391, streamfunc-change: 0.000105189, vorticity-change: 0.00303191
+
+Timestep #272: 0.0302096s
+SOR iterations: 84
+u-change: 0.000151038, v-change: 0.0404462, streamfunc-change: 0.000104534, vorticity-change: 0.00506904
+
+Timestep #273: 0.0303207s
+SOR iterations: 84
+u-change: 0.000147914, v-change: 0.0419395, streamfunc-change: 0.00010351, vorticity-change: 0.0023469
+
+Timestep #274: 0.0304318s
+SOR iterations: 84
+u-change: 0.000147865, v-change: 0.0581368, streamfunc-change: 0.000102835, vorticity-change: 0.00201755
+
+Timestep #275: 0.0305428s
+SOR iterations: 84
+u-change: 0.000149638, v-change: 0.0462931, streamfunc-change: 0.000101608, vorticity-change: 0.00187911
+
+Timestep #276: 0.0306539s
+SOR iterations: 84
+u-change: 0.000144242, v-change: 0.0589388, streamfunc-change: 0.000100723, vorticity-change: 0.00184671
+
+Timestep #277: 0.030765s
+SOR iterations: 84
+u-change: 0.000144086, v-change: 0.0494594, streamfunc-change: 0.00010022, vorticity-change: 0.00190542
+
+Timestep #278: 0.030876s
+SOR iterations: 84
+u-change: 0.000140105, v-change: 0.04754, streamfunc-change: 9.93185e-05, vorticity-change: 0.00204192
+
+Timestep #279: 0.0309871s
+SOR iterations: 84
+u-change: 0.000144902, v-change: 0.0467611, streamfunc-change: 9.82416e-05, vorticity-change: 0.00269768
+
+Timestep #280: 0.0310982s
+SOR iterations: 84
+u-change: 0.000142701, v-change: 0.0445259, streamfunc-change: 9.77028e-05, vorticity-change: 0.00635884
+
+Timestep #281: 0.0312092s
+SOR iterations: 84
+u-change: 0.000138588, v-change: 0.0524171, streamfunc-change: 9.66491e-05, vorticity-change: 0.00258154
+
+Timestep #282: 0.0313203s
+SOR iterations: 84
+u-change: 0.000137572, v-change: 0.0387439, streamfunc-change: 9.58001e-05, vorticity-change: 0.00209203
+
+Timestep #283: 0.0314313s
+SOR iterations: 84
+u-change: 0.000136867, v-change: 0.0305822, streamfunc-change: 9.4958e-05, vorticity-change: 0.00188985
+
+Timestep #284: 0.0315424s
+SOR iterations: 84
+u-change: 0.000135414, v-change: 0.0324124, streamfunc-change: 9.42712e-05, vorticity-change: 0.00176677
+
+Timestep #285: 0.0316535s
+SOR iterations: 84
+u-change: 0.000134727, v-change: 0.0238578, streamfunc-change: 9.35725e-05, vorticity-change: 0.00171408
+
+Timestep #286: 0.0317645s
+SOR iterations: 84
+u-change: 0.000134029, v-change: 0.0445218, streamfunc-change: 9.31107e-05, vorticity-change: 0.00163687
+
+Timestep #287: 0.0318756s
+SOR iterations: 84
+u-change: 0.000133773, v-change: 0.0414723, streamfunc-change: 9.18234e-05, vorticity-change: 0.00223946
+
+Timestep #288: 0.0319867s
+SOR iterations: 84
+u-change: 0.000134111, v-change: 0.033404, streamfunc-change: 9.1041e-05, vorticity-change: 0.00252771
+
+Timestep #289: 0.0320977s
+SOR iterations: 84
+u-change: 0.00012941, v-change: 0.0372267, streamfunc-change: 9.05096e-05, vorticity-change: 0.00465128
+
+Timestep #290: 0.0322088s
+SOR iterations: 84
+u-change: 0.00013009, v-change: 0.032044, streamfunc-change: 8.95533e-05, vorticity-change: 0.00336295
+
+Timestep #291: 0.0323199s
+SOR iterations: 84
+u-change: 0.000127899, v-change: 0.0353537, streamfunc-change: 8.91498e-05, vorticity-change: 0.00254271
+
+Timestep #292: 0.0324309s
+SOR iterations: 84
+u-change: 0.000129481, v-change: 0.0378573, streamfunc-change: 8.80011e-05, vorticity-change: 0.00286257
+
+Timestep #293: 0.032542s
+SOR iterations: 84
+u-change: 0.00012495, v-change: 0.0368587, streamfunc-change: 8.72367e-05, vorticity-change: 0.0139661
+
+Timestep #294: 0.0326531s
+SOR iterations: 84
+u-change: 0.000123898, v-change: 0.0363685, streamfunc-change: 8.69039e-05, vorticity-change: 0.00240884
+
+Timestep #295: 0.0327641s
+SOR iterations: 84
+u-change: 0.000126311, v-change: 0.0319523, streamfunc-change: 8.5822e-05, vorticity-change: 0.00188642
+
+Timestep #296: 0.0328752s
+SOR iterations: 84
+u-change: 0.000122213, v-change: 0.0314167, streamfunc-change: 8.52314e-05, vorticity-change: 0.00167553
+
+Timestep #297: 0.0329863s
+SOR iterations: 84
+u-change: 0.000123213, v-change: 0.0227956, streamfunc-change: 8.43611e-05, vorticity-change: 0.00155184
+
+Timestep #298: 0.0330973s
+SOR iterations: 84
+u-change: 0.000118901, v-change: 0.0334796, streamfunc-change: 8.39626e-05, vorticity-change: 0.00148589
+
+Timestep #299: 0.0332084s
+SOR iterations: 84
+u-change: 0.000121881, v-change: 0.0431907, streamfunc-change: 8.29057e-05, vorticity-change: 0.00154887
+
+Timestep #300: 0.0333195s
+SOR iterations: 84
+u-change: 0.000118196, v-change: 0.043933, streamfunc-change: 8.22275e-05, vorticity-change: 0.00149224
+
+Timestep #301: 0.0334305s
+SOR iterations: 84
+u-change: 0.000116643, v-change: 0.0369639, streamfunc-change: 8.17682e-05, vorticity-change: 0.00145296
+
+Timestep #302: 0.0335416s
+SOR iterations: 84
+u-change: 0.000120115, v-change: 0.0342955, streamfunc-change: 8.09309e-05, vorticity-change: 0.00142966
+
+Timestep #303: 0.0336526s
+SOR iterations: 84
+u-change: 0.000115608, v-change: 0.0412785, streamfunc-change: 8.01623e-05, vorticity-change: 0.00137731
+
+Timestep #304: 0.0337637s
+SOR iterations: 84
+u-change: 0.00011399, v-change: 0.0306199, streamfunc-change: 7.96616e-05, vorticity-change: 0.00168318
+
+Timestep #305: 0.0338748s
+SOR iterations: 84
+u-change: 0.000111591, v-change: 0.0401096, streamfunc-change: 7.91266e-05, vorticity-change: 0.00146321
+
+Timestep #306: 0.0339858s
+SOR iterations: 84
+u-change: 0.000114031, v-change: 0.0408416, streamfunc-change: 7.81153e-05, vorticity-change: 0.00145627
+
+Timestep #307: 0.0340969s
+SOR iterations: 84
+u-change: 0.000110849, v-change: 0.0363624, streamfunc-change: 7.77337e-05, vorticity-change: 0.00155423
+
+Timestep #308: 0.034208s
+SOR iterations: 84
+u-change: 0.000113209, v-change: 0.0242883, streamfunc-change: 7.6915e-05, vorticity-change: 0.00151937
+
+Timestep #309: 0.034319s
+SOR iterations: 84
+u-change: 0.000109636, v-change: 0.0314584, streamfunc-change: 7.65312e-05, vorticity-change: 0.00153536
+
+Timestep #310: 0.0344301s
+SOR iterations: 84
+u-change: 0.000111007, v-change: 0.0341915, streamfunc-change: 7.54579e-05, vorticity-change: 0.00156837
+
+Timestep #311: 0.0345412s
+SOR iterations: 84
+u-change: 0.000109226, v-change: 0.0336712, streamfunc-change: 7.51755e-05, vorticity-change: 0.00171693
+
+Timestep #312: 0.0346522s
+SOR iterations: 84
+u-change: 0.000107817, v-change: 0.0387944, streamfunc-change: 7.47684e-05, vorticity-change: 0.00220068
+
+Timestep #313: 0.0347633s
+SOR iterations: 84
+u-change: 0.000108903, v-change: 0.0412844, streamfunc-change: 7.37377e-05, vorticity-change: 0.0190788
+
+Timestep #314: 0.0348744s
+SOR iterations: 84
+u-change: 0.000101302, v-change: 0.0487509, streamfunc-change: 7.31555e-05, vorticity-change: 0.00220071
+
+Timestep #315: 0.0349854s
+SOR iterations: 84
+u-change: 0.000106837, v-change: 0.0320016, streamfunc-change: 7.26723e-05, vorticity-change: 0.00160621
+
+Timestep #316: 0.0350965s
+SOR iterations: 84
+u-change: 0.000105167, v-change: 0.0341962, streamfunc-change: 7.20425e-05, vorticity-change: 0.00141813
+
+Timestep #317: 0.0352076s
+SOR iterations: 84
+u-change: 0.000103982, v-change: 0.0465849, streamfunc-change: 7.13981e-05, vorticity-change: 0.00130446
+
+Timestep #318: 0.0353186s
+SOR iterations: 84
+u-change: 0.000103018, v-change: 0.0270405, streamfunc-change: 7.10635e-05, vorticity-change: 0.00126173
+
+Timestep #319: 0.0354297s
+SOR iterations: 84
+u-change: 9.9188e-05, v-change: 0.0453572, streamfunc-change: 7.00525e-05, vorticity-change: 0.00119653
+
+Timestep #320: 0.0355407s
+SOR iterations: 84
+u-change: 0.000101826, v-change: 0.0253298, streamfunc-change: 6.97724e-05, vorticity-change: 0.00117299
+
+Timestep #321: 0.0356518s
+SOR iterations: 84
+u-change: 0.00010095, v-change: 0.0398749, streamfunc-change: 6.89895e-05, vorticity-change: 0.00117795
+
+Timestep #322: 0.0357629s
+SOR iterations: 84
+u-change: 0.000100868, v-change: 0.0321535, streamfunc-change: 6.83768e-05, vorticity-change: 0.0011863
+
+Timestep #323: 0.0358739s
+SOR iterations: 84
+u-change: 9.49701e-05, v-change: 0.0433393, streamfunc-change: 6.82334e-05, vorticity-change: 0.00125197
+
+Timestep #324: 0.035985s
+SOR iterations: 84
+u-change: 9.77745e-05, v-change: 0.0380186, streamfunc-change: 6.71979e-05, vorticity-change: 0.00131124
+
+Timestep #325: 0.0360961s
+SOR iterations: 84
+u-change: 9.7296e-05, v-change: 0.0466724, streamfunc-change: 6.66836e-05, vorticity-change: 0.00153192
+
+Timestep #326: 0.0362071s
+SOR iterations: 84
+u-change: 9.37415e-05, v-change: 0.0374745, streamfunc-change: 6.63757e-05, vorticity-change: 0.00251407
+
+Timestep #327: 0.0363182s
+SOR iterations: 84
+u-change: 9.93611e-05, v-change: 0.0440395, streamfunc-change: 6.56259e-05, vorticity-change: 0.00360934
+
+Timestep #328: 0.0364293s
+SOR iterations: 84
+u-change: 8.98189e-05, v-change: 0.0354022, streamfunc-change: 6.52386e-05, vorticity-change: 0.00159186
+
+Timestep #329: 0.0365403s
+SOR iterations: 84
+u-change: 9.4782e-05, v-change: 0.0391498, streamfunc-change: 6.43829e-05, vorticity-change: 0.00127436
+
+Timestep #330: 0.0366514s
+SOR iterations: 84
+u-change: 9.36001e-05, v-change: 0.030629, streamfunc-change: 6.42361e-05, vorticity-change: 0.00111418
+
+Timestep #331: 0.0367625s
+SOR iterations: 84
+u-change: 9.22243e-05, v-change: 0.0310122, streamfunc-change: 6.32956e-05, vorticity-change: 0.00103883
+
+Timestep #332: 0.0368735s
+SOR iterations: 84
+u-change: 8.83186e-05, v-change: 0.0369396, streamfunc-change: 6.3038e-05, vorticity-change: 0.000971516
+
+Timestep #333: 0.0369846s
+SOR iterations: 84
+u-change: 9.0395e-05, v-change: 0.0367308, streamfunc-change: 6.24024e-05, vorticity-change: 0.000931643
+
+Timestep #334: 0.0370957s
+SOR iterations: 84
+u-change: 9.03008e-05, v-change: 0.0176061, streamfunc-change: 6.22027e-05, vorticity-change: 0.000903743
+
+Timestep #335: 0.0372067s
+SOR iterations: 84
+u-change: 8.76959e-05, v-change: 0.0356212, streamfunc-change: 6.12803e-05, vorticity-change: 0.000905398
+
+Timestep #336: 0.0373178s
+SOR iterations: 84
+u-change: 8.89586e-05, v-change: 0.0278413, streamfunc-change: 6.09406e-05, vorticity-change: 0.000846629
+
+Timestep #337: 0.0374288s
+SOR iterations: 84
+u-change: 8.94022e-05, v-change: 0.0264273, streamfunc-change: 6.06866e-05, vorticity-change: 0.000833909
+
+Timestep #338: 0.0375399s
+SOR iterations: 84
+u-change: 8.4829e-05, v-change: 0.0347004, streamfunc-change: 5.98299e-05, vorticity-change: 0.000813687
+
+Timestep #339: 0.037651s
+SOR iterations: 84
+u-change: 8.7862e-05, v-change: 0.0359142, streamfunc-change: 5.93462e-05, vorticity-change: 0.000787908
+
+Timestep #340: 0.037762s
+SOR iterations: 84
+u-change: 8.67778e-05, v-change: 0.0201206, streamfunc-change: 5.90701e-05, vorticity-change: 0.00077153
+
+Timestep #341: 0.0378731s
+SOR iterations: 84
+u-change: 8.17505e-05, v-change: 0.0394632, streamfunc-change: 5.8328e-05, vorticity-change: 0.000806038
+
+Timestep #342: 0.0379842s
+SOR iterations: 84
+u-change: 8.50951e-05, v-change: 0.0330913, streamfunc-change: 5.79734e-05, vorticity-change: 0.000810726
+
+Timestep #343: 0.0380952s
+SOR iterations: 84
+u-change: 8.54274e-05, v-change: 0.0428452, streamfunc-change: 5.75748e-05, vorticity-change: 0.000772639
+
+Timestep #344: 0.0382063s
+SOR iterations: 84
+u-change: 8.05133e-05, v-change: 0.0346059, streamfunc-change: 5.67373e-05, vorticity-change: 0.00076034
+
+Timestep #345: 0.0383174s
+SOR iterations: 84
+u-change: 8.22647e-05, v-change: 0.0430039, streamfunc-change: 5.66043e-05, vorticity-change: 0.000747839
+
+Timestep #346: 0.0384284s
+SOR iterations: 84
+u-change: 8.3906e-05, v-change: 0.0475068, streamfunc-change: 5.57902e-05, vorticity-change: 0.000730333
+
+Timestep #347: 0.0385395s
+SOR iterations: 84
+u-change: 7.84819e-05, v-change: 0.0363916, streamfunc-change: 5.57703e-05, vorticity-change: 0.000717134
+
+Timestep #348: 0.0386506s
+SOR iterations: 84
+u-change: 8.07634e-05, v-change: 0.0305262, streamfunc-change: 5.51672e-05, vorticity-change: 0.000714424
+
+Timestep #349: 0.0387616s
+SOR iterations: 84
+u-change: 8.13486e-05, v-change: 0.0391941, streamfunc-change: 5.46735e-05, vorticity-change: 0.000713603
+
+Timestep #350: 0.0388727s
+SOR iterations: 84
+u-change: 7.66877e-05, v-change: 0.0413692, streamfunc-change: 5.40292e-05, vorticity-change: 0.000680656
+
+Timestep #351: 0.0389838s
+SOR iterations: 84
+u-change: 7.79123e-05, v-change: 0.0381019, streamfunc-change: 5.38644e-05, vorticity-change: 0.000670728
+
+Timestep #352: 0.0390948s
+SOR iterations: 84
+u-change: 7.74324e-05, v-change: 0.0309355, streamfunc-change: 5.33583e-05, vorticity-change: 0.000662548
+
+Timestep #353: 0.0392059s
+SOR iterations: 84
+u-change: 7.67901e-05, v-change: 0.0315159, streamfunc-change: 5.30364e-05, vorticity-change: 0.000665586
+
+Timestep #354: 0.039317s
+SOR iterations: 84
+u-change: 7.97559e-05, v-change: 0.0410557, streamfunc-change: 5.2348e-05, vorticity-change: 0.00115153
+
+Timestep #355: 0.039428s
+SOR iterations: 84
+u-change: 7.22926e-05, v-change: 0.0350101, streamfunc-change: 5.17795e-05, vorticity-change: 0.000727983
+
+Timestep #356: 0.0395391s
+SOR iterations: 84
+u-change: 7.46803e-05, v-change: 0.0314703, streamfunc-change: 5.1863e-05, vorticity-change: 0.000710147
+
+Timestep #357: 0.0396501s
+SOR iterations: 84
+u-change: 7.42935e-05, v-change: 0.0363309, streamfunc-change: 5.09543e-05, vorticity-change: 0.000713811
+
+Timestep #358: 0.0397612s
+SOR iterations: 84
+u-change: 7.43213e-05, v-change: 0.0313463, streamfunc-change: 5.09204e-05, vorticity-change: 0.000675876
+
+Timestep #359: 0.0398723s
+SOR iterations: 84
+u-change: 6.91631e-05, v-change: 0.0339738, streamfunc-change: 5.01785e-05, vorticity-change: 0.000666183
+
+Timestep #360: 0.0399833s
+SOR iterations: 84
+u-change: 7.27801e-05, v-change: 0.0267503, streamfunc-change: 5.01578e-05, vorticity-change: 0.000640991
+
+Timestep #361: 0.0400944s
+SOR iterations: 84
+u-change: 7.5732e-05, v-change: 0.043871, streamfunc-change: 4.94213e-05, vorticity-change: 0.000629251
+
+Timestep #362: 0.0402055s
+SOR iterations: 84
+u-change: 6.97117e-05, v-change: 0.0304897, streamfunc-change: 4.89651e-05, vorticity-change: 0.0006092
+
+Timestep #363: 0.0403165s
+SOR iterations: 84
+u-change: 7.19606e-05, v-change: 0.0233959, streamfunc-change: 4.86294e-05, vorticity-change: 0.000607853
+
+Timestep #364: 0.0404276s
+SOR iterations: 84
+u-change: 6.73736e-05, v-change: 0.0192316, streamfunc-change: 4.82537e-05, vorticity-change: 0.000589953
+
+Timestep #365: 0.0405387s
+SOR iterations: 84
+u-change: 7.03303e-05, v-change: 0.0300695, streamfunc-change: 4.80097e-05, vorticity-change: 0.000587604
+
+Timestep #366: 0.0406497s
+SOR iterations: 84
+u-change: 6.7162e-05, v-change: 0.0288203, streamfunc-change: 4.74769e-05, vorticity-change: 0.000620676
+
+Timestep #367: 0.0407608s
+SOR iterations: 84
+u-change: 6.94284e-05, v-change: 0.0268088, streamfunc-change: 4.70346e-05, vorticity-change: 0.000601605
+
+Timestep #368: 0.0408719s
+SOR iterations: 84
+u-change: 6.58396e-05, v-change: 0.0245257, streamfunc-change: 4.68117e-05, vorticity-change: 0.000591442
+
+Timestep #369: 0.0409829s
+SOR iterations: 84
+u-change: 6.98747e-05, v-change: 0.0178642, streamfunc-change: 4.63514e-05, vorticity-change: 0.000590276
+
+Timestep #370: 0.041094s
+SOR iterations: 84
+u-change: 6.40773e-05, v-change: 0.0407897, streamfunc-change: 4.61001e-05, vorticity-change: 0.000576989
+
+Timestep #371: 0.0412051s
+SOR iterations: 84
+u-change: 6.73389e-05, v-change: 0.0390359, streamfunc-change: 4.54375e-05, vorticity-change: 0.000575859
+
+Timestep #372: 0.0413161s
+SOR iterations: 84
+u-change: 6.26415e-05, v-change: 0.0181991, streamfunc-change: 4.52663e-05, vorticity-change: 0.000597098
+
+Timestep #373: 0.0414272s
+SOR iterations: 84
+u-change: 6.78409e-05, v-change: 0.0307752, streamfunc-change: 4.49237e-05, vorticity-change: 0.000599568
+
+Timestep #374: 0.0415382s
+SOR iterations: 84
+u-change: 6.30791e-05, v-change: 0.0387892, streamfunc-change: 4.43487e-05, vorticity-change: 0.000608498
+
+Timestep #375: 0.0416493s
+SOR iterations: 84
+u-change: 6.48452e-05, v-change: 0.0402241, streamfunc-change: 4.38849e-05, vorticity-change: 0.000585983
+
+Timestep #376: 0.0417604s
+SOR iterations: 84
+u-change: 6.21592e-05, v-change: 0.0240603, streamfunc-change: 4.38648e-05, vorticity-change: 0.000701623
+
+Timestep #377: 0.0418714s
+SOR iterations: 84
+u-change: 6.59923e-05, v-change: 0.0351952, streamfunc-change: 4.34316e-05, vorticity-change: 0.000702682
+
+Timestep #378: 0.0419825s
+SOR iterations: 84
+u-change: 6.19981e-05, v-change: 0.0347799, streamfunc-change: 4.27297e-05, vorticity-change: 0.000701546
+
+Timestep #379: 0.0420936s
+SOR iterations: 84
+u-change: 6.09656e-05, v-change: 0.0305103, streamfunc-change: 4.28967e-05, vorticity-change: 0.000701653
+
+Timestep #380: 0.0422046s
+SOR iterations: 84
+u-change: 6.14349e-05, v-change: 0.026096, streamfunc-change: 4.22806e-05, vorticity-change: 0.000710336
+
+Timestep #381: 0.0423157s
+SOR iterations: 84
+u-change: 6.25694e-05, v-change: 0.0337552, streamfunc-change: 4.18582e-05, vorticity-change: 0.000877411
+
+Timestep #382: 0.0424268s
+SOR iterations: 84
+u-change: 5.85938e-05, v-change: 0.0356954, streamfunc-change: 4.16405e-05, vorticity-change: 0.000879258
+
+Timestep #383: 0.0425378s
+SOR iterations: 84
+u-change: 5.88665e-05, v-change: 0.0420328, streamfunc-change: 4.14603e-05, vorticity-change: 0.000895327
+
+Timestep #384: 0.0426489s
+SOR iterations: 84
+u-change: 6.20982e-05, v-change: 0.0391114, streamfunc-change: 4.06963e-05, vorticity-change: 0.000967112
+
+Timestep #385: 0.04276s
+SOR iterations: 84
+u-change: 5.54986e-05, v-change: 0.024959, streamfunc-change: 4.07606e-05, vorticity-change: 0.00105647
+
+Timestep #386: 0.042871s
+SOR iterations: 84
+u-change: 6.23593e-05, v-change: 0.0357408, streamfunc-change: 4.00655e-05, vorticity-change: 0.00135197
+
+Timestep #387: 0.0429821s
+SOR iterations: 84
+u-change: 5.50145e-05, v-change: 0.0393552, streamfunc-change: 4.0035e-05, vorticity-change: 0.0032857
+
+Timestep #388: 0.0430932s
+SOR iterations: 84
+u-change: 6.01149e-05, v-change: 0.0309422, streamfunc-change: 3.96445e-05, vorticity-change: 0.00219891
+
+Timestep #389: 0.0432042s
+SOR iterations: 84
+u-change: 5.57986e-05, v-change: 0.0391721, streamfunc-change: 3.91723e-05, vorticity-change: 0.00119447
+
+Timestep #390: 0.0433153s
+SOR iterations: 84
+u-change: 6.12038e-05, v-change: 0.044781, streamfunc-change: 3.88719e-05, vorticity-change: 0.000948308
+
+Timestep #391: 0.0434264s
+SOR iterations: 84
+u-change: 5.30748e-05, v-change: 0.0277238, streamfunc-change: 3.86967e-05, vorticity-change: 0.000843903
+
+Timestep #392: 0.0435374s
+SOR iterations: 84
+u-change: 5.40585e-05, v-change: 0.03356, streamfunc-change: 3.84905e-05, vorticity-change: 0.000780855
+
+Timestep #393: 0.0436485s
+SOR iterations: 84
+u-change: 5.8092e-05, v-change: 0.0323358, streamfunc-change: 3.80042e-05, vorticity-change: 0.000734078
+
+Timestep #394: 0.0437595s
+SOR iterations: 84
+u-change: 5.46123e-05, v-change: 0.0378751, streamfunc-change: 3.76048e-05, vorticity-change: 0.000681584
+
+Timestep #395: 0.0438706s
+SOR iterations: 84
+u-change: 5.43483e-05, v-change: 0.0297947, streamfunc-change: 3.71812e-05, vorticity-change: 0.000685731
+
+Timestep #396: 0.0439817s
+SOR iterations: 84
+u-change: 5.31547e-05, v-change: 0.0285312, streamfunc-change: 3.72538e-05, vorticity-change: 0.000625071
+
+Timestep #397: 0.0440927s
+SOR iterations: 84
+u-change: 5.25539e-05, v-change: 0.0387577, streamfunc-change: 3.67422e-05, vorticity-change: 0.000730343
+
+Timestep #398: 0.0442038s
+SOR iterations: 84
+u-change: 5.42093e-05, v-change: 0.0329149, streamfunc-change: 3.63807e-05, vorticity-change: 0.000725966
+
+Timestep #399: 0.0443149s
+SOR iterations: 84
+u-change: 5.09112e-05, v-change: 0.0253861, streamfunc-change: 3.62873e-05, vorticity-change: 0.000721529
+
+Timestep #400: 0.0444259s
+SOR iterations: 84
+u-change: 5.58543e-05, v-change: 0.0357354, streamfunc-change: 3.573e-05, vorticity-change: 0.000734852
+
+Timestep #401: 0.044537s
+SOR iterations: 84
+u-change: 5.02404e-05, v-change: 0.0265346, streamfunc-change: 3.55054e-05, vorticity-change: 0.000725244
+
+Timestep #402: 0.0446481s
+SOR iterations: 84
+u-change: 4.89642e-05, v-change: 0.0361808, streamfunc-change: 3.52781e-05, vorticity-change: 0.000747495
+
+Timestep #403: 0.0447591s
+SOR iterations: 84
+u-change: 5.25677e-05, v-change: 0.0298753, streamfunc-change: 3.52338e-05, vorticity-change: 0.000776121
+
+Timestep #404: 0.0448702s
+SOR iterations: 84
+u-change: 5.04759e-05, v-change: 0.0385528, streamfunc-change: 3.47823e-05, vorticity-change: 0.000806759
+
+Timestep #405: 0.0449813s
+SOR iterations: 84
+u-change: 5.2026e-05, v-change: 0.0301511, streamfunc-change: 3.4203e-05, vorticity-change: 0.000866455
+
+Timestep #406: 0.0450923s
+SOR iterations: 84
+u-change: 4.83376e-05, v-change: 0.0297171, streamfunc-change: 3.43369e-05, vorticity-change: 0.000976502
+
+Timestep #407: 0.0452034s
+SOR iterations: 84
+u-change: 4.65109e-05, v-change: 0.0362299, streamfunc-change: 3.37708e-05, vorticity-change: 0.0013017
+
+Timestep #408: 0.0453145s
+SOR iterations: 84
+u-change: 4.96722e-05, v-change: 0.0282776, streamfunc-change: 3.35131e-05, vorticity-change: 0.00323481
+
+Timestep #409: 0.0454255s
+SOR iterations: 84
+u-change: 4.64635e-05, v-change: 0.025709, streamfunc-change: 3.33214e-05, vorticity-change: 0.00213029
+
+Timestep #410: 0.0455366s
+SOR iterations: 84
+u-change: 4.94852e-05, v-change: 0.0287844, streamfunc-change: 3.32222e-05, vorticity-change: 0.00110671
+
+Timestep #411: 0.0456476s
+SOR iterations: 84
+u-change: 4.92105e-05, v-change: 0.0331798, streamfunc-change: 3.29266e-05, vorticity-change: 0.000887822
+
+Timestep #412: 0.0457587s
+SOR iterations: 84
+u-change: 4.64009e-05, v-change: 0.036591, streamfunc-change: 3.21205e-05, vorticity-change: 0.000742771
+
+Timestep #413: 0.0458698s
+SOR iterations: 84
+u-change: 4.46935e-05, v-change: 0.0288744, streamfunc-change: 3.24394e-05, vorticity-change: 0.000668812
+
+Timestep #414: 0.0459808s
+SOR iterations: 84
+u-change: 4.84682e-05, v-change: 0.0330068, streamfunc-change: 3.20421e-05, vorticity-change: 0.000637788
+
+Timestep #415: 0.0460919s
+SOR iterations: 84
+u-change: 4.47708e-05, v-change: 0.0307612, streamfunc-change: 3.15003e-05, vorticity-change: 0.000597487
+
+Timestep #416: 0.046203s
+SOR iterations: 84
+u-change: 4.41445e-05, v-change: 0.0331283, streamfunc-change: 3.15132e-05, vorticity-change: 0.000568784
+
+Timestep #417: 0.046314s
+SOR iterations: 84
+u-change: 4.75856e-05, v-change: 0.032069, streamfunc-change: 3.12095e-05, vorticity-change: 0.00157836
+
+Timestep #418: 0.0464251s
+SOR iterations: 84
+u-change: 4.30452e-05, v-change: 0.0308662, streamfunc-change: 3.11678e-05, vorticity-change: 0.00059582
+
+Timestep #419: 0.0465362s
+SOR iterations: 84
+u-change: 4.41683e-05, v-change: 0.0394635, streamfunc-change: 3.04565e-05, vorticity-change: 0.000587738
+
+Timestep #420: 0.0466472s
+SOR iterations: 84
+u-change: 4.85705e-05, v-change: 0.0417909, streamfunc-change: 3.02607e-05, vorticity-change: 0.000587746
+
+Timestep #421: 0.0467583s
+SOR iterations: 84
+u-change: 4.00196e-05, v-change: 0.0259718, streamfunc-change: 3.0261e-05, vorticity-change: 0.000563674
+
+Timestep #422: 0.0468694s
+SOR iterations: 84
+u-change: 4.26427e-05, v-change: 0.0309666, streamfunc-change: 2.97563e-05, vorticity-change: 0.000543879
+
+Timestep #423: 0.0469804s
+SOR iterations: 84
+u-change: 4.61153e-05, v-change: 0.0351293, streamfunc-change: 2.98604e-05, vorticity-change: 0.000527808
+
+Timestep #424: 0.0470915s
+SOR iterations: 84
+u-change: 4.20818e-05, v-change: 0.0455529, streamfunc-change: 2.92239e-05, vorticity-change: 0.000523525
+
+Timestep #425: 0.0472026s
+SOR iterations: 84
+u-change: 4.13337e-05, v-change: 0.0319202, streamfunc-change: 2.9205e-05, vorticity-change: 0.000503573
+
+Timestep #426: 0.0473136s
+SOR iterations: 84
+u-change: 4.46992e-05, v-change: 0.0445508, streamfunc-change: 2.92763e-05, vorticity-change: 0.000507562
+
+Timestep #427: 0.0474247s
+SOR iterations: 84
+u-change: 4.09696e-05, v-change: 0.0346411, streamfunc-change: 2.83253e-05, vorticity-change: 0.000497512
+
+Timestep #428: 0.0475357s
+SOR iterations: 84
+u-change: 3.94072e-05, v-change: 0.0206008, streamfunc-change: 2.88553e-05, vorticity-change: 0.000483086
+
+Timestep #429: 0.0476468s
+SOR iterations: 84
+u-change: 4.55891e-05, v-change: 0.0271428, streamfunc-change: 2.81773e-05, vorticity-change: 0.000485473
+
+Timestep #430: 0.0477579s
+SOR iterations: 84
+u-change: 3.84797e-05, v-change: 0.0456118, streamfunc-change: 2.78947e-05, vorticity-change: 0.000473455
+
+Timestep #431: 0.0478689s
+SOR iterations: 84
+u-change: 4.02757e-05, v-change: 0.0426391, streamfunc-change: 2.79743e-05, vorticity-change: 0.0006486
+
+Timestep #432: 0.04798s
+SOR iterations: 84
+u-change: 4.3962e-05, v-change: 0.037144, streamfunc-change: 2.72321e-05, vorticity-change: 0.000636878
+
+Timestep #433: 0.0480911s
+SOR iterations: 84
+u-change: 3.88594e-05, v-change: 0.028866, streamfunc-change: 2.73642e-05, vorticity-change: 0.000627682
+
+Timestep #434: 0.0482021s
+SOR iterations: 84
+u-change: 3.71984e-05, v-change: 0.0322799, streamfunc-change: 2.72394e-05, vorticity-change: 0.000625887
+
+Timestep #435: 0.0483132s
+SOR iterations: 84
+u-change: 3.8174e-05, v-change: 0.0249517, streamfunc-change: 2.66752e-05, vorticity-change: 0.000642088
+
+Timestep #436: 0.0484243s
+SOR iterations: 84
+u-change: 4.29103e-05, v-change: 0.0352634, streamfunc-change: 2.67506e-05, vorticity-change: 0.00061841
+
+Timestep #437: 0.0485353s
+SOR iterations: 84
+u-change: 3.72739e-05, v-change: 0.0423046, streamfunc-change: 2.6349e-05, vorticity-change: 0.000620683
+
+Timestep #438: 0.0486464s
+SOR iterations: 84
+u-change: 3.84924e-05, v-change: 0.0324424, streamfunc-change: 2.61843e-05, vorticity-change: 0.000620353
+
+Timestep #439: 0.0487575s
+SOR iterations: 84
+u-change: 3.90242e-05, v-change: 0.0416968, streamfunc-change: 2.6078e-05, vorticity-change: 0.000626997
+
+Timestep #440: 0.0488685s
+SOR iterations: 84
+u-change: 3.70933e-05, v-change: 0.0496454, streamfunc-change: 2.59451e-05, vorticity-change: 0.000623308
+
+Timestep #441: 0.0489796s
+SOR iterations: 84
+u-change: 3.80485e-05, v-change: 0.0421095, streamfunc-change: 2.55837e-05, vorticity-change: 0.000628188
+
+Timestep #442: 0.0490907s
+SOR iterations: 84
+u-change: 3.52184e-05, v-change: 0.0423208, streamfunc-change: 2.536e-05, vorticity-change: 0.000641977
+
+Timestep #443: 0.0492017s
+SOR iterations: 84
+u-change: 4.08362e-05, v-change: 0.0225619, streamfunc-change: 2.51938e-05, vorticity-change: 0.000637739
+
+Timestep #444: 0.0493128s
+SOR iterations: 84
+u-change: 3.52585e-05, v-change: 0.0307559, streamfunc-change: 2.50115e-05, vorticity-change: 0.000647083
+
+Timestep #445: 0.0494239s
+SOR iterations: 84
+u-change: 3.58817e-05, v-change: 0.0264047, streamfunc-change: 2.49115e-05, vorticity-change: 0.000650954
+
+Timestep #446: 0.0495349s
+SOR iterations: 84
+u-change: 3.46886e-05, v-change: 0.0406333, streamfunc-change: 2.43791e-05, vorticity-change: 0.000681379
+
+Timestep #447: 0.049646s
+SOR iterations: 84
+u-change: 3.87569e-05, v-change: 0.0308842, streamfunc-change: 2.45067e-05, vorticity-change: 0.000894703
+
+Timestep #448: 0.049757s
+SOR iterations: 84
+u-change: 3.55428e-05, v-change: 0.0334762, streamfunc-change: 2.38963e-05, vorticity-change: 0.00107243
+
+Timestep #449: 0.0498681s
+SOR iterations: 84
+u-change: 3.36065e-05, v-change: 0.0285612, streamfunc-change: 2.41769e-05, vorticity-change: 0.00165109
+
+Timestep #450: 0.0499792s
+SOR iterations: 84
+u-change: 3.85506e-05, v-change: 0.0380986, streamfunc-change: 2.3761e-05, vorticity-change: 0.00983394
+
+Timestep #451: 0.0500902s
+SOR iterations: 84
+u-change: 3.17594e-05, v-change: 0.0220582, streamfunc-change: 2.35701e-05, vorticity-change: 0.00140637
+
+Timestep #452: 0.0502013s
+SOR iterations: 84
+u-change: 3.42752e-05, v-change: 0.0325735, streamfunc-change: 2.35211e-05, vorticity-change: 0.000980212
+
+Timestep #453: 0.0503124s
+SOR iterations: 84
+u-change: 3.18858e-05, v-change: 0.0415345, streamfunc-change: 2.31264e-05, vorticity-change: 0.00080508
+
+Timestep #454: 0.0504234s
+SOR iterations: 84
+u-change: 3.73641e-05, v-change: 0.0335157, streamfunc-change: 2.31337e-05, vorticity-change: 0.000718901
+
+Timestep #455: 0.0505345s
+SOR iterations: 84
+u-change: 3.31609e-05, v-change: 0.0321572, streamfunc-change: 2.28475e-05, vorticity-change: 0.000662797
+
+Timestep #456: 0.0506456s
+SOR iterations: 84
+u-change: 3.24412e-05, v-change: 0.028325, streamfunc-change: 2.27733e-05, vorticity-change: 0.000629858
+
+Timestep #457: 0.0507566s
+SOR iterations: 84
+u-change: 3.23847e-05, v-change: 0.0356908, streamfunc-change: 2.22611e-05, vorticity-change: 0.000600885
+
+Timestep #458: 0.0508677s
+SOR iterations: 84
+u-change: 3.13963e-05, v-change: 0.0308209, streamfunc-change: 2.23958e-05, vorticity-change: 0.000578567
+
+Timestep #459: 0.0509788s
+SOR iterations: 84
+u-change: 3.54071e-05, v-change: 0.0418432, streamfunc-change: 2.19095e-05, vorticity-change: 0.000675774
+
+Timestep #460: 0.0510898s
+SOR iterations: 84
+u-change: 3.12554e-05, v-change: 0.0249286, streamfunc-change: 2.17645e-05, vorticity-change: 0.000638382
+
+Timestep #461: 0.0512009s
+SOR iterations: 84
+u-change: 3.1236e-05, v-change: 0.0244545, streamfunc-change: 2.21092e-05, vorticity-change: 0.000617669
+
+Timestep #462: 0.051312s
+SOR iterations: 84
+u-change: 3.14954e-05, v-change: 0.0400993, streamfunc-change: 2.13196e-05, vorticity-change: 0.000606843
+
+Timestep #463: 0.051423s
+SOR iterations: 84
+u-change: 3.51053e-05, v-change: 0.0368582, streamfunc-change: 2.14512e-05, vorticity-change: 0.000593132
+
+Timestep #464: 0.0515341s
+SOR iterations: 84
+u-change: 2.77696e-05, v-change: 0.0447642, streamfunc-change: 2.12605e-05, vorticity-change: 0.00065351
+
+Timestep #465: 0.0516451s
+SOR iterations: 84
+u-change: 3.26561e-05, v-change: 0.0286763, streamfunc-change: 2.11253e-05, vorticity-change: 0.00070287
+
+Timestep #466: 0.0517562s
+SOR iterations: 84
+u-change: 2.86485e-05, v-change: 0.0349106, streamfunc-change: 2.0704e-05, vorticity-change: 0.000697448
+
+Timestep #467: 0.0518673s
+SOR iterations: 84
+u-change: 3.43551e-05, v-change: 0.0328035, streamfunc-change: 2.07686e-05, vorticity-change: 0.000691026
+
+Timestep #468: 0.0519783s
+SOR iterations: 84
+u-change: 2.80285e-05, v-change: 0.0238079, streamfunc-change: 2.05696e-05, vorticity-change: 0.000693684
+
+Timestep #469: 0.0520894s
+SOR iterations: 84
+u-change: 3.01481e-05, v-change: 0.0240968, streamfunc-change: 2.03255e-05, vorticity-change: 0.000680857
+
+Timestep #470: 0.0522005s
+SOR iterations: 84
+u-change: 2.80256e-05, v-change: 0.0380143, streamfunc-change: 2.00321e-05, vorticity-change: 0.000580915
+
+Timestep #471: 0.0523115s
+SOR iterations: 84
+u-change: 2.65721e-05, v-change: 0.0270053, streamfunc-change: 1.99721e-05, vorticity-change: 0.000563419
+
+Timestep #472: 0.0524226s
+SOR iterations: 84
+u-change: 3.58826e-05, v-change: 0.0308128, streamfunc-change: 2.02225e-05, vorticity-change: 0.000562916
+
+Timestep #473: 0.0525337s
+SOR iterations: 84
+u-change: 2.8644e-05, v-change: 0.0392098, streamfunc-change: 1.94047e-05, vorticity-change: 0.00057059
+
+Timestep #474: 0.0526447s
+SOR iterations: 84
+u-change: 2.60449e-05, v-change: 0.0249511, streamfunc-change: 1.96068e-05, vorticity-change: 0.000568861
+
+Timestep #475: 0.0527558s
+SOR iterations: 84
+u-change: 2.77246e-05, v-change: 0.0257365, streamfunc-change: 1.9217e-05, vorticity-change: 0.000566618
+
+Timestep #476: 0.0528669s
+SOR iterations: 84
+u-change: 2.73979e-05, v-change: 0.028737, streamfunc-change: 1.94905e-05, vorticity-change: 0.000551163
+
+Timestep #477: 0.0529779s
+SOR iterations: 84
+u-change: 3.18609e-05, v-change: 0.0221517, streamfunc-change: 1.91757e-05, vorticity-change: 0.000557712
+
+Timestep #478: 0.053089s
+SOR iterations: 84
+u-change: 2.75029e-05, v-change: 0.0344355, streamfunc-change: 1.86107e-05, vorticity-change: 0.000546097
+
+Timestep #479: 0.0532001s
+SOR iterations: 84
+u-change: 2.55301e-05, v-change: 0.0284739, streamfunc-change: 1.89578e-05, vorticity-change: 0.000533044
+
+Timestep #480: 0.0533111s
+SOR iterations: 84
+u-change: 2.63494e-05, v-change: 0.0405444, streamfunc-change: 1.83877e-05, vorticity-change: 0.000607837
+
+Timestep #481: 0.0534222s
+SOR iterations: 84
+u-change: 2.4942e-05, v-change: 0.0242771, streamfunc-change: 1.8785e-05, vorticity-change: 0.000599677
+
+Timestep #482: 0.0535333s
+SOR iterations: 84
+u-change: 3.20677e-05, v-change: 0.0398586, streamfunc-change: 1.81075e-05, vorticity-change: 0.00060493
+
+Timestep #483: 0.0536443s
+SOR iterations: 84
+u-change: 2.52229e-05, v-change: 0.0266873, streamfunc-change: 1.81555e-05, vorticity-change: 0.000607996
+
+Timestep #484: 0.0537554s
+SOR iterations: 84
+u-change: 2.63058e-05, v-change: 0.0318011, streamfunc-change: 1.79941e-05, vorticity-change: 0.000606166
+
+Timestep #485: 0.0538664s
+SOR iterations: 84
+u-change: 2.35766e-05, v-change: 0.044033, streamfunc-change: 1.79002e-05, vorticity-change: 0.000692189
+
+Timestep #486: 0.0539775s
+SOR iterations: 84
+u-change: 2.60769e-05, v-change: 0.0382211, streamfunc-change: 1.7753e-05, vorticity-change: 0.000684735
+
+Timestep #487: 0.0540886s
+SOR iterations: 84
+u-change: 2.81404e-05, v-change: 0.0229035, streamfunc-change: 1.75993e-05, vorticity-change: 0.000739978
+
+Timestep #488: 0.0541996s
+SOR iterations: 84
+u-change: 2.58296e-05, v-change: 0.0339737, streamfunc-change: 1.72134e-05, vorticity-change: 0.000750065
+
+Timestep #489: 0.0543107s
+SOR iterations: 84
+u-change: 2.31485e-05, v-change: 0.0291699, streamfunc-change: 1.74324e-05, vorticity-change: 0.000856781
+
+Timestep #490: 0.0544218s
+SOR iterations: 84
+u-change: 2.37239e-05, v-change: 0.0300491, streamfunc-change: 1.70709e-05, vorticity-change: 0.000896034
+
+Timestep #491: 0.0545328s
+SOR iterations: 84
+u-change: 2.41668e-05, v-change: 0.0220472, streamfunc-change: 1.69567e-05, vorticity-change: 0.00125595
+
+Timestep #492: 0.0546439s
+SOR iterations: 84
+u-change: 2.59479e-05, v-change: 0.0257414, streamfunc-change: 1.71951e-05, vorticity-change: 0.00168427
+
+Timestep #493: 0.054755s
+SOR iterations: 84
+u-change: 2.77015e-05, v-change: 0.0339637, streamfunc-change: 1.65908e-05, vorticity-change: 0.034582
+
+Timestep #494: 0.054866s
+SOR iterations: 84
+u-change: 2.38734e-05, v-change: 0.0280156, streamfunc-change: 1.67332e-05, vorticity-change: 0.00184161
+
+Timestep #495: 0.0549771s
+SOR iterations: 84
+u-change: 2.31527e-05, v-change: 0.0421772, streamfunc-change: 1.65643e-05, vorticity-change: 0.00144451
+
+Timestep #496: 0.0550882s
+SOR iterations: 84
+u-change: 2.2329e-05, v-change: 0.0354031, streamfunc-change: 1.6127e-05, vorticity-change: 0.00149899
+
+Timestep #497: 0.0551992s
+SOR iterations: 84
+u-change: 2.16774e-05, v-change: 0.0243546, streamfunc-change: 1.65154e-05, vorticity-change: 0.00218608
+
+Timestep #498: 0.0553103s
+SOR iterations: 84
+u-change: 2.79795e-05, v-change: 0.0277693, streamfunc-change: 1.59385e-05, vorticity-change: 0.00492135
+
+Timestep #499: 0.0554214s
+SOR iterations: 84
+u-change: 2.26025e-05, v-change: 0.027822, streamfunc-change: 1.57801e-05, vorticity-change: 0.00154558
+
+Timestep #500: 0.0555324s
+SOR iterations: 84
+u-change: 2.2032e-05, v-change: 0.0248631, streamfunc-change: 1.59719e-05, vorticity-change: 0.00154835
+
+Timestep #501: 0.0556435s
+SOR iterations: 84
+u-change: 2.13539e-05, v-change: 0.0243509, streamfunc-change: 1.56849e-05, vorticity-change: 0.0016798
+
+Timestep #502: 0.0557545s
+SOR iterations: 84
+u-change: 2.27376e-05, v-change: 0.0268851, streamfunc-change: 1.54481e-05, vorticity-change: 0.00323686
+
+Timestep #503: 0.0558656s
+SOR iterations: 84
+u-change: 2.24864e-05, v-change: 0.0274161, streamfunc-change: 1.55686e-05, vorticity-change: 0.00258064
+
+Timestep #504: 0.0559767s
+SOR iterations: 84
+u-change: 2.43425e-05, v-change: 0.0256307, streamfunc-change: 1.51364e-05, vorticity-change: 0.00142534
+
+Timestep #505: 0.0560877s
+SOR iterations: 84
+u-change: 2.20678e-05, v-change: 0.0215242, streamfunc-change: 1.5197e-05, vorticity-change: 0.00115774
+
+Timestep #506: 0.0561988s
+SOR iterations: 84
+u-change: 2.22926e-05, v-change: 0.0306498, streamfunc-change: 1.51763e-05, vorticity-change: 0.00104875
+
+Timestep #507: 0.0563099s
+SOR iterations: 84
+u-change: 2.0001e-05, v-change: 0.0383999, streamfunc-change: 1.48477e-05, vorticity-change: 0.000991112
+
+Timestep #508: 0.0564209s
+SOR iterations: 84
+u-change: 2.08511e-05, v-change: 0.0250144, streamfunc-change: 1.48526e-05, vorticity-change: 0.000880126
+
+Timestep #509: 0.056532s
+SOR iterations: 84
+u-change: 2.21873e-05, v-change: 0.0341405, streamfunc-change: 1.48165e-05, vorticity-change: 0.000847012
+
+Timestep #510: 0.0566431s
+SOR iterations: 84
+u-change: 2.05983e-05, v-change: 0.0419438, streamfunc-change: 1.46872e-05, vorticity-change: 0.000830363
+
+Timestep #511: 0.0567541s
+SOR iterations: 84
+u-change: 2.57647e-05, v-change: 0.0239395, streamfunc-change: 1.42291e-05, vorticity-change: 0.000843057
+
+Timestep #512: 0.0568652s
+SOR iterations: 84
+u-change: 1.928e-05, v-change: 0.03088, streamfunc-change: 1.43575e-05, vorticity-change: 0.000847335
+
+Timestep #513: 0.0569763s
+SOR iterations: 84
+u-change: 2.11867e-05, v-change: 0.0172444, streamfunc-change: 1.44249e-05, vorticity-change: 0.000877962
+
+Timestep #514: 0.0570873s
+SOR iterations: 84
+u-change: 1.89046e-05, v-change: 0.0375446, streamfunc-change: 1.40417e-05, vorticity-change: 0.000933069
+
+Timestep #515: 0.0571984s
+SOR iterations: 84
+u-change: 2.08264e-05, v-change: 0.0486819, streamfunc-change: 1.38523e-05, vorticity-change: 0.00108564
+
+Timestep #516: 0.0573095s
+SOR iterations: 84
+u-change: 2.04021e-05, v-change: 0.0308325, streamfunc-change: 1.41199e-05, vorticity-change: 0.00150239
+
+Timestep #517: 0.0574205s
+SOR iterations: 84
+u-change: 2.37078e-05, v-change: 0.0231903, streamfunc-change: 1.37842e-05, vorticity-change: 0.00872373
+
+Timestep #518: 0.0575316s
+SOR iterations: 84
+u-change: 1.98926e-05, v-change: 0.0296076, streamfunc-change: 1.35521e-05, vorticity-change: 0.00171825
+
+Timestep #519: 0.0576426s
+SOR iterations: 84
+u-change: 1.9584e-05, v-change: 0.0175523, streamfunc-change: 1.36006e-05, vorticity-change: 0.00123873
+
+Timestep #520: 0.0577537s
+SOR iterations: 84
+u-change: 1.88333e-05, v-change: 0.0208096, streamfunc-change: 1.3558e-05, vorticity-change: 0.00114395
+
+Timestep #521: 0.0578648s
+SOR iterations: 84
+u-change: 1.907e-05, v-change: 0.0261996, streamfunc-change: 1.29962e-05, vorticity-change: 0.00111532
+
+Timestep #522: 0.0579758s
+SOR iterations: 84
+u-change: 1.74587e-05, v-change: 0.0239844, streamfunc-change: 1.31719e-05, vorticity-change: 0.00113567
+
+Timestep #523: 0.0580869s
+SOR iterations: 84
+u-change: 2.0702e-05, v-change: 0.0182238, streamfunc-change: 1.3428e-05, vorticity-change: 0.00134201
+
+Timestep #524: 0.058198s
+SOR iterations: 84
+u-change: 2.39516e-05, v-change: 0.0300353, streamfunc-change: 1.30265e-05, vorticity-change: 0.0022945
+
+Timestep #525: 0.058309s
+SOR iterations: 84
+u-change: 1.9273e-05, v-change: 0.0212274, streamfunc-change: 1.29687e-05, vorticity-change: 0.00343809
+
+Timestep #526: 0.0584201s
+SOR iterations: 84
+u-change: 1.83588e-05, v-change: 0.0360571, streamfunc-change: 1.25185e-05, vorticity-change: 0.00156225
+
+Timestep #527: 0.0585312s
+SOR iterations: 84
+u-change: 1.77358e-05, v-change: 0.0215709, streamfunc-change: 1.29566e-05, vorticity-change: 0.00124271
+
+Timestep #528: 0.0586422s
+SOR iterations: 84
+u-change: 1.89202e-05, v-change: 0.0298417, streamfunc-change: 1.24897e-05, vorticity-change: 0.00116197
+
+Timestep #529: 0.0587533s
+SOR iterations: 84
+u-change: 1.84597e-05, v-change: 0.0271617, streamfunc-change: 1.25222e-05, vorticity-change: 0.00112888
+
+Timestep #530: 0.0588644s
+SOR iterations: 84
+u-change: 1.84324e-05, v-change: 0.0194792, streamfunc-change: 1.26589e-05, vorticity-change: 0.00123441
+
+Timestep #531: 0.0589754s
+SOR iterations: 84
+u-change: 2.15378e-05, v-change: 0.030907, streamfunc-change: 1.21286e-05, vorticity-change: 0.00166347
+
+Timestep #532: 0.0590865s
+SOR iterations: 84
+u-change: 1.70806e-05, v-change: 0.0279071, streamfunc-change: 1.21749e-05, vorticity-change: 0.019013
+
+Timestep #533: 0.0591976s
+SOR iterations: 84
+u-change: 1.8143e-05, v-change: 0.0142615, streamfunc-change: 1.20434e-05, vorticity-change: 0.00167608
+
+Timestep #534: 0.0593086s
+SOR iterations: 84
+u-change: 1.7654e-05, v-change: 0.0216174, streamfunc-change: 1.21408e-05, vorticity-change: 0.00111214
+
+Timestep #535: 0.0594197s
+SOR iterations: 84
+u-change: 1.64788e-05, v-change: 0.0145234, streamfunc-change: 1.19062e-05, vorticity-change: 0.00193239
+
+Timestep #536: 0.0595308s
+SOR iterations: 84
+u-change: 1.71447e-05, v-change: 0.0207117, streamfunc-change: 1.1887e-05, vorticity-change: 0.000898191
+
+Timestep #537: 0.0596418s
+SOR iterations: 84
+u-change: 1.80474e-05, v-change: 0.028315, streamfunc-change: 1.16615e-05, vorticity-change: 0.000849543
+
+Timestep #538: 0.0597529s
+SOR iterations: 84
+u-change: 1.72131e-05, v-change: 0.0446562, streamfunc-change: 1.16324e-05, vorticity-change: 0.000812183
+
+Timestep #539: 0.0598639s
+SOR iterations: 84
+u-change: 2.01409e-05, v-change: 0.0221106, streamfunc-change: 1.16358e-05, vorticity-change: 0.000797403
+
+Timestep #540: 0.059975s
+SOR iterations: 84
+u-change: 1.81342e-05, v-change: 0.0278636, streamfunc-change: 1.14625e-05, vorticity-change: 0.000713946
+
+Timestep #541: 0.0600861s
+SOR iterations: 84
+u-change: 1.67734e-05, v-change: 0.0294104, streamfunc-change: 1.10446e-05, vorticity-change: 0.000946324
+
+Timestep #542: 0.0601971s
+SOR iterations: 84
+u-change: 1.47936e-05, v-change: 0.0357717, streamfunc-change: 1.15271e-05, vorticity-change: 0.000999174
+
+Timestep #543: 0.0603082s
+SOR iterations: 84
+u-change: 1.63677e-05, v-change: 0.0451246, streamfunc-change: 1.10459e-05, vorticity-change: 0.00111416
+
+Timestep #544: 0.0604193s
+SOR iterations: 84
+u-change: 1.66184e-05, v-change: 0.0303034, streamfunc-change: 1.09945e-05, vorticity-change: 0.00131668
+
+Timestep #545: 0.0605303s
+SOR iterations: 84
+u-change: 1.63494e-05, v-change: 0.0481416, streamfunc-change: 1.09246e-05, vorticity-change: 0.00190073
+
+Timestep #546: 0.0606414s
+SOR iterations: 84
+u-change: 1.5204e-05, v-change: 0.0161318, streamfunc-change: 1.12558e-05, vorticity-change: 0.0277313
+
+Timestep #547: 0.0607525s
+SOR iterations: 84
+u-change: 1.68135e-05, v-change: 0.0257344, streamfunc-change: 1.07289e-05, vorticity-change: 0.00356324
+
+Timestep #548: 0.0608635s
+SOR iterations: 84
+u-change: 2.09327e-05, v-change: 0.0297617, streamfunc-change: 1.07662e-05, vorticity-change: 0.00296397
+
+Timestep #549: 0.0609746s
+SOR iterations: 84
+u-change: 1.5151e-05, v-change: 0.0316789, streamfunc-change: 1.04811e-05, vorticity-change: 0.00140467
+
+Timestep #550: 0.0610857s
+SOR iterations: 84
+u-change: 1.64074e-05, v-change: 0.0318429, streamfunc-change: 1.02538e-05, vorticity-change: 0.00118917
+
+Timestep #551: 0.0611967s
+SOR iterations: 84
+u-change: 1.31944e-05, v-change: 0.0237134, streamfunc-change: 1.05878e-05, vorticity-change: 0.00102048
+
+Timestep #552: 0.0613078s
+SOR iterations: 84
+u-change: 1.52867e-05, v-change: 0.0359046, streamfunc-change: 1.06066e-05, vorticity-change: 0.000778231
+
+Timestep #553: 0.0614189s
+SOR iterations: 84
+u-change: 1.66519e-05, v-change: 0.0238399, streamfunc-change: 1.01716e-05, vorticity-change: 0.000725041
+
+Timestep #554: 0.0615299s
+SOR iterations: 84
+u-change: 1.43736e-05, v-change: 0.0215385, streamfunc-change: 1.03122e-05, vorticity-change: 0.000691431
+
+Timestep #555: 0.061641s
+SOR iterations: 84
+u-change: 1.68733e-05, v-change: 0.0271913, streamfunc-change: 1.03686e-05, vorticity-change: 0.000658508
+
+Timestep #556: 0.061752s
+SOR iterations: 84
+u-change: 1.43995e-05, v-change: 0.0321179, streamfunc-change: 9.64648e-06, vorticity-change: 0.000646515
+
+Timestep #557: 0.0618631s
+SOR iterations: 84
+u-change: 1.80167e-05, v-change: 0.0291868, streamfunc-change: 9.97481e-06, vorticity-change: 0.000634115
+
+Timestep #558: 0.0619742s
+SOR iterations: 84
+u-change: 1.58075e-05, v-change: 0.0298565, streamfunc-change: 9.87483e-06, vorticity-change: 0.000630415
+
+Timestep #559: 0.0620852s
+SOR iterations: 84
+u-change: 1.4223e-05, v-change: 0.0381756, streamfunc-change: 9.97883e-06, vorticity-change: 0.000621206
+
+Timestep #560: 0.0621963s
+SOR iterations: 84
+u-change: 1.53583e-05, v-change: 0.024419, streamfunc-change: 1.00174e-05, vorticity-change: 0.000616671
+
+Timestep #561: 0.0623074s
+SOR iterations: 84
+u-change: 1.60078e-05, v-change: 0.0284048, streamfunc-change: 9.30063e-06, vorticity-change: 0.00061654
+
+Timestep #562: 0.0624184s
+SOR iterations: 84
+u-change: 1.15288e-05, v-change: 0.0293167, streamfunc-change: 9.65836e-06, vorticity-change: 0.000600769
+
+Timestep #563: 0.0625295s
+SOR iterations: 84
+u-change: 1.55893e-05, v-change: 0.0548666, streamfunc-change: 9.35539e-06, vorticity-change: 0.000593578
+
+Timestep #564: 0.0626406s
+SOR iterations: 84
+u-change: 1.36337e-05, v-change: 0.0228212, streamfunc-change: 9.66444e-06, vorticity-change: 0.000643854
+
+Timestep #565: 0.0627516s
+SOR iterations: 84
+u-change: 1.4882e-05, v-change: 0.0263767, streamfunc-change: 9.32182e-06, vorticity-change: 0.000649078
+
+Timestep #566: 0.0628627s
+SOR iterations: 84
+u-change: 1.96884e-05, v-change: 0.0431124, streamfunc-change: 9.19151e-06, vorticity-change: 0.000659982
+
+Timestep #567: 0.0629738s
+SOR iterations: 84
+u-change: 1.35641e-05, v-change: 0.0272101, streamfunc-change: 9.23446e-06, vorticity-change: 0.000650887
+
+Timestep #568: 0.0630848s
+SOR iterations: 84
+u-change: 1.52065e-05, v-change: 0.0525997, streamfunc-change: 9.08876e-06, vorticity-change: 0.000797985
+
+Timestep #569: 0.0631959s
+SOR iterations: 84
+u-change: 1.29706e-05, v-change: 0.0447172, streamfunc-change: 8.92803e-06, vorticity-change: 0.000768561
+
+Timestep #570: 0.063307s
+SOR iterations: 84
+u-change: 1.36697e-05, v-change: 0.0286801, streamfunc-change: 8.95634e-06, vorticity-change: 0.00075801
+
+Timestep #571: 0.063418s
+SOR iterations: 84
+u-change: 1.10867e-05, v-change: 0.0215079, streamfunc-change: 9.12042e-06, vorticity-change: 0.000764647
+
+Timestep #572: 0.0635291s
+SOR iterations: 84
+u-change: 1.55269e-05, v-change: 0.0435915, streamfunc-change: 8.75524e-06, vorticity-change: 0.00075434
+
+Timestep #573: 0.0636401s
+SOR iterations: 84
+u-change: 1.25207e-05, v-change: 0.0277075, streamfunc-change: 8.73412e-06, vorticity-change: 0.000767924
+
+Timestep #574: 0.0637512s
+SOR iterations: 84
+u-change: 1.3247e-05, v-change: 0.0246574, streamfunc-change: 8.65846e-06, vorticity-change: 0.000792255
+
+Timestep #575: 0.0638623s
+SOR iterations: 84
+u-change: 1.2152e-05, v-change: 0.0422911, streamfunc-change: 8.86919e-06, vorticity-change: 0.000817875
+
+Timestep #576: 0.0639733s
+SOR iterations: 84
+u-change: 1.95796e-05, v-change: 0.0183066, streamfunc-change: 8.61779e-06, vorticity-change: 0.000862086
+
+Timestep #577: 0.0640844s
+SOR iterations: 84
+u-change: 1.43391e-05, v-change: 0.0259018, streamfunc-change: 8.34509e-06, vorticity-change: 0.000923954
+
+Timestep #578: 0.0641955s
+SOR iterations: 84
+u-change: 1.2405e-05, v-change: 0.0304471, streamfunc-change: 8.59349e-06, vorticity-change: 0.00100894
+
+Timestep #579: 0.0643065s
+SOR iterations: 84
+u-change: 1.35772e-05, v-change: 0.0312053, streamfunc-change: 8.0838e-06, vorticity-change: 0.00123053
+
+Timestep #580: 0.0644176s
+SOR iterations: 84
+u-change: 1.14964e-05, v-change: 0.0267667, streamfunc-change: 8.3689e-06, vorticity-change: 0.00199197
+
+Timestep #581: 0.0645287s
+SOR iterations: 84
+u-change: 1.34076e-05, v-change: 0.0370381, streamfunc-change: 8.4211e-06, vorticity-change: 0.00530031
+
+Timestep #582: 0.0646397s
+SOR iterations: 84
+u-change: 1.12129e-05, v-change: 0.025599, streamfunc-change: 8.09357e-06, vorticity-change: 0.00155817
+
+Timestep #583: 0.0647508s
+SOR iterations: 84
+u-change: 1.21461e-05, v-change: 0.0256751, streamfunc-change: 8.04363e-06, vorticity-change: 0.00125113
+
+Timestep #584: 0.0648619s
+SOR iterations: 84
+u-change: 1.22803e-05, v-change: 0.0481755, streamfunc-change: 8.23778e-06, vorticity-change: 0.0012377
+
+Timestep #585: 0.0649729s
+SOR iterations: 84
+u-change: 1.31872e-05, v-change: 0.028572, streamfunc-change: 7.67198e-06, vorticity-change: 0.00129969
+
+Timestep #586: 0.065084s
+SOR iterations: 84
+u-change: 1.08181e-05, v-change: 0.032622, streamfunc-change: 7.72838e-06, vorticity-change: 0.00164547
+
+Timestep #587: 0.0651951s
+SOR iterations: 84
+u-change: 1.14099e-05, v-change: 0.0343645, streamfunc-change: 8.29759e-06, vorticity-change: 0.00528276
+
+Timestep #588: 0.0653061s
+SOR iterations: 84
+u-change: 1.80758e-05, v-change: 0.0320008, streamfunc-change: 7.4193e-06, vorticity-change: 0.00213196
+
+Timestep #589: 0.0654172s
+SOR iterations: 84
+u-change: 9.92865e-06, v-change: 0.0247403, streamfunc-change: 7.95367e-06, vorticity-change: 0.00155293
+
+Timestep #590: 0.0655283s
+SOR iterations: 84
+u-change: 1.39392e-05, v-change: 0.0484548, streamfunc-change: 7.27029e-06, vorticity-change: 0.00177983
+
+Timestep #591: 0.0656393s
+SOR iterations: 84
+u-change: 9.50386e-06, v-change: 0.0410905, streamfunc-change: 7.90691e-06, vorticity-change: 0.0129082
+
+Timestep #592: 0.0657504s
+SOR iterations: 84
+u-change: 1.36736e-05, v-change: 0.0228952, streamfunc-change: 7.49136e-06, vorticity-change: 0.00175119
+
+Timestep #593: 0.0658614s
+SOR iterations: 84
+u-change: 1.07838e-05, v-change: 0.0412644, streamfunc-change: 7.51889e-06, vorticity-change: 0.00120037
+
+Timestep #594: 0.0659725s
+SOR iterations: 84
+u-change: 1.16292e-05, v-change: 0.0327246, streamfunc-change: 7.35824e-06, vorticity-change: 0.00100862
+
+Timestep #595: 0.0660836s
+SOR iterations: 84
+u-change: 1.13619e-05, v-change: 0.0403676, streamfunc-change: 7.24921e-06, vorticity-change: 0.000885714
+
+Timestep #596: 0.0661946s
+SOR iterations: 84
+u-change: 1.08271e-05, v-change: 0.0277454, streamfunc-change: 7.21236e-06, vorticity-change: 0.000798353
+
+Timestep #597: 0.0663057s
+SOR iterations: 84
+u-change: 1.08961e-05, v-change: 0.0366293, streamfunc-change: 7.33916e-06, vorticity-change: 0.000745168
+
+Timestep #598: 0.0664168s
+SOR iterations: 84
+u-change: 1.13995e-05, v-change: 0.0406079, streamfunc-change: 7.17424e-06, vorticity-change: 0.000856797
+
+Timestep #599: 0.0665278s
+SOR iterations: 84
+u-change: 1.16417e-05, v-change: 0.018347, streamfunc-change: 6.98641e-06, vorticity-change: 0.000822878
+
+Timestep #600: 0.0666389s
+SOR iterations: 84
+u-change: 1.56443e-05, v-change: 0.0223226, streamfunc-change: 7.2105e-06, vorticity-change: 0.000805464
+
+Timestep #601: 0.06675s
+SOR iterations: 84
+u-change: 1.15476e-05, v-change: 0.0304243, streamfunc-change: 7.20537e-06, vorticity-change: 0.00077355
+
+Timestep #602: 0.066861s
+SOR iterations: 84
+u-change: 1.19878e-05, v-change: 0.0259803, streamfunc-change: 6.87723e-06, vorticity-change: 0.000743294
+
+Timestep #603: 0.0669721s
+SOR iterations: 84
+u-change: 1.11748e-05, v-change: 0.0275275, streamfunc-change: 6.7993e-06, vorticity-change: 0.000763038
+
+Timestep #604: 0.0670832s
+SOR iterations: 84
+u-change: 1.02831e-05, v-change: 0.0171455, streamfunc-change: 6.61544e-06, vorticity-change: 0.000753548
+
+Timestep #605: 0.0671942s
+SOR iterations: 84
+u-change: 1.01642e-05, v-change: 0.043778, streamfunc-change: 6.84237e-06, vorticity-change: 0.00075794
+
+Timestep #606: 0.0673053s
+SOR iterations: 84
+u-change: 1.10284e-05, v-change: 0.0358491, streamfunc-change: 6.68351e-06, vorticity-change: 0.000763713
+
+Timestep #607: 0.0674164s
+SOR iterations: 84
+u-change: 9.66875e-06, v-change: 0.0255157, streamfunc-change: 6.97715e-06, vorticity-change: 0.000826059
+
+Timestep #608: 0.0675274s
+SOR iterations: 84
+u-change: 1.23657e-05, v-change: 0.0328457, streamfunc-change: 6.66985e-06, vorticity-change: 0.000930757
+
+Timestep #609: 0.0676385s
+SOR iterations: 84
+u-change: 1.00994e-05, v-change: 0.0300756, streamfunc-change: 6.27574e-06, vorticity-change: 0.00109845
+
+Timestep #610: 0.0677495s
+SOR iterations: 84
+u-change: 8.2766e-06, v-change: 0.0347646, streamfunc-change: 6.85382e-06, vorticity-change: 0.00172174
+
+Timestep #611: 0.0678606s
+SOR iterations: 84
+u-change: 1.29435e-05, v-change: 0.0291458, streamfunc-change: 6.22954e-06, vorticity-change: 0.00730049
+
+Timestep #612: 0.0679717s
+SOR iterations: 84
+u-change: 7.682e-06, v-change: 0.0157967, streamfunc-change: 6.64018e-06, vorticity-change: 0.00136394
+
+Timestep #613: 0.0680827s
+SOR iterations: 84
+u-change: 1.21843e-05, v-change: 0.0333347, streamfunc-change: 5.96272e-06, vorticity-change: 0.000941528
+
+Timestep #614: 0.0681938s
+SOR iterations: 84
+u-change: 1.31714e-05, v-change: 0.0310366, streamfunc-change: 6.44918e-06, vorticity-change: 0.000843259
+
+Timestep #615: 0.0683049s
+SOR iterations: 84
+u-change: 9.07685e-06, v-change: 0.0278134, streamfunc-change: 6.28492e-06, vorticity-change: 0.000753862
+
+Timestep #616: 0.0684159s
+SOR iterations: 84
+u-change: 1.11503e-05, v-change: 0.0391586, streamfunc-change: 6.31041e-06, vorticity-change: 0.000673335
+
+Timestep #617: 0.068527s
+SOR iterations: 84
+u-change: 9.7695e-06, v-change: 0.0196192, streamfunc-change: 5.85502e-06, vorticity-change: 0.000629207
+
+Timestep #618: 0.0686381s
+SOR iterations: 84
+u-change: 7.8583e-06, v-change: 0.0326111, streamfunc-change: 6.48981e-06, vorticity-change: 0.000587797
+
+Timestep #619: 0.0687491s
+SOR iterations: 84
+u-change: 1.24449e-05, v-change: 0.0368141, streamfunc-change: 5.90735e-06, vorticity-change: 0.000576288
+
+Timestep #620: 0.0688602s
+SOR iterations: 84
+u-change: 7.82316e-06, v-change: 0.0282607, streamfunc-change: 6.38928e-06, vorticity-change: 0.000558973
+
+Timestep #621: 0.0689713s
+SOR iterations: 84
+u-change: 1.12449e-05, v-change: 0.0280814, streamfunc-change: 5.67009e-06, vorticity-change: 0.000546783
+
+Timestep #622: 0.0690823s
+SOR iterations: 84
+u-change: 7.63655e-06, v-change: 0.028843, streamfunc-change: 6.06077e-06, vorticity-change: 0.00052588
+
+Timestep #623: 0.0691934s
+SOR iterations: 84
+u-change: 8.47746e-06, v-change: 0.0489266, streamfunc-change: 5.85658e-06, vorticity-change: 0.000532352
+
+Timestep #624: 0.0693045s
+SOR iterations: 84
+u-change: 1.05404e-05, v-change: 0.0273888, streamfunc-change: 5.74452e-06, vorticity-change: 0.0005195
+
+Timestep #625: 0.0694155s
+SOR iterations: 84
+u-change: 9.01413e-06, v-change: 0.034524, streamfunc-change: 5.60093e-06, vorticity-change: 0.000511062
+
+Timestep #626: 0.0695266s
+SOR iterations: 84
+u-change: 7.07451e-06, v-change: 0.0292725, streamfunc-change: 5.81198e-06, vorticity-change: 0.000510515
+
+Timestep #627: 0.0696377s
+SOR iterations: 84
+u-change: 9.36686e-06, v-change: 0.0371803, streamfunc-change: 5.729e-06, vorticity-change: 0.000506242
+
+Timestep #628: 0.0697487s
+SOR iterations: 84
+u-change: 9.56431e-06, v-change: 0.0224498, streamfunc-change: 5.49776e-06, vorticity-change: 0.000520016
+
+Timestep #629: 0.0698598s
+SOR iterations: 84
+u-change: 1.27847e-05, v-change: 0.0150893, streamfunc-change: 5.90551e-06, vorticity-change: 0.000497369
+
+Timestep #630: 0.0699708s
+SOR iterations: 84
+u-change: 1.12781e-05, v-change: 0.0212455, streamfunc-change: 5.42745e-06, vorticity-change: 0.000498659
+
+Timestep #631: 0.0700819s
+SOR iterations: 84
+u-change: 8.27985e-06, v-change: 0.0230095, streamfunc-change: 5.81291e-06, vorticity-change: 0.000527746
+
+Timestep #632: 0.070193s
+SOR iterations: 84
+u-change: 7.80682e-06, v-change: 0.0444326, streamfunc-change: 5.58843e-06, vorticity-change: 0.000592275
+
+Timestep #633: 0.070304s
+SOR iterations: 84
+u-change: 9.1706e-06, v-change: 0.0346143, streamfunc-change: 5.34906e-06, vorticity-change: 0.000602679
+
+Timestep #634: 0.0704151s
+SOR iterations: 84
+u-change: 9.20777e-06, v-change: 0.0373103, streamfunc-change: 5.15182e-06, vorticity-change: 0.000627726
+
+Timestep #635: 0.0705262s
+SOR iterations: 84
+u-change: 6.69527e-06, v-change: 0.014657, streamfunc-change: 5.34208e-06, vorticity-change: 0.000668968
+
+Timestep #636: 0.0706372s
+SOR iterations: 84
+u-change: 8.96458e-06, v-change: 0.0213841, streamfunc-change: 5.25874e-06, vorticity-change: 0.000751552
+
+Timestep #637: 0.0707483s
+SOR iterations: 84
+u-change: 8.75352e-06, v-change: 0.0226128, streamfunc-change: 5.01696e-06, vorticity-change: 0.000924356
+
+Timestep #638: 0.0708594s
+SOR iterations: 84
+u-change: 6.32084e-06, v-change: 0.0190644, streamfunc-change: 5.43983e-06, vorticity-change: 0.00148254
+
+Timestep #639: 0.0709704s
+SOR iterations: 84
+u-change: 1.09653e-05, v-change: 0.030159, streamfunc-change: 5.04853e-06, vorticity-change: 0.0245676
+
+Timestep #640: 0.0710815s
+SOR iterations: 84
+u-change: 7.858e-06, v-change: 0.030828, streamfunc-change: 5.36784e-06, vorticity-change: 0.00139268
+
+Timestep #641: 0.0711926s
+SOR iterations: 84
+u-change: 7.5699e-06, v-change: 0.0323556, streamfunc-change: 5.28807e-06, vorticity-change: 0.000934174
+
+Timestep #642: 0.0713036s
+SOR iterations: 84
+u-change: 9.96231e-06, v-change: 0.0359674, streamfunc-change: 4.92379e-06, vorticity-change: 0.000773163
+
+Timestep #643: 0.0714147s
+SOR iterations: 84
+u-change: 7.24623e-06, v-change: 0.0315618, streamfunc-change: 5.08615e-06, vorticity-change: 0.000702189
+
+Timestep #644: 0.0715258s
+SOR iterations: 84
+u-change: 7.198e-06, v-change: 0.018597, streamfunc-change: 4.93353e-06, vorticity-change: 0.000669362
+
+Timestep #645: 0.0716368s
+SOR iterations: 84
+u-change: 7.44197e-06, v-change: 0.029129, streamfunc-change: 4.78057e-06, vorticity-change: 0.000734997
+
+Timestep #646: 0.0717479s
+SOR iterations: 84
+u-change: 8.32534e-06, v-change: 0.0257591, streamfunc-change: 4.92475e-06, vorticity-change: 0.000839596
+
+Timestep #647: 0.0718589s
+SOR iterations: 84
+u-change: 1.29428e-05, v-change: 0.0272683, streamfunc-change: 4.67769e-06, vorticity-change: 0.00106459
+
+Timestep #648: 0.07197s
+SOR iterations: 84
+u-change: 6.55899e-06, v-change: 0.0184135, streamfunc-change: 5.04166e-06, vorticity-change: 0.00204072
+
+Timestep #649: 0.0720811s
+SOR iterations: 84
+u-change: 1.11818e-05, v-change: 0.0337304, streamfunc-change: 4.63167e-06, vorticity-change: 0.00303723
+
+Timestep #650: 0.0721921s
+SOR iterations: 84
+u-change: 7.24142e-06, v-change: 0.0466422, streamfunc-change: 4.54933e-06, vorticity-change: 0.00108421
+
+Timestep #651: 0.0723032s
+SOR iterations: 84
+u-change: 6.00798e-06, v-change: 0.0266321, streamfunc-change: 4.85549e-06, vorticity-change: 0.000778596
+
+Timestep #652: 0.0724143s
+SOR iterations: 84
+u-change: 7.70726e-06, v-change: 0.0262668, streamfunc-change: 4.86268e-06, vorticity-change: 0.000629874
+
+Timestep #653: 0.0725253s
+SOR iterations: 84
+u-change: 8.51268e-06, v-change: 0.0290627, streamfunc-change: 4.5161e-06, vorticity-change: 0.000784947
+
+Timestep #654: 0.0726364s
+SOR iterations: 84
+u-change: 5.66874e-06, v-change: 0.0246016, streamfunc-change: 4.71731e-06, vorticity-change: 0.0007016
+
+Timestep #655: 0.0727475s
+SOR iterations: 84
+u-change: 7.90312e-06, v-change: 0.0426168, streamfunc-change: 4.34663e-06, vorticity-change: 0.000623484
+
+Timestep #656: 0.0728585s
+SOR iterations: 84
+u-change: 6.45418e-06, v-change: 0.030809, streamfunc-change: 4.90601e-06, vorticity-change: 0.000575112
+
+Timestep #657: 0.0729696s
+SOR iterations: 84
+u-change: 9.84747e-06, v-change: 0.0351371, streamfunc-change: 4.45094e-06, vorticity-change: 0.000528419
+
+Timestep #658: 0.0730807s
+SOR iterations: 84
+u-change: 5.65793e-06, v-change: 0.0295454, streamfunc-change: 4.10926e-06, vorticity-change: 0.000494326
+
+Timestep #659: 0.0731917s
+SOR iterations: 84
+u-change: 6.14818e-06, v-change: 0.0262917, streamfunc-change: 4.75992e-06, vorticity-change: 0.000485473
+
+Timestep #660: 0.0733028s
+SOR iterations: 84
+u-change: 9.69384e-06, v-change: 0.0362425, streamfunc-change: 4.3622e-06, vorticity-change: 0.000469389
+
+Timestep #661: 0.0734139s
+SOR iterations: 84
+u-change: 6.9556e-06, v-change: 0.046708, streamfunc-change: 4.21394e-06, vorticity-change: 0.000548073
+
+Timestep #662: 0.0735249s
+SOR iterations: 84
+u-change: 5.6153e-06, v-change: 0.0292613, streamfunc-change: 4.23593e-06, vorticity-change: 0.000510123
+
+Timestep #663: 0.073636s
+SOR iterations: 84
+u-change: 7.6214e-06, v-change: 0.0321959, streamfunc-change: 4.41915e-06, vorticity-change: 0.000490796
+
+Timestep #664: 0.073747s
+SOR iterations: 84
+u-change: 8.27762e-06, v-change: 0.0316538, streamfunc-change: 3.97005e-06, vorticity-change: 0.000461227
+
+Timestep #665: 0.0738581s
+SOR iterations: 84
+u-change: 4.99165e-06, v-change: 0.0279266, streamfunc-change: 4.31899e-06, vorticity-change: 0.000442347
+
+Timestep #666: 0.0739692s
+SOR iterations: 84
+u-change: 6.50577e-06, v-change: 0.0319462, streamfunc-change: 4.07088e-06, vorticity-change: 0.00043245
+
+Timestep #667: 0.0740802s
+SOR iterations: 84
+u-change: 1.12278e-05, v-change: 0.0248594, streamfunc-change: 4.38026e-06, vorticity-change: 0.000426374
+
+Timestep #668: 0.0741913s
+SOR iterations: 84
+u-change: 7.71244e-06, v-change: 0.0382004, streamfunc-change: 4.19529e-06, vorticity-change: 0.000415054
+
+Timestep #669: 0.0743024s
+SOR iterations: 84
+u-change: 8.29028e-06, v-change: 0.0288899, streamfunc-change: 4.03566e-06, vorticity-change: 0.000413524
+
+Timestep #670: 0.0744134s
+SOR iterations: 84
+u-change: 5.02846e-06, v-change: 0.0313438, streamfunc-change: 3.96247e-06, vorticity-change: 0.000425313
+
+Timestep #671: 0.0745245s
+SOR iterations: 84
+u-change: 5.2166e-06, v-change: 0.0299037, streamfunc-change: 4.09333e-06, vorticity-change: 0.000428171
+
+Timestep #672: 0.0746356s
+SOR iterations: 84
+u-change: 7.06144e-06, v-change: 0.0521047, streamfunc-change: 4.50941e-06, vorticity-change: 0.000410671
+
+Timestep #673: 0.0747466s
+SOR iterations: 84
+u-change: 7.9652e-06, v-change: 0.0383094, streamfunc-change: 3.70572e-06, vorticity-change: 0.000421689
+
+Timestep #674: 0.0748577s
+SOR iterations: 84
+u-change: 4.61051e-06, v-change: 0.0210958, streamfunc-change: 3.63909e-06, vorticity-change: 0.000418453
+
+Timestep #675: 0.0749688s
+SOR iterations: 84
+u-change: 4.97467e-06, v-change: 0.0295962, streamfunc-change: 4.01808e-06, vorticity-change: 0.000412999
+
+Timestep #676: 0.0750798s
+SOR iterations: 84
+u-change: 7.5683e-06, v-change: 0.0257505, streamfunc-change: 4.04614e-06, vorticity-change: 0.00039831
+
+Timestep #677: 0.0751909s
+SOR iterations: 84
+u-change: 7.93158e-06, v-change: 0.0203591, streamfunc-change: 3.54281e-06, vorticity-change: 0.000394351
+
+Timestep #678: 0.075302s
+SOR iterations: 84
+u-change: 4.38691e-06, v-change: 0.0273022, streamfunc-change: 3.83671e-06, vorticity-change: 0.000405207
+
+Timestep #679: 0.075413s
+SOR iterations: 84
+u-change: 6.32336e-06, v-change: 0.0205564, streamfunc-change: 3.59433e-06, vorticity-change: 0.000457759
+
+Timestep #680: 0.0755241s
+SOR iterations: 84
+u-change: 4.78629e-06, v-change: 0.026526, streamfunc-change: 3.90523e-06, vorticity-change: 0.000463115
+
+Timestep #681: 0.0756352s
+SOR iterations: 84
+u-change: 8.51272e-06, v-change: 0.02351, streamfunc-change: 3.48125e-06, vorticity-change: 0.000467914
+
+Timestep #682: 0.0757462s
+SOR iterations: 84
+u-change: 5.03301e-06, v-change: 0.0213369, streamfunc-change: 3.70303e-06, vorticity-change: 0.000463856
+
+Timestep #683: 0.0758573s
+SOR iterations: 84
+u-change: 6.63701e-06, v-change: 0.0159302, streamfunc-change: 3.52454e-06, vorticity-change: 0.000460335
+
+Timestep #684: 0.0759683s
+SOR iterations: 84
+u-change: 4.86572e-06, v-change: 0.0202198, streamfunc-change: 3.55338e-06, vorticity-change: 0.00045753
+
+Timestep #685: 0.0760794s
+SOR iterations: 84
+u-change: 5.14137e-06, v-change: 0.0109607, streamfunc-change: 4.22707e-06, vorticity-change: 0.000456004
+
+Timestep #686: 0.0761905s
+SOR iterations: 84
+u-change: 7.22172e-06, v-change: 0.0205841, streamfunc-change: 3.51116e-06, vorticity-change: 0.000464325
+
+Timestep #687: 0.0763015s
+SOR iterations: 84
+u-change: 5.03845e-06, v-change: 0.0328027, streamfunc-change: 3.52124e-06, vorticity-change: 0.000458265
+
+Timestep #688: 0.0764126s
+SOR iterations: 84
+u-change: 4.70442e-06, v-change: 0.0313462, streamfunc-change: 3.59414e-06, vorticity-change: 0.000467418
+
+Timestep #689: 0.0765237s
+SOR iterations: 84
+u-change: 4.95755e-06, v-change: 0.0221403, streamfunc-change: 3.69929e-06, vorticity-change: 0.00056772
+
+Timestep #690: 0.0766347s
+SOR iterations: 84
+u-change: 1.13849e-05, v-change: 0.0312886, streamfunc-change: 3.57637e-06, vorticity-change: 0.000574771
+
+Timestep #691: 0.0767458s
+SOR iterations: 84
+u-change: 7.42537e-06, v-change: 0.0230342, streamfunc-change: 3.20454e-06, vorticity-change: 0.000565423
+
+Timestep #692: 0.0768569s
+SOR iterations: 84
+u-change: 4.17554e-06, v-change: 0.0178986, streamfunc-change: 3.38074e-06, vorticity-change: 0.000563179
+
+Timestep #693: 0.0769679s
+SOR iterations: 84
+u-change: 5.92677e-06, v-change: 0.0444152, streamfunc-change: 3.14624e-06, vorticity-change: 0.00053536
+
+Timestep #694: 0.077079s
+SOR iterations: 84
+u-change: 5.31356e-06, v-change: 0.0277674, streamfunc-change: 3.26976e-06, vorticity-change: 0.00103317
+
+Timestep #695: 0.0771901s
+SOR iterations: 84
+u-change: 4.31231e-06, v-change: 0.0241663, streamfunc-change: 3.40836e-06, vorticity-change: 0.000625123
+
+Timestep #696: 0.0773011s
+SOR iterations: 84
+u-change: 6.43898e-06, v-change: 0.0264919, streamfunc-change: 3.50719e-06, vorticity-change: 0.000634941
+
+Timestep #697: 0.0774122s
+SOR iterations: 84
+u-change: 5.91194e-06, v-change: 0.017745, streamfunc-change: 3.09882e-06, vorticity-change: 0.000641725
+
+Timestep #698: 0.0775233s
+SOR iterations: 84
+u-change: 4.59442e-06, v-change: 0.0224843, streamfunc-change: 3.08296e-06, vorticity-change: 0.000668318
+
+Timestep #699: 0.0776343s
+SOR iterations: 84
+u-change: 4.09776e-06, v-change: 0.0197793, streamfunc-change: 3.17509e-06, vorticity-change: 0.000624328
+
+Timestep #700: 0.0777454s
+SOR iterations: 84
+u-change: 4.81963e-06, v-change: 0.0245771, streamfunc-change: 3.48693e-06, vorticity-change: 0.000678109
+
+Timestep #701: 0.0778564s
+SOR iterations: 84
+u-change: 7.59765e-06, v-change: 0.0339248, streamfunc-change: 3.05369e-06, vorticity-change: 0.000734778
+
+Timestep #702: 0.0779675s
+SOR iterations: 84
+u-change: 4.26458e-06, v-change: 0.036308, streamfunc-change: 3.03766e-06, vorticity-change: 0.00111098
+
+Timestep #703: 0.0780786s
+SOR iterations: 84
+u-change: 4.29323e-06, v-change: 0.0182208, streamfunc-change: 3.1591e-06, vorticity-change: 0.00219513
+
+Timestep #704: 0.0781896s
+SOR iterations: 84
+u-change: 3.84821e-06, v-change: 0.0264936, streamfunc-change: 3.21814e-06, vorticity-change: 0.0199606
+
+Timestep #705: 0.0783007s
+SOR iterations: 84
+u-change: 4.96924e-06, v-change: 0.0293351, streamfunc-change: 3.31218e-06, vorticity-change: 0.00139297
+
+Timestep #706: 0.0784118s
+SOR iterations: 84
+u-change: 5.74324e-06, v-change: 0.0270484, streamfunc-change: 3.12786e-06, vorticity-change: 0.000910099
+
+Timestep #707: 0.0785228s
+SOR iterations: 84
+u-change: 7.67688e-06, v-change: 0.0277842, streamfunc-change: 3.03372e-06, vorticity-change: 0.000652098
+
+Timestep #708: 0.0786339s
+SOR iterations: 84
+u-change: 3.51086e-06, v-change: 0.0290557, streamfunc-change: 2.96934e-06, vorticity-change: 0.000733624
+
+Timestep #709: 0.078745s
+SOR iterations: 84
+u-change: 4.27122e-06, v-change: 0.0272201, streamfunc-change: 3.19027e-06, vorticity-change: 0.000625307
+
+Timestep #710: 0.078856s
+SOR iterations: 84
+u-change: 5.73785e-06, v-change: 0.0274053, streamfunc-change: 2.89419e-06, vorticity-change: 0.000672393
+
+Timestep #711: 0.0789671s
+SOR iterations: 84
+u-change: 3.81488e-06, v-change: 0.0397314, streamfunc-change: 2.71497e-06, vorticity-change: 0.000952558
+
+Timestep #712: 0.0790782s
+SOR iterations: 84
+u-change: 3.61493e-06, v-change: 0.0407696, streamfunc-change: 3.06954e-06, vorticity-change: 0.0017467
+
+Timestep #713: 0.0791892s
+SOR iterations: 84
+u-change: 6.55355e-06, v-change: 0.020123, streamfunc-change: 2.90608e-06, vorticity-change: 0.00330608
+
+Timestep #714: 0.0793003s
+SOR iterations: 84
+u-change: 5.71487e-06, v-change: 0.0383136, streamfunc-change: 2.73772e-06, vorticity-change: 0.00109704
+
+Timestep #715: 0.0794114s
+SOR iterations: 84
+u-change: 4.06248e-06, v-change: 0.022241, streamfunc-change: 2.84449e-06, vorticity-change: 0.000758476
+
+Timestep #716: 0.0795224s
+SOR iterations: 84
+u-change: 4.2852e-06, v-change: 0.0415151, streamfunc-change: 2.76008e-06, vorticity-change: 0.000613168
+
+Timestep #717: 0.0796335s
+SOR iterations: 84
+u-change: 9.48889e-06, v-change: 0.0239333, streamfunc-change: 2.69128e-06, vorticity-change: 0.00150924
+
+Timestep #718: 0.0797446s
+SOR iterations: 84
+u-change: 3.62298e-06, v-change: 0.0320393, streamfunc-change: 3.10371e-06, vorticity-change: 0.000476318
+
+Timestep #719: 0.0798556s
+SOR iterations: 84
+u-change: 7.75989e-06, v-change: 0.0354649, streamfunc-change: 2.70856e-06, vorticity-change: 0.000427535
+
+Timestep #720: 0.0799667s
+SOR iterations: 84
+u-change: 4.10586e-06, v-change: 0.022689, streamfunc-change: 2.54759e-06, vorticity-change: 0.000400381
+
+Timestep #721: 0.0800777s
+SOR iterations: 84
+u-change: 3.25827e-06, v-change: 0.0302805, streamfunc-change: 2.68611e-06, vorticity-change: 0.000389786
+
+Timestep #722: 0.0801888s
+SOR iterations: 84
+u-change: 4.38428e-06, v-change: 0.0258646, streamfunc-change: 2.48339e-06, vorticity-change: 0.000348721
+
+Timestep #723: 0.0802999s
+SOR iterations: 84
+u-change: 3.32401e-06, v-change: 0.0182936, streamfunc-change: 2.85396e-06, vorticity-change: 0.000871132
+
+Timestep #724: 0.0804109s
+SOR iterations: 84
+u-change: 5.65007e-06, v-change: 0.0224126, streamfunc-change: 2.69489e-06, vorticity-change: 0.00132423
+
+Timestep #725: 0.080522s
+SOR iterations: 84
+u-change: 5.08548e-06, v-change: 0.0323006, streamfunc-change: 2.69673e-06, vorticity-change: 0.000623563
+
+Timestep #726: 0.0806331s
+SOR iterations: 84
+u-change: 5.10427e-06, v-change: 0.0242012, streamfunc-change: 2.54945e-06, vorticity-change: 0.000689068
+
+Timestep #727: 0.0807441s
+SOR iterations: 84
+u-change: 3.22826e-06, v-change: 0.0135413, streamfunc-change: 2.44155e-06, vorticity-change: 0.000782537
+
+Timestep #728: 0.0808552s
+SOR iterations: 84
+u-change: 3.23437e-06, v-change: 0.0197184, streamfunc-change: 2.7895e-06, vorticity-change: 0.00100721
+
+Timestep #729: 0.0809663s
+SOR iterations: 84
+u-change: 5.30011e-06, v-change: 0.0314152, streamfunc-change: 2.48376e-06, vorticity-change: 0.0019961
+
+Timestep #730: 0.0810773s
+SOR iterations: 84
+u-change: 3.13185e-06, v-change: 0.0187701, streamfunc-change: 2.4672e-06, vorticity-change: 0.00245159
+
+Timestep #731: 0.0811884s
+SOR iterations: 84
+u-change: 3.45858e-06, v-change: 0.0206677, streamfunc-change: 2.8125e-06, vorticity-change: 0.00116942
+
+Timestep #732: 0.0812995s
+SOR iterations: 84
+u-change: 6.51832e-06, v-change: 0.0320158, streamfunc-change: 2.43383e-06, vorticity-change: 0.000927101
+
+Timestep #733: 0.0814105s
+SOR iterations: 84
+u-change: 3.37068e-06, v-change: 0.0200071, streamfunc-change: 2.71201e-06, vorticity-change: 0.000824916
+
+Timestep #734: 0.0815216s
+SOR iterations: 84
+u-change: 4.82244e-06, v-change: 0.02902, streamfunc-change: 2.35608e-06, vorticity-change: 0.000722897
+
+Timestep #735: 0.0816327s
+SOR iterations: 84
+u-change: 3.37104e-06, v-change: 0.022793, streamfunc-change: 2.61628e-06, vorticity-change: 0.000683566
+
+Timestep #736: 0.0817437s
+SOR iterations: 84
+u-change: 4.04839e-06, v-change: 0.0341038, streamfunc-change: 2.44961e-06, vorticity-change: 0.000674644
+
+Timestep #737: 0.0818548s
+SOR iterations: 84
+u-change: 4.09136e-06, v-change: 0.0297081, streamfunc-change: 2.23117e-06, vorticity-change: 0.000661793
+
+Timestep #738: 0.0819658s
+SOR iterations: 84
+u-change: 3.81078e-06, v-change: 0.0264613, streamfunc-change: 2.93975e-06, vorticity-change: 0.000649295
+
+Timestep #739: 0.0820769s
+SOR iterations: 84
+u-change: 8.54557e-06, v-change: 0.0400874, streamfunc-change: 2.24224e-06, vorticity-change: 0.000650488
+
+Timestep #740: 0.082188s
+SOR iterations: 84
+u-change: 3.69463e-06, v-change: 0.025577, streamfunc-change: 2.15529e-06, vorticity-change: 0.000714081
+
+Timestep #741: 0.082299s
+SOR iterations: 84
+u-change: 2.87826e-06, v-change: 0.0226786, streamfunc-change: 2.26413e-06, vorticity-change: 0.000744924
+
+Timestep #742: 0.0824101s
+SOR iterations: 84
+u-change: 2.87276e-06, v-change: 0.0317394, streamfunc-change: 2.19339e-06, vorticity-change: 0.000800176
+
+Timestep #743: 0.0825212s
+SOR iterations: 84
+u-change: 2.98757e-06, v-change: 0.0253681, streamfunc-change: 2.17548e-06, vorticity-change: 0.0009218
+
+Timestep #744: 0.0826322s
+SOR iterations: 84
+u-change: 3.13642e-06, v-change: 0.0155385, streamfunc-change: 2.14409e-06, vorticity-change: 0.00175834
+
+Timestep #745: 0.0827433s
+SOR iterations: 84
+u-change: 3.34439e-06, v-change: 0.0266835, streamfunc-change: 2.34745e-06, vorticity-change: 0.00522023
+
+Timestep #746: 0.0828544s
+SOR iterations: 84
+u-change: 5.14005e-06, v-change: 0.0249939, streamfunc-change: 2.27031e-06, vorticity-change: 0.00227492
+
+Timestep #747: 0.0829654s
+SOR iterations: 84
+u-change: 4.36582e-06, v-change: 0.0332065, streamfunc-change: 2.28773e-06, vorticity-change: 0.000972894
+
+Timestep #748: 0.0830765s
+SOR iterations: 84
+u-change: 4.54949e-06, v-change: 0.023904, streamfunc-change: 2.07548e-06, vorticity-change: 0.000738601
+
+Timestep #749: 0.0831876s
+SOR iterations: 84
+u-change: 3.44218e-06, v-change: 0.0162625, streamfunc-change: 2.06758e-06, vorticity-change: 0.000648734
+
+Timestep #750: 0.0832986s
+SOR iterations: 84
+u-change: 2.61495e-06, v-change: 0.0193536, streamfunc-change: 2.26318e-06, vorticity-change: 0.000560501
+
+Timestep #751: 0.0834097s
+SOR iterations: 84
+u-change: 9.07987e-06, v-change: 0.0239431, streamfunc-change: 2.26393e-06, vorticity-change: 0.000512887
+
+Timestep #752: 0.0835208s
+SOR iterations: 84
+u-change: 3.94074e-06, v-change: 0.0374783, streamfunc-change: 2.03311e-06, vorticity-change: 0.000476329
+
+Timestep #753: 0.0836318s
+SOR iterations: 84
+u-change: 3.0363e-06, v-change: 0.0230913, streamfunc-change: 1.9425e-06, vorticity-change: 0.000457578
+
+Timestep #754: 0.0837429s
+SOR iterations: 84
+u-change: 2.54752e-06, v-change: 0.0218766, streamfunc-change: 2.08041e-06, vorticity-change: 0.000449211
+
+Timestep #755: 0.0838539s
+SOR iterations: 84
+u-change: 3.58765e-06, v-change: 0.0324135, streamfunc-change: 2.16404e-06, vorticity-change: 0.000442236
+
+Timestep #756: 0.083965s
+SOR iterations: 84
+u-change: 4.68265e-06, v-change: 0.0356787, streamfunc-change: 2.04257e-06, vorticity-change: 0.000434685
+
+Timestep #757: 0.0840761s
+SOR iterations: 84
+u-change: 2.76589e-06, v-change: 0.0125896, streamfunc-change: 2.29006e-06, vorticity-change: 0.00265578
+
+Timestep #758: 0.0841871s
+SOR iterations: 84
+u-change: 5.27651e-06, v-change: 0.0323973, streamfunc-change: 2.18946e-06, vorticity-change: 0.00249081
+
+Timestep #759: 0.0842982s
+SOR iterations: 84
+u-change: 4.3079e-06, v-change: 0.0258097, streamfunc-change: 2.00377e-06, vorticity-change: 0.00118096
+
+Timestep #760: 0.0844093s
+SOR iterations: 84
+u-change: 2.63474e-06, v-change: 0.0256274, streamfunc-change: 1.97198e-06, vorticity-change: 0.000912982
+
+Timestep #761: 0.0845203s
+SOR iterations: 84
+u-change: 2.76721e-06, v-change: 0.0222502, streamfunc-change: 2.13099e-06, vorticity-change: 0.00080137
+
+Timestep #762: 0.0846314s
+SOR iterations: 84
+u-change: 2.50656e-06, v-change: 0.0177794, streamfunc-change: 1.99318e-06, vorticity-change: 0.000755459
+
+Timestep #763: 0.0847425s
+SOR iterations: 84
+u-change: 2.85053e-06, v-change: 0.0195459, streamfunc-change: 2.40114e-06, vorticity-change: 0.000721699
+
+Timestep #764: 0.0848535s
+SOR iterations: 84
+u-change: 6.66313e-06, v-change: 0.038107, streamfunc-change: 2.0408e-06, vorticity-change: 0.000717133
+
+Timestep #765: 0.0849646s
+SOR iterations: 84
+u-change: 3.3035e-06, v-change: 0.0231773, streamfunc-change: 1.91835e-06, vorticity-change: 0.000741236
+
+Timestep #766: 0.0850757s
+SOR iterations: 84
+u-change: 2.7151e-06, v-change: 0.0294652, streamfunc-change: 1.86368e-06, vorticity-change: 0.000786205
+
+Timestep #767: 0.0851867s
+SOR iterations: 84
+u-change: 2.26482e-06, v-change: 0.0140769, streamfunc-change: 1.85681e-06, vorticity-change: 0.000890992
+
+Timestep #768: 0.0852978s
+SOR iterations: 84
+u-change: 2.55299e-06, v-change: 0.0289547, streamfunc-change: 1.78254e-06, vorticity-change: 0.00117721
+
+Timestep #769: 0.0854089s
+SOR iterations: 84
+u-change: 2.11855e-06, v-change: 0.0158105, streamfunc-change: 1.76799e-06, vorticity-change: 0.00283038
+
+Timestep #770: 0.0855199s
+SOR iterations: 84
+u-change: 2.60082e-06, v-change: 0.0209816, streamfunc-change: 1.75922e-06, vorticity-change: 0.00217713
+
+Timestep #771: 0.085631s
+SOR iterations: 84
+u-change: 2.24333e-06, v-change: 0.0197804, streamfunc-change: 2.02231e-06, vorticity-change: 0.000994269
+
+Timestep #772: 0.0857421s
+SOR iterations: 84
+u-change: 4.39982e-06, v-change: 0.0186447, streamfunc-change: 1.65736e-06, vorticity-change: 0.000728763
+
+Timestep #773: 0.0858531s
+SOR iterations: 84
+u-change: 2.645e-06, v-change: 0.0201888, streamfunc-change: 1.99525e-06, vorticity-change: 0.000606999
+
+Timestep #774: 0.0859642s
+SOR iterations: 84
+u-change: 4.90673e-06, v-change: 0.0248448, streamfunc-change: 1.74696e-06, vorticity-change: 0.000542023
+
+Timestep #775: 0.0860752s
+SOR iterations: 84
+u-change: 2.76044e-06, v-change: 0.0167918, streamfunc-change: 1.69726e-06, vorticity-change: 0.000500793
+
+Timestep #776: 0.0861863s
+SOR iterations: 84
+u-change: 2.48781e-06, v-change: 0.0146895, streamfunc-change: 1.66789e-06, vorticity-change: 0.000478575
+
+Timestep #777: 0.0862974s
+SOR iterations: 84
+u-change: 2.33945e-06, v-change: 0.0216653, streamfunc-change: 1.72583e-06, vorticity-change: 0.000611117
+
+Timestep #778: 0.0864084s
+SOR iterations: 84
+u-change: 2.30107e-06, v-change: 0.0172889, streamfunc-change: 1.7039e-06, vorticity-change: 0.000608086
+
+Timestep #779: 0.0865195s
+SOR iterations: 84
+u-change: 2.45952e-06, v-change: 0.0202458, streamfunc-change: 1.86153e-06, vorticity-change: 0.000612011
+
+Timestep #780: 0.0866306s
+SOR iterations: 84
+u-change: 4.18908e-06, v-change: 0.0183358, streamfunc-change: 1.66861e-06, vorticity-change: 0.000626002
+
+Timestep #781: 0.0867416s
+SOR iterations: 84
+u-change: 2.91814e-06, v-change: 0.0215535, streamfunc-change: 1.65517e-06, vorticity-change: 0.000649423
+
+Timestep #782: 0.0868527s
+SOR iterations: 84
+u-change: 2.16801e-06, v-change: 0.0196061, streamfunc-change: 1.63476e-06, vorticity-change: 0.000685369
+
+Timestep #783: 0.0869638s
+SOR iterations: 84
+u-change: 2.33603e-06, v-change: 0.016318, streamfunc-change: 1.70297e-06, vorticity-change: 0.000757778
+
+Timestep #784: 0.0870748s
+SOR iterations: 84
+u-change: 3.44786e-06, v-change: 0.033502, streamfunc-change: 1.6524e-06, vorticity-change: 0.000924488
+
+Timestep #785: 0.0871859s
+SOR iterations: 84
+u-change: 3.73096e-06, v-change: 0.0334821, streamfunc-change: 1.51919e-06, vorticity-change: 0.00150276
+
+Timestep #786: 0.087297s
+SOR iterations: 84
+u-change: 2.14599e-06, v-change: 0.026066, streamfunc-change: 1.72407e-06, vorticity-change: 0.0103261
+
+Timestep #787: 0.087408s
+SOR iterations: 84
+u-change: 2.84387e-06, v-change: 0.042446, streamfunc-change: 1.89203e-06, vorticity-change: 0.00125056
+
+Timestep #788: 0.0875191s
+SOR iterations: 84
+u-change: 3.20973e-06, v-change: 0.0196579, streamfunc-change: 1.59447e-06, vorticity-change: 0.000810053
+
+Timestep #789: 0.0876302s
+SOR iterations: 84
+u-change: 2.74871e-06, v-change: 0.0195564, streamfunc-change: 1.55445e-06, vorticity-change: 0.000639688
+
+Timestep #790: 0.0877412s
+SOR iterations: 84
+u-change: 1.94635e-06, v-change: 0.0223958, streamfunc-change: 1.47102e-06, vorticity-change: 0.000551267
+
+Timestep #791: 0.0878523s
+SOR iterations: 84
+u-change: 1.74821e-06, v-change: 0.0174773, streamfunc-change: 1.49691e-06, vorticity-change: 0.000491705
+
+Timestep #792: 0.0879633s
+SOR iterations: 84
+u-change: 1.57438e-06, v-change: 0.0201776, streamfunc-change: 1.53751e-06, vorticity-change: 0.000454001
+
+Timestep #793: 0.0880744s
+SOR iterations: 84
+u-change: 2.62788e-06, v-change: 0.0265456, streamfunc-change: 1.58422e-06, vorticity-change: 0.000429475
+
+Timestep #794: 0.0881855s
+SOR iterations: 84
+u-change: 2.49987e-06, v-change: 0.0191736, streamfunc-change: 1.57164e-06, vorticity-change: 0.000407184
+
+Timestep #795: 0.0882965s
+SOR iterations: 84
+u-change: 2.30396e-06, v-change: 0.0323765, streamfunc-change: 1.98422e-06, vorticity-change: 0.000387424
+
+Timestep #796: 0.0884076s
+SOR iterations: 84
+u-change: 5.96025e-06, v-change: 0.0202973, streamfunc-change: 1.62427e-06, vorticity-change: 0.000379757
+
+Timestep #797: 0.0885187s
+SOR iterations: 84
+u-change: 2.43831e-06, v-change: 0.0193082, streamfunc-change: 1.66474e-06, vorticity-change: 0.000369643
+
+Timestep #798: 0.0886297s
+SOR iterations: 84
+u-change: 2.21066e-06, v-change: 0.0217306, streamfunc-change: 1.62898e-06, vorticity-change: 0.000363439
+
+Timestep #799: 0.0887408s
+SOR iterations: 84
+u-change: 1.82698e-06, v-change: 0.0230965, streamfunc-change: 1.55837e-06, vorticity-change: 0.000363873
+
+Timestep #800: 0.0888519s
+SOR iterations: 84
+u-change: 2.14662e-06, v-change: 0.0303102, streamfunc-change: 1.5996e-06, vorticity-change: 0.00035873
+
+Timestep #801: 0.0889629s
+SOR iterations: 84
+u-change: 2.16044e-06, v-change: 0.0234833, streamfunc-change: 1.47321e-06, vorticity-change: 0.000965662
+
+Timestep #802: 0.089074s
+SOR iterations: 84
+u-change: 2.24837e-06, v-change: 0.0260003, streamfunc-change: 1.42547e-06, vorticity-change: 0.00105926
+
+Timestep #803: 0.0891851s
+SOR iterations: 84
+u-change: 6.99954e-06, v-change: 0.0203995, streamfunc-change: 1.52741e-06, vorticity-change: 0.00133366
+
+Timestep #804: 0.0892961s
+SOR iterations: 84
+u-change: 1.82365e-06, v-change: 0.0279197, streamfunc-change: 1.56855e-06, vorticity-change: 0.00333477
+
+Timestep #805: 0.0894072s
+SOR iterations: 84
+u-change: 2.87962e-06, v-change: 0.0358874, streamfunc-change: 1.63762e-06, vorticity-change: 0.00210839
+
+Timestep #806: 0.0895183s
+SOR iterations: 84
+u-change: 3.34301e-06, v-change: 0.0218487, streamfunc-change: 1.33478e-06, vorticity-change: 0.0011023
+
+Timestep #807: 0.0896293s
+SOR iterations: 84
+u-change: 2.13391e-06, v-change: 0.0216239, streamfunc-change: 1.26463e-06, vorticity-change: 0.00084443
+
+Timestep #808: 0.0897404s
+SOR iterations: 84
+u-change: 3.19603e-06, v-change: 0.0383914, streamfunc-change: 1.51865e-06, vorticity-change: 0.000719782
+
+Timestep #809: 0.0898515s
+SOR iterations: 84
+u-change: 4.2179e-06, v-change: 0.0279821, streamfunc-change: 1.2907e-06, vorticity-change: 0.000642103
+
+Timestep #810: 0.0899625s
+SOR iterations: 84
+u-change: 2.12727e-06, v-change: 0.0254396, streamfunc-change: 1.21462e-06, vorticity-change: 0.000585941
+
+Timestep #811: 0.0900736s
+SOR iterations: 84
+u-change: 1.83349e-06, v-change: 0.0175418, streamfunc-change: 1.33192e-06, vorticity-change: 0.000544839
+
+Timestep #812: 0.0901846s
+SOR iterations: 84
+u-change: 1.95049e-06, v-change: 0.03159, streamfunc-change: 1.22554e-06, vorticity-change: 0.000512477
+
+Timestep #813: 0.0902957s
+SOR iterations: 84
+u-change: 1.65949e-06, v-change: 0.024508, streamfunc-change: 1.30626e-06, vorticity-change: 0.000482577
+
+Timestep #814: 0.0904068s
+SOR iterations: 84
+u-change: 2.12348e-06, v-change: 0.0202441, streamfunc-change: 1.31771e-06, vorticity-change: 0.000457341
+
+Timestep #815: 0.0905178s
+SOR iterations: 84
+u-change: 1.97541e-06, v-change: 0.0303207, streamfunc-change: 1.34306e-06, vorticity-change: 0.000437447
+
+Timestep #816: 0.0906289s
+SOR iterations: 84
+u-change: 2.27274e-06, v-change: 0.027493, streamfunc-change: 1.44355e-06, vorticity-change: 0.000420136
+
+Timestep #817: 0.09074s
+SOR iterations: 84
+u-change: 3.52246e-06, v-change: 0.0258092, streamfunc-change: 1.2425e-06, vorticity-change: 0.000400856
+
+Timestep #818: 0.090851s
+SOR iterations: 84
+u-change: 1.57536e-06, v-change: 0.0282782, streamfunc-change: 1.27117e-06, vorticity-change: 0.0003876
+
+Timestep #819: 0.0909621s
+SOR iterations: 84
+u-change: 1.72698e-06, v-change: 0.0264294, streamfunc-change: 1.21156e-06, vorticity-change: 0.000373943
+
+Timestep #820: 0.0910732s
+SOR iterations: 84
+u-change: 1.75339e-06, v-change: 0.0302991, streamfunc-change: 1.24949e-06, vorticity-change: 0.000361299
+
+Timestep #821: 0.0911842s
+SOR iterations: 84
+u-change: 2.05849e-06, v-change: 0.0263955, streamfunc-change: 1.27396e-06, vorticity-change: 0.000348661
+
+Timestep #822: 0.0912953s
+SOR iterations: 84
+u-change: 1.90455e-06, v-change: 0.0252292, streamfunc-change: 1.37178e-06, vorticity-change: 0.000338003
+
+Timestep #823: 0.0914064s
+SOR iterations: 84
+u-change: 5.13313e-06, v-change: 0.0345313, streamfunc-change: 1.26781e-06, vorticity-change: 0.000328196
+
+Timestep #824: 0.0915174s
+SOR iterations: 84
+u-change: 2.13337e-06, v-change: 0.0182143, streamfunc-change: 1.30947e-06, vorticity-change: 0.000318331
+
+Timestep #825: 0.0916285s
+SOR iterations: 84
+u-change: 2.06716e-06, v-change: 0.0296318, streamfunc-change: 1.32723e-06, vorticity-change: 0.00031182
+
+Timestep #826: 0.0917396s
+SOR iterations: 84
+u-change: 2.70861e-06, v-change: 0.0314273, streamfunc-change: 1.4897e-06, vorticity-change: 0.00031042
+
+Timestep #827: 0.0918506s
+SOR iterations: 84
+u-change: 3.62126e-06, v-change: 0.0281889, streamfunc-change: 1.2715e-06, vorticity-change: 0.000302905
+
+Timestep #828: 0.0919617s
+SOR iterations: 84
+u-change: 1.64557e-06, v-change: 0.0264324, streamfunc-change: 1.07894e-06, vorticity-change: 0.000295134
+
+Timestep #829: 0.0920727s
+SOR iterations: 84
+u-change: 1.72156e-06, v-change: 0.0268721, streamfunc-change: 1.17838e-06, vorticity-change: 0.000293563
+
+Timestep #830: 0.0921838s
+SOR iterations: 84
+u-change: 1.79565e-06, v-change: 0.0177326, streamfunc-change: 1.178e-06, vorticity-change: 0.00030409
+
+Timestep #831: 0.0922949s
+SOR iterations: 84
+u-change: 1.65575e-06, v-change: 0.0263342, streamfunc-change: 1.09599e-06, vorticity-change: 0.000679733
+
+Timestep #832: 0.0924059s
+SOR iterations: 84
+u-change: 1.78924e-06, v-change: 0.0315613, streamfunc-change: 1.12612e-06, vorticity-change: 0.000670374
+
+Timestep #833: 0.092517s
+SOR iterations: 84
+u-change: 1.76293e-06, v-change: 0.0227467, streamfunc-change: 1.0321e-06, vorticity-change: 0.000619613
+
+Timestep #834: 0.0926281s
+SOR iterations: 84
+u-change: 1.65479e-06, v-change: 0.0287188, streamfunc-change: 1.10594e-06, vorticity-change: 0.000597067
+
+Timestep #835: 0.0927391s
+SOR iterations: 84
+u-change: 1.54945e-06, v-change: 0.0228775, streamfunc-change: 1.05916e-06, vorticity-change: 0.000560517
+
+Timestep #836: 0.0928502s
+SOR iterations: 84
+u-change: 1.16375e-06, v-change: 0.0228272, streamfunc-change: 1.0204e-06, vorticity-change: 0.000544772
+
+Timestep #837: 0.0929613s
+SOR iterations: 84
+u-change: 1.83001e-06, v-change: 0.0193918, streamfunc-change: 1.08198e-06, vorticity-change: 0.000512174
+
+Timestep #838: 0.0930723s
+SOR iterations: 84
+u-change: 1.50787e-06, v-change: 0.0274514, streamfunc-change: 9.00727e-07, vorticity-change: 0.000501701
+
+Timestep #839: 0.0931834s
+SOR iterations: 84
+u-change: 1.14384e-06, v-change: 0.0276779, streamfunc-change: 1.24345e-06, vorticity-change: 0.000482802
+
+Timestep #840: 0.0932945s
+SOR iterations: 84
+u-change: 3.89707e-06, v-change: 0.0397431, streamfunc-change: 1.37826e-06, vorticity-change: 0.000465655
+
+Timestep #841: 0.0934055s
+SOR iterations: 84
+u-change: 4.73154e-06, v-change: 0.0332213, streamfunc-change: 1.09146e-06, vorticity-change: 0.000448766
+
+Timestep #842: 0.0935166s
+SOR iterations: 84
+u-change: 1.64919e-06, v-change: 0.0309418, streamfunc-change: 1.00133e-06, vorticity-change: 0.00043467
+
+Timestep #843: 0.0936277s
+SOR iterations: 84
+u-change: 1.38912e-06, v-change: 0.0322944, streamfunc-change: 1.00938e-06, vorticity-change: 0.000417827
+
+Timestep #844: 0.0937387s
+SOR iterations: 84
+u-change: 1.36573e-06, v-change: 0.026892, streamfunc-change: 1.1212e-06, vorticity-change: 0.0004027
+
+Timestep #845: 0.0938498s
+SOR iterations: 84
+u-change: 2.75369e-06, v-change: 0.0280705, streamfunc-change: 1.03082e-06, vorticity-change: 0.000385298
+
+Timestep #846: 0.0939608s
+SOR iterations: 84
+u-change: 1.58324e-06, v-change: 0.0296883, streamfunc-change: 1.0694e-06, vorticity-change: 0.00038303
+
+Timestep #847: 0.0940719s
+SOR iterations: 84
+u-change: 1.38747e-06, v-change: 0.0281209, streamfunc-change: 9.25844e-07, vorticity-change: 0.000366227
+
+Timestep #848: 0.094183s
+SOR iterations: 84
+u-change: 1.10723e-06, v-change: 0.0283064, streamfunc-change: 1.0883e-06, vorticity-change: 0.000357655
+
+Timestep #849: 0.094294s
+SOR iterations: 84
+u-change: 1.17051e-06, v-change: 0.0241526, streamfunc-change: 9.56829e-07, vorticity-change: 0.00034836
+
+Timestep #850: 0.0944051s
+SOR iterations: 84
+u-change: 1.06859e-06, v-change: 0.0312946, streamfunc-change: 1.02591e-06, vorticity-change: 0.000341402
+
+Timestep #851: 0.0945162s
+SOR iterations: 84
+u-change: 1.63845e-06, v-change: 0.0214967, streamfunc-change: 1.03674e-06, vorticity-change: 0.000335375
+
+Timestep #852: 0.0946272s
+SOR iterations: 84
+u-change: 1.71789e-06, v-change: 0.0282707, streamfunc-change: 1.07406e-06, vorticity-change: 0.000328768
+
+Timestep #853: 0.0947383s
+SOR iterations: 84
+u-change: 2.24546e-06, v-change: 0.0300565, streamfunc-change: 1.18812e-06, vorticity-change: 0.0003197
+
+Timestep #854: 0.0948494s
+SOR iterations: 84
+u-change: 2.69681e-06, v-change: 0.0302302, streamfunc-change: 9.68356e-07, vorticity-change: 0.000319756
+
+Timestep #855: 0.0949604s
+SOR iterations: 84
+u-change: 1.13863e-06, v-change: 0.0307628, streamfunc-change: 1.02447e-06, vorticity-change: 0.000314123
+
+Timestep #856: 0.0950715s
+SOR iterations: 84
+u-change: 1.88121e-06, v-change: 0.0280244, streamfunc-change: 1.05173e-06, vorticity-change: 0.000302979
+
+Timestep #857: 0.0951826s
+SOR iterations: 84
+u-change: 1.92567e-06, v-change: 0.0393169, streamfunc-change: 1.23399e-06, vorticity-change: 0.000302191
+
+Timestep #858: 0.0952936s
+SOR iterations: 84
+u-change: 3.45075e-06, v-change: 0.0276638, streamfunc-change: 1.11802e-06, vorticity-change: 0.000297578
+
+Timestep #859: 0.0954047s
+SOR iterations: 84
+u-change: 1.77336e-06, v-change: 0.0382705, streamfunc-change: 9.66079e-07, vorticity-change: 0.000289496
+
+Timestep #860: 0.0955158s
+SOR iterations: 84
+u-change: 1.40609e-06, v-change: 0.0257139, streamfunc-change: 1.01489e-06, vorticity-change: 0.000290077
+
+Timestep #861: 0.0956268s
+SOR iterations: 84
+u-change: 1.74061e-06, v-change: 0.0259715, streamfunc-change: 9.25854e-07, vorticity-change: 0.000286864
+
+Timestep #862: 0.0957379s
+SOR iterations: 84
+u-change: 1.57271e-06, v-change: 0.0263141, streamfunc-change: 8.81005e-07, vorticity-change: 0.000289755
+
+Timestep #863: 0.095849s
+SOR iterations: 84
+u-change: 1.31993e-06, v-change: 0.0382057, streamfunc-change: 8.51266e-07, vorticity-change: 0.000298358
+
+Timestep #864: 0.09596s
+SOR iterations: 84
+u-change: 1.22905e-06, v-change: 0.0189492, streamfunc-change: 7.2361e-07, vorticity-change: 0.000291862
+
+Timestep #865: 0.0960711s
+SOR iterations: 84
+u-change: 1.14031e-06, v-change: 0.0282929, streamfunc-change: 9.57505e-07, vorticity-change: 0.000295367
+
+Timestep #866: 0.0961821s
+SOR iterations: 84
+u-change: 1.62289e-06, v-change: 0.0245193, streamfunc-change: 8.33161e-07, vorticity-change: 0.000311533
+
+Timestep #867: 0.0962932s
+SOR iterations: 84
+u-change: 1.46408e-06, v-change: 0.033881, streamfunc-change: 9.56451e-07, vorticity-change: 0.000308862
+
+Timestep #868: 0.0964043s
+SOR iterations: 84
+u-change: 1.74238e-06, v-change: 0.0393259, streamfunc-change: 9.72898e-07, vorticity-change: 0.000322174
+
+Timestep #869: 0.0965153s
+SOR iterations: 84
+u-change: 2.32079e-06, v-change: 0.026036, streamfunc-change: 7.76125e-07, vorticity-change: 0.00034997
+
+Timestep #870: 0.0966264s
+SOR iterations: 84
+u-change: 1.68606e-06, v-change: 0.033515, streamfunc-change: 8.68834e-07, vorticity-change: 0.000687011
+
+Timestep #871: 0.0967375s
+SOR iterations: 84
+u-change: 1.45204e-06, v-change: 0.0254026, streamfunc-change: 7.21232e-07, vorticity-change: 0.000527607
+
+Timestep #872: 0.0968485s
+SOR iterations: 84
+u-change: 6.45574e-06, v-change: 0.0241578, streamfunc-change: 8.38948e-07, vorticity-change: 0.000580068
+
+Timestep #873: 0.0969596s
+SOR iterations: 84
+u-change: 1.33353e-06, v-change: 0.029603, streamfunc-change: 8.48923e-07, vorticity-change: 0.000625758
+
+Timestep #874: 0.0970707s
+SOR iterations: 84
+u-change: 1.42374e-06, v-change: 0.0222103, streamfunc-change: 6.6619e-07, vorticity-change: 0.000730228
+
+Timestep #875: 0.0971817s
+SOR iterations: 84
+u-change: 9.33672e-07, v-change: 0.0343611, streamfunc-change: 9.25271e-07, vorticity-change: 0.000978742
+
+Timestep #876: 0.0972928s
+SOR iterations: 84
+u-change: 1.05174e-06, v-change: 0.0184373, streamfunc-change: 7.03751e-07, vorticity-change: 0.00210141
+
+Timestep #877: 0.0974039s
+SOR iterations: 84
+u-change: 1.29599e-06, v-change: 0.0345103, streamfunc-change: 7.58044e-07, vorticity-change: 0.00261307
+
+Timestep #878: 0.0975149s
+SOR iterations: 84
+u-change: 1.5734e-06, v-change: 0.0421155, streamfunc-change: 9.73189e-07, vorticity-change: 0.00104322
+
+Timestep #879: 0.097626s
+SOR iterations: 84
+u-change: 2.00195e-06, v-change: 0.0361317, streamfunc-change: 8.90177e-07, vorticity-change: 0.000751335
+
+Timestep #880: 0.0977371s
+SOR iterations: 84
+u-change: 3.87855e-06, v-change: 0.0303105, streamfunc-change: 8.62557e-07, vorticity-change: 0.000625706
+
+Timestep #881: 0.0978481s
+SOR iterations: 84
+u-change: 1.99634e-06, v-change: 0.0339375, streamfunc-change: 8.83642e-07, vorticity-change: 0.000563941
+
+Timestep #882: 0.0979592s
+SOR iterations: 84
+u-change: 1.45684e-06, v-change: 0.0331013, streamfunc-change: 6.96403e-07, vorticity-change: 0.000510651
+
+Timestep #883: 0.0980702s
+SOR iterations: 84
+u-change: 1.47241e-06, v-change: 0.0244406, streamfunc-change: 8.05697e-07, vorticity-change: 0.000477972
+
+Timestep #884: 0.0981813s
+SOR iterations: 84
+u-change: 1.29907e-06, v-change: 0.0266271, streamfunc-change: 8.0667e-07, vorticity-change: 0.000459891
+
+Timestep #885: 0.0982924s
+SOR iterations: 84
+u-change: 1.20288e-06, v-change: 0.0317846, streamfunc-change: 8.02126e-07, vorticity-change: 0.000436336
+
+Timestep #886: 0.0984034s
+SOR iterations: 84
+u-change: 1.78181e-06, v-change: 0.0312475, streamfunc-change: 9.58506e-07, vorticity-change: 0.000423097
+
+Timestep #887: 0.0985145s
+SOR iterations: 84
+u-change: 2.48327e-06, v-change: 0.0324254, streamfunc-change: 8.18944e-07, vorticity-change: 0.00042
+
+Timestep #888: 0.0986256s
+SOR iterations: 84
+u-change: 1.52818e-06, v-change: 0.0229358, streamfunc-change: 8.1744e-07, vorticity-change: 0.000408071
+
+Timestep #889: 0.0987366s
+SOR iterations: 84
+u-change: 1.13925e-06, v-change: 0.0318091, streamfunc-change: 7.70897e-07, vorticity-change: 0.00039767
+
+Timestep #890: 0.0988477s
+SOR iterations: 84
+u-change: 1.27906e-06, v-change: 0.0257411, streamfunc-change: 6.79622e-07, vorticity-change: 0.000398098
+
+Timestep #891: 0.0989588s
+SOR iterations: 84
+u-change: 9.3888e-07, v-change: 0.0244958, streamfunc-change: 8.13286e-07, vorticity-change: 0.000382139
+
+Timestep #892: 0.0990698s
+SOR iterations: 84
+u-change: 1.1723e-06, v-change: 0.0358266, streamfunc-change: 7.89537e-07, vorticity-change: 0.000375161
+
+Timestep #893: 0.0991809s
+SOR iterations: 84
+u-change: 1.54637e-06, v-change: 0.023739, streamfunc-change: 7.62743e-07, vorticity-change: 0.000375055
+
+Timestep #894: 0.099292s
+SOR iterations: 84
+u-change: 1.3958e-06, v-change: 0.0289242, streamfunc-change: 6.67951e-07, vorticity-change: 0.000359975
+
+Timestep #895: 0.099403s
+SOR iterations: 84
+u-change: 1.14883e-06, v-change: 0.0242374, streamfunc-change: 6.58012e-07, vorticity-change: 0.000355426
+
+Timestep #896: 0.0995141s
+SOR iterations: 84
+u-change: 1.01922e-06, v-change: 0.0190298, streamfunc-change: 5.58846e-07, vorticity-change: 0.000357245
+
+Timestep #897: 0.0996252s
+SOR iterations: 84
+u-change: 6.98812e-07, v-change: 0.0184878, streamfunc-change: 7.6131e-07, vorticity-change: 0.00034284
+
+Timestep #898: 0.0997362s
+SOR iterations: 84
+u-change: 1.02279e-06, v-change: 0.0232941, streamfunc-change: 5.94468e-07, vorticity-change: 0.000337707
+
+Timestep #899: 0.0998473s
+SOR iterations: 84
+u-change: 1.00715e-06, v-change: 0.0255493, streamfunc-change: 6.33406e-07, vorticity-change: 0.00034198
+
+Timestep #900: 0.0999584s
+SOR iterations: 84
+u-change: 1.66677e-06, v-change: 0.0197699, streamfunc-change: 7.59094e-07, vorticity-change: 0.000330934
+
+Timestep #901: 0.100069s
+SOR iterations: 84
+u-change: 1.44028e-06, v-change: 0.026516, streamfunc-change: 5.96653e-07, vorticity-change: 0.00032425
+
+Timestep #902: 0.10018s
+SOR iterations: 84
+u-change: 1.04948e-06, v-change: 0.0253195, streamfunc-change: 5.72189e-07, vorticity-change: 0.000329019
+
+Timestep #903: 0.100292s
+SOR iterations: 84
+u-change: 9.33977e-07, v-change: 0.0202545, streamfunc-change: 7.24003e-07, vorticity-change: 0.000317582
+
+Timestep #904: 0.100403s
+SOR iterations: 84
+u-change: 1.05057e-06, v-change: 0.02706, streamfunc-change: 5.98194e-07, vorticity-change: 0.000312174
+
+Timestep #905: 0.100514s
+SOR iterations: 84
+u-change: 9.28765e-07, v-change: 0.0157368, streamfunc-change: 5.4778e-07, vorticity-change: 0.000319105
+
+Timestep #906: 0.100625s
+SOR iterations: 84
+u-change: 7.72548e-07, v-change: 0.0242437, streamfunc-change: 6.99576e-07, vorticity-change: 0.000307354
+
+Timestep #907: 0.100736s
+SOR iterations: 84
+u-change: 1.38574e-06, v-change: 0.0267292, streamfunc-change: 5.9813e-07, vorticity-change: 0.000302384
+
+Timestep #908: 0.100847s
+SOR iterations: 84
+u-change: 7.67783e-07, v-change: 0.013335, streamfunc-change: 5.16876e-07, vorticity-change: 0.000303691
+
+Timestep #909: 0.100958s
+SOR iterations: 84
+u-change: 9.11322e-07, v-change: 0.0208274, streamfunc-change: 7.24235e-07, vorticity-change: 0.000299929
+
+Timestep #910: 0.101069s
+SOR iterations: 84
+u-change: 1.49025e-06, v-change: 0.0356725, streamfunc-change: 7.67613e-07, vorticity-change: 0.000296108
+
+Timestep #911: 0.10118s
+SOR iterations: 84
+u-change: 1.80692e-06, v-change: 0.0293315, streamfunc-change: 6.50148e-07, vorticity-change: 0.000296392
+
+Timestep #912: 0.101291s
+SOR iterations: 84
+u-change: 1.54292e-06, v-change: 0.0272449, streamfunc-change: 7.74866e-07, vorticity-change: 0.000291748
+
+Timestep #913: 0.101402s
+SOR iterations: 84
+u-change: 3.06894e-06, v-change: 0.0198933, streamfunc-change: 7.28509e-07, vorticity-change: 0.000291338
+
+Timestep #914: 0.101513s
+SOR iterations: 84
+u-change: 1.49512e-06, v-change: 0.0291152, streamfunc-change: 5.9675e-07, vorticity-change: 0.000290404
+
+Timestep #915: 0.101624s
+SOR iterations: 84
+u-change: 1.22957e-06, v-change: 0.0189175, streamfunc-change: 5.26757e-07, vorticity-change: 0.000299162
+
+Timestep #916: 0.101735s
+SOR iterations: 84
+u-change: 1.02782e-06, v-change: 0.0220858, streamfunc-change: 6.8861e-07, vorticity-change: 0.000297961
+
+Timestep #917: 0.101846s
+SOR iterations: 84
+u-change: 1.06194e-06, v-change: 0.0299078, streamfunc-change: 6.21514e-07, vorticity-change: 0.000296381
+
+Timestep #918: 0.101958s
+SOR iterations: 84
+u-change: 9.96586e-07, v-change: 0.0135577, streamfunc-change: 5.39206e-07, vorticity-change: 0.000291399
+
+Timestep #919: 0.102069s
+SOR iterations: 84
+u-change: 8.67299e-07, v-change: 0.0221054, streamfunc-change: 6.46718e-07, vorticity-change: 0.000302512
+
+Timestep #920: 0.10218s
+SOR iterations: 84
+u-change: 1.26075e-06, v-change: 0.0232195, streamfunc-change: 6.39648e-07, vorticity-change: 0.000299084
+
+Timestep #921: 0.102291s
+SOR iterations: 84
+u-change: 9.06459e-07, v-change: 0.0219336, streamfunc-change: 5.90577e-07, vorticity-change: 0.000301107
+
+Timestep #922: 0.102402s
+SOR iterations: 84
+u-change: 1.08312e-06, v-change: 0.0165868, streamfunc-change: 4.50421e-07, vorticity-change: 0.000300339
+
+Timestep #923: 0.102513s
+SOR iterations: 84
+u-change: 5.62146e-07, v-change: 0.0180957, streamfunc-change: 6.78165e-07, vorticity-change: 0.000303426
+
+Timestep #924: 0.102624s
+SOR iterations: 84
+u-change: 1.07615e-06, v-change: 0.0256158, streamfunc-change: 6.08068e-07, vorticity-change: 0.000311155
+
+Timestep #925: 0.102735s
+SOR iterations: 84
+u-change: 8.28668e-07, v-change: 0.0165497, streamfunc-change: 5.36398e-07, vorticity-change: 0.000315246
+
+Timestep #926: 0.102846s
+SOR iterations: 84
+u-change: 1.2298e-06, v-change: 0.0281148, streamfunc-change: 6.08788e-07, vorticity-change: 0.000485492
+
+Timestep #927: 0.102957s
+SOR iterations: 84
+u-change: 1.05739e-06, v-change: 0.0234377, streamfunc-change: 5.30803e-07, vorticity-change: 0.00082072
+
+Timestep #928: 0.103068s
+SOR iterations: 84
+u-change: 1.07907e-06, v-change: 0.0260306, streamfunc-change: 5.34539e-07, vorticity-change: 0.00085787
+
+Timestep #929: 0.103179s
+SOR iterations: 84
+u-change: 1.08678e-06, v-change: 0.0280676, streamfunc-change: 5.06506e-07, vorticity-change: 0.000727161
+
+Timestep #930: 0.10329s
+SOR iterations: 84
+u-change: 7.01168e-07, v-change: 0.0247814, streamfunc-change: 5.74472e-07, vorticity-change: 0.000619859
+
+Timestep #931: 0.103401s
+SOR iterations: 84
+u-change: 9.51989e-07, v-change: 0.018976, streamfunc-change: 5.21863e-07, vorticity-change: 0.000571304
+
+Timestep #932: 0.103512s
+SOR iterations: 84
+u-change: 7.87729e-07, v-change: 0.025856, streamfunc-change: 4.99901e-07, vorticity-change: 0.000529614
+
+Timestep #933: 0.103623s
+SOR iterations: 84
+u-change: 9.3526e-07, v-change: 0.0397731, streamfunc-change: 4.94042e-07, vorticity-change: 0.00050558
+
+Timestep #934: 0.103735s
+SOR iterations: 84
+u-change: 7.03763e-07, v-change: 0.0263844, streamfunc-change: 6.12672e-07, vorticity-change: 0.000530221
+
+Timestep #935: 0.103846s
+SOR iterations: 84
+u-change: 2.28716e-06, v-change: 0.0218981, streamfunc-change: 4.89569e-07, vorticity-change: 0.000504483
+
+Timestep #936: 0.103957s
+SOR iterations: 84
+u-change: 1.024e-06, v-change: 0.0328907, streamfunc-change: 5.23656e-07, vorticity-change: 0.000480631
+
+Timestep #937: 0.104068s
+SOR iterations: 84
+u-change: 2.11035e-06, v-change: 0.0349853, streamfunc-change: 6.22683e-07, vorticity-change: 0.000460187
+
+Timestep #938: 0.104179s
+SOR iterations: 84
+u-change: 1.89142e-06, v-change: 0.0172148, streamfunc-change: 5.80556e-07, vorticity-change: 0.000440089
+
+Timestep #939: 0.10429s
+SOR iterations: 84
+u-change: 8.29232e-07, v-change: 0.0227616, streamfunc-change: 4.89474e-07, vorticity-change: 0.000429994
+
+Timestep #940: 0.104401s
+SOR iterations: 84
+u-change: 8.24459e-07, v-change: 0.0245247, streamfunc-change: 4.51894e-07, vorticity-change: 0.000459218
+
+Timestep #941: 0.104512s
+SOR iterations: 84
+u-change: 1.0977e-06, v-change: 0.0329442, streamfunc-change: 5.09632e-07, vorticity-change: 0.000451696
+
+Timestep #942: 0.104623s
+SOR iterations: 84
+u-change: 1.48731e-06, v-change: 0.0282183, streamfunc-change: 5.81874e-07, vorticity-change: 0.000433308
+
+Timestep #943: 0.104734s
+SOR iterations: 84
+u-change: 1.43564e-06, v-change: 0.0378273, streamfunc-change: 5.04469e-07, vorticity-change: 0.000422934
+
+Timestep #944: 0.104845s
+SOR iterations: 84
+u-change: 1.14327e-06, v-change: 0.0359787, streamfunc-change: 5.83519e-07, vorticity-change: 0.000407812
+
+Timestep #945: 0.104956s
+SOR iterations: 84
+u-change: 2.50183e-06, v-change: 0.0249426, streamfunc-change: 4.37821e-07, vorticity-change: 0.000394819
+
+Timestep #946: 0.105067s
+SOR iterations: 84
+u-change: 5.97761e-07, v-change: 0.029979, streamfunc-change: 5.06242e-07, vorticity-change: 0.000382984
+
+Timestep #947: 0.105178s
+SOR iterations: 84
+u-change: 7.70993e-07, v-change: 0.028582, streamfunc-change: 4.96129e-07, vorticity-change: 0.000371247
+
+Timestep #948: 0.105289s
+SOR iterations: 84
+u-change: 8.49567e-07, v-change: 0.0240159, streamfunc-change: 4.70071e-07, vorticity-change: 0.00036239
+
+Timestep #949: 0.105401s
+SOR iterations: 84
+u-change: 6.73934e-07, v-change: 0.0318324, streamfunc-change: 4.73157e-07, vorticity-change: 0.000351194
+
+Timestep #950: 0.105512s
+SOR iterations: 84
+u-change: 7.44761e-07, v-change: 0.0281351, streamfunc-change: 4.57866e-07, vorticity-change: 0.000346268
+
+Timestep #951: 0.105623s
+SOR iterations: 84
+u-change: 1.05569e-06, v-change: 0.0330492, streamfunc-change: 5.70616e-07, vorticity-change: 0.000333691
+
+Timestep #952: 0.105734s
+SOR iterations: 84
+u-change: 7.70616e-07, v-change: 0.0225627, streamfunc-change: 4.95857e-07, vorticity-change: 0.000339951
+
+Timestep #953: 0.105845s
+SOR iterations: 84
+u-change: 1.02373e-06, v-change: 0.0288478, streamfunc-change: 4.28959e-07, vorticity-change: 0.000334381
+
+Timestep #954: 0.105956s
+SOR iterations: 84
+u-change: 5.02282e-07, v-change: 0.0296415, streamfunc-change: 4.22558e-07, vorticity-change: 0.000324469
+
+Timestep #955: 0.106067s
+SOR iterations: 84
+u-change: 5.94769e-07, v-change: 0.0243669, streamfunc-change: 4.64583e-07, vorticity-change: 0.000316981
+
+Timestep #956: 0.106178s
+SOR iterations: 84
+u-change: 6.29642e-07, v-change: 0.0300086, streamfunc-change: 3.91929e-07, vorticity-change: 0.000313428
+
+Timestep #957: 0.106289s
+SOR iterations: 84
+u-change: 5.41632e-07, v-change: 0.0200944, streamfunc-change: 3.69938e-07, vorticity-change: 0.000305627
+
+Timestep #958: 0.1064s
+SOR iterations: 84
+u-change: 5.41491e-07, v-change: 0.0205451, streamfunc-change: 3.72353e-07, vorticity-change: 0.000300697
+
+Timestep #959: 0.106511s
+SOR iterations: 84
+u-change: 9.20499e-07, v-change: 0.0271725, streamfunc-change: 4.09477e-07, vorticity-change: 0.000296378
+
+Timestep #960: 0.106622s
+SOR iterations: 84
+u-change: 7.6111e-07, v-change: 0.0288414, streamfunc-change: 4.28613e-07, vorticity-change: 0.000289561
+
+Timestep #961: 0.106733s
+SOR iterations: 84
+u-change: 9.06806e-07, v-change: 0.0237624, streamfunc-change: 6.76674e-07, vorticity-change: 0.000292584
+
+Timestep #962: 0.106844s
+SOR iterations: 84
+u-change: 1.28242e-06, v-change: 0.0343287, streamfunc-change: 4.22491e-07, vorticity-change: 0.000307201
+
+Timestep #963: 0.106955s
+SOR iterations: 84
+u-change: 6.76185e-07, v-change: 0.0266584, streamfunc-change: 4.03789e-07, vorticity-change: 0.000306843
+
+Timestep #964: 0.107067s
+SOR iterations: 84
+u-change: 8.67978e-07, v-change: 0.0220307, streamfunc-change: 6.26348e-07, vorticity-change: 0.00030409
+
+Timestep #965: 0.107178s
+SOR iterations: 84
+u-change: 1.94122e-06, v-change: 0.0277197, streamfunc-change: 5.94538e-07, vorticity-change: 0.000274271
+
+Timestep #966: 0.107289s
+SOR iterations: 84
+u-change: 1.34056e-06, v-change: 0.0282953, streamfunc-change: 4.34487e-07, vorticity-change: 0.000275286
+
+Timestep #967: 0.1074s
+SOR iterations: 84
+u-change: 8.50236e-07, v-change: 0.0254018, streamfunc-change: 4.12721e-07, vorticity-change: 0.000271401
+
+Timestep #968: 0.107511s
+SOR iterations: 84
+u-change: 1.01137e-06, v-change: 0.027138, streamfunc-change: 4.19664e-07, vorticity-change: 0.000269497
+
+Timestep #969: 0.107622s
+SOR iterations: 84
+u-change: 9.29847e-07, v-change: 0.0262436, streamfunc-change: 4.74112e-07, vorticity-change: 0.000269643
+
+Timestep #970: 0.107733s
+SOR iterations: 84
+u-change: 7.08666e-07, v-change: 0.0229624, streamfunc-change: 5.59765e-07, vorticity-change: 0.000311653
+
+Timestep #971: 0.107844s
+SOR iterations: 84
+u-change: 9.67956e-07, v-change: 0.0212631, streamfunc-change: 5.39484e-07, vorticity-change: 0.000318557
+
+Timestep #972: 0.107955s
+SOR iterations: 84
+u-change: 1.15559e-06, v-change: 0.0196005, streamfunc-change: 3.71534e-07, vorticity-change: 0.000334425
+
+Timestep #973: 0.108066s
+SOR iterations: 84
+u-change: 8.96971e-07, v-change: 0.023359, streamfunc-change: 4.45967e-07, vorticity-change: 0.000343564
+
+Timestep #974: 0.108177s
+SOR iterations: 84
+u-change: 7.28838e-07, v-change: 0.0352616, streamfunc-change: 3.8672e-07, vorticity-change: 0.000364463
+
+Timestep #975: 0.108288s
+SOR iterations: 84
+u-change: 6.41357e-07, v-change: 0.0154417, streamfunc-change: 3.04874e-07, vorticity-change: 0.000395235
+
+Timestep #976: 0.108399s
+SOR iterations: 84
+u-change: 6.99528e-07, v-change: 0.0149988, streamfunc-change: 4.70707e-07, vorticity-change: 0.000440998
+
+Timestep #977: 0.10851s
+SOR iterations: 84
+u-change: 1.14419e-06, v-change: 0.0279676, streamfunc-change: 3.99988e-07, vorticity-change: 0.000523323
+
+Timestep #978: 0.108621s
+SOR iterations: 84
+u-change: 9.51565e-07, v-change: 0.0200564, streamfunc-change: 4.94861e-07, vorticity-change: 0.000690938
+
+Timestep #979: 0.108732s
+SOR iterations: 84
+u-change: 1.19305e-06, v-change: 0.0244295, streamfunc-change: 4.53961e-07, vorticity-change: 0.000565996
+
+Timestep #980: 0.108844s
+SOR iterations: 84
+u-change: 8.76825e-07, v-change: 0.0274906, streamfunc-change: 3.63569e-07, vorticity-change: 0.000815139
+
+Timestep #981: 0.108955s
+SOR iterations: 84
+u-change: 6.1116e-07, v-change: 0.0141847, streamfunc-change: 3.37179e-07, vorticity-change: 0.00721543
+
+Timestep #982: 0.109066s
+SOR iterations: 84
+u-change: 4.31013e-07, v-change: 0.0131536, streamfunc-change: 4.22081e-07, vorticity-change: 0.0010265
+
+Timestep #983: 0.109177s
+SOR iterations: 84
+u-change: 8.6372e-07, v-change: 0.0396803, streamfunc-change: 4.74324e-07, vorticity-change: 0.000612132
+
+Timestep #984: 0.109288s
+SOR iterations: 84
+u-change: 8.25147e-07, v-change: 0.0289642, streamfunc-change: 3.20083e-07, vorticity-change: 0.000457844
+
+Timestep #985: 0.109399s
+SOR iterations: 84
+u-change: 1.28653e-06, v-change: 0.0186721, streamfunc-change: 4.43991e-07, vorticity-change: 0.000377933
+
+Timestep #986: 0.10951s
+SOR iterations: 84
+u-change: 1.43115e-06, v-change: 0.0324656, streamfunc-change: 4.19661e-07, vorticity-change: 0.000402278
+
+Timestep #987: 0.109621s
+SOR iterations: 84
+u-change: 1.12908e-06, v-change: 0.027318, streamfunc-change: 3.82457e-07, vorticity-change: 0.000343701
+
+Timestep #988: 0.109732s
+SOR iterations: 84
+u-change: 8.10217e-07, v-change: 0.023575, streamfunc-change: 4.83833e-07, vorticity-change: 0.000301653
+
+Timestep #989: 0.109843s
+SOR iterations: 84
+u-change: 1.11176e-06, v-change: 0.0250848, streamfunc-change: 4.56072e-07, vorticity-change: 0.000227147
+
+Timestep #990: 0.109954s
+SOR iterations: 84
+u-change: 1.06868e-06, v-change: 0.0316021, streamfunc-change: 5.48981e-07, vorticity-change: 0.000216643
+
+Timestep #991: 0.110065s
+SOR iterations: 84
+u-change: 1.33873e-06, v-change: 0.0181389, streamfunc-change: 3.88336e-07, vorticity-change: 0.000210425
+
+Timestep #992: 0.110176s
+SOR iterations: 84
+u-change: 7.78873e-07, v-change: 0.0342243, streamfunc-change: 3.71412e-07, vorticity-change: 0.000197982
+
+Timestep #993: 0.110287s
+SOR iterations: 84
+u-change: 7.84754e-07, v-change: 0.0346267, streamfunc-change: 3.63818e-07, vorticity-change: 0.000189859
+
+Timestep #994: 0.110398s
+SOR iterations: 84
+u-change: 1.27109e-06, v-change: 0.0244674, streamfunc-change: 5.49018e-07, vorticity-change: 0.000182662
+
+Timestep #995: 0.11051s
+SOR iterations: 84
+u-change: 2.66969e-06, v-change: 0.0265365, streamfunc-change: 4.11691e-07, vorticity-change: 0.000177919
+
+Timestep #996: 0.110621s
+SOR iterations: 84
+u-change: 1.08261e-06, v-change: 0.01579, streamfunc-change: 2.81673e-07, vorticity-change: 0.000169664
+
+Timestep #997: 0.110732s
+SOR iterations: 84
+u-change: 6.01951e-06, v-change: 0.0127264, streamfunc-change: 4.79909e-07, vorticity-change: 0.000170114
+
+Timestep #998: 0.110843s
+SOR iterations: 84
+u-change: 7.40212e-07, v-change: 0.0273102, streamfunc-change: 4.58279e-07, vorticity-change: 0.000162144
+
+Timestep #999: 0.110954s
+SOR iterations: 84
+u-change: 6.47578e-07, v-change: 0.0170218, streamfunc-change: 3.92864e-07, vorticity-change: 0.000158969
+
+Timestep #1000: 0.111065s
+SOR iterations: 84
+u-change: 7.93537e-07, v-change: 0.0306591, streamfunc-change: 4.87082e-07, vorticity-change: 0.000155989
+
+Timestep #1001: 0.111176s
+SOR iterations: 84
+u-change: 1.24658e-06, v-change: 0.0310878, streamfunc-change: 4.15924e-07, vorticity-change: 0.000126297
+
+Timestep #1002: 0.111287s
+SOR iterations: 84
+u-change: 1.11295e-06, v-change: 0.0262943, streamfunc-change: 3.23849e-07, vorticity-change: 0.000124826
+
+Timestep #1003: 0.111398s
+SOR iterations: 84
+u-change: 6.05754e-07, v-change: 0.0216319, streamfunc-change: 4.66685e-07, vorticity-change: 0.000122636
+
+Timestep #1004: 0.111509s
+SOR iterations: 84
+u-change: 9.20675e-07, v-change: 0.0310942, streamfunc-change: 5.24809e-07, vorticity-change: 0.000124317
+
+Timestep #1005: 0.11162s
+SOR iterations: 84
+u-change: 1.38949e-06, v-change: 0.0218171, streamfunc-change: 2.68269e-07, vorticity-change: 0.000127236
+
+Timestep #1006: 0.111731s
+SOR iterations: 84
+u-change: 3.96179e-07, v-change: 0.013496, streamfunc-change: 3.18235e-07, vorticity-change: 0.000126306
+
+Timestep #1007: 0.111842s
+SOR iterations: 84
+u-change: 3.93281e-07, v-change: 0.0261034, streamfunc-change: 3.44559e-07, vorticity-change: 0.000122958
+
+Timestep #1008: 0.111953s
+SOR iterations: 84
+u-change: 4.39576e-07, v-change: 0.0218842, streamfunc-change: 3.64785e-07, vorticity-change: 0.000123675
+
+Timestep #1009: 0.112064s
+SOR iterations: 84
+u-change: 4.48206e-07, v-change: 0.0119183, streamfunc-change: 3.51813e-07, vorticity-change: 0.000124748
+
+Timestep #1010: 0.112175s
+SOR iterations: 84
+u-change: 5.80963e-07, v-change: 0.0225579, streamfunc-change: 4.23168e-07, vorticity-change: 0.000126311
+
+Timestep #1011: 0.112287s
+SOR iterations: 84
+u-change: 5.83086e-07, v-change: 0.0174468, streamfunc-change: 3.29365e-07, vorticity-change: 0.000137369
+
+Timestep #1012: 0.112398s
+SOR iterations: 84
+u-change: 7.98496e-07, v-change: 0.0218096, streamfunc-change: 3.41001e-07, vorticity-change: 0.000139746
+
+Timestep #1013: 0.112509s
+SOR iterations: 84
+u-change: 7.16337e-07, v-change: 0.0238052, streamfunc-change: 3.13923e-07, vorticity-change: 0.00014338
+
+Timestep #1014: 0.11262s
+SOR iterations: 84
+u-change: 4.84632e-07, v-change: 0.0278855, streamfunc-change: 2.73754e-07, vorticity-change: 0.000159713
+
+Timestep #1015: 0.112731s
+SOR iterations: 84
+u-change: 6.61446e-07, v-change: 0.0257621, streamfunc-change: 3.52717e-07, vorticity-change: 0.000164391
+
+Timestep #1016: 0.112842s
+SOR iterations: 84
+u-change: 6.76221e-07, v-change: 0.0259701, streamfunc-change: 4.29789e-07, vorticity-change: 0.000223579
+
+Timestep #1017: 0.112953s
+SOR iterations: 84
+u-change: 9.3607e-07, v-change: 0.0318989, streamfunc-change: 4.75835e-07, vorticity-change: 0.000211445
+
+Timestep #1018: 0.113064s
+SOR iterations: 84
+u-change: 8.63933e-07, v-change: 0.0186625, streamfunc-change: 3.69041e-07, vorticity-change: 0.000256944
+
+Timestep #1019: 0.113175s
+SOR iterations: 84
+u-change: 8.74842e-07, v-change: 0.0241521, streamfunc-change: 3.43709e-07, vorticity-change: 0.00029906
+
+Timestep #1020: 0.113286s
+SOR iterations: 84
+u-change: 9.25089e-07, v-change: 0.0144784, streamfunc-change: 3.42642e-07, vorticity-change: 0.000409769
+
+Timestep #1021: 0.113397s
+SOR iterations: 84
+u-change: 7.73174e-07, v-change: 0.0345117, streamfunc-change: 3.84033e-07, vorticity-change: 0.000583416
+
+Timestep #1022: 0.113508s
+SOR iterations: 84
+u-change: 1.71974e-06, v-change: 0.0258714, streamfunc-change: 4.17568e-07, vorticity-change: 0.00136151
+
+Timestep #1023: 0.113619s
+SOR iterations: 84
+u-change: 1.08243e-06, v-change: 0.0317327, streamfunc-change: 3.45744e-07, vorticity-change: 0.00466985
+
+Timestep #1024: 0.11373s
+SOR iterations: 84
+u-change: 8.30957e-07, v-change: 0.0259931, streamfunc-change: 5.23758e-07, vorticity-change: 0.000883499
+
+Timestep #1025: 0.113841s
+SOR iterations: 84
+u-change: 1.68725e-06, v-change: 0.0181902, streamfunc-change: 3.22793e-07, vorticity-change: 0.000500739
+
+Timestep #1026: 0.113953s
+SOR iterations: 84
+u-change: 4.32704e-07, v-change: 0.0205498, streamfunc-change: 3.6364e-07, vorticity-change: 0.000374013
+
+Timestep #1027: 0.114064s
+SOR iterations: 84
+u-change: 5.73047e-07, v-change: 0.0271797, streamfunc-change: 3.17315e-07, vorticity-change: 0.000291036
+
+Timestep #1028: 0.114175s
+SOR iterations: 84
+u-change: 4.38837e-07, v-change: 0.0222826, streamfunc-change: 2.52538e-07, vorticity-change: 0.000253267
+
+Timestep #1029: 0.114286s
+SOR iterations: 84
+u-change: 3.02958e-07, v-change: 0.0141522, streamfunc-change: 3.37207e-07, vorticity-change: 0.000225254
+
+Timestep #1030: 0.114397s
+SOR iterations: 84
+u-change: 5.14094e-07, v-change: 0.0157799, streamfunc-change: 4.04857e-07, vorticity-change: 0.000197768
+
+Timestep #1031: 0.114508s
+SOR iterations: 84
+u-change: 9.28142e-07, v-change: 0.031479, streamfunc-change: 4.25605e-07, vorticity-change: 0.000186781
+
+Timestep #1032: 0.114619s
+SOR iterations: 84
+u-change: 6.15587e-07, v-change: 0.0272781, streamfunc-change: 2.4249e-07, vorticity-change: 0.00016741
+
+Timestep #1033: 0.11473s
+SOR iterations: 84
+u-change: 3.76085e-07, v-change: 0.027277, streamfunc-change: 2.68221e-07, vorticity-change: 0.000161031
+
+Timestep #1034: 0.114841s
+SOR iterations: 84
+u-change: 3.60195e-07, v-change: 0.0215436, streamfunc-change: 3.23605e-07, vorticity-change: 0.000146774
+
+Timestep #1035: 0.114952s
+SOR iterations: 84
+u-change: 7.35462e-07, v-change: 0.0189413, streamfunc-change: 3.46459e-07, vorticity-change: 0.000144064
+
+Timestep #1036: 0.115063s
+SOR iterations: 84
+u-change: 5.66666e-07, v-change: 0.0163768, streamfunc-change: 3.11482e-07, vorticity-change: 0.000133189
+
+Timestep #1037: 0.115174s
+SOR iterations: 84
+u-change: 4.29204e-07, v-change: 0.0252228, streamfunc-change: 3.97744e-07, vorticity-change: 0.000130739
+
+Timestep #1038: 0.115285s
+SOR iterations: 84
+u-change: 6.32402e-07, v-change: 0.0246784, streamfunc-change: 3.28842e-07, vorticity-change: 0.00012535
+
+Timestep #1039: 0.115396s
+SOR iterations: 84
+u-change: 6.00669e-07, v-change: 0.0214154, streamfunc-change: 3.05879e-07, vorticity-change: 0.000124024
+
+Timestep #1040: 0.115507s
+SOR iterations: 84
+u-change: 7.19274e-07, v-change: 0.0246818, streamfunc-change: 3.33151e-07, vorticity-change: 0.000123301
+
+Timestep #1041: 0.115618s
+SOR iterations: 84
+u-change: 8.13681e-07, v-change: 0.027818, streamfunc-change: 3.49912e-07, vorticity-change: 0.000120982
+
+Timestep #1042: 0.11573s
+SOR iterations: 84
+u-change: 9.81197e-07, v-change: 0.0189025, streamfunc-change: 2.70528e-07, vorticity-change: 0.00011956
+
+Timestep #1043: 0.115841s
+SOR iterations: 84
+u-change: 5.15493e-07, v-change: 0.0154446, streamfunc-change: 2.84375e-07, vorticity-change: 0.000265653
+
+Timestep #1044: 0.115952s
+SOR iterations: 84
+u-change: 7.20582e-07, v-change: 0.0269899, streamfunc-change: 4.01945e-07, vorticity-change: 0.000929018
+
+Timestep #1045: 0.116063s
+SOR iterations: 84
+u-change: 5.14803e-07, v-change: 0.0265857, streamfunc-change: 3.01524e-07, vorticity-change: 0.000920941
+
+Timestep #1046: 0.116174s
+SOR iterations: 84
+u-change: 4.72756e-07, v-change: 0.0243017, streamfunc-change: 2.49121e-07, vorticity-change: 0.000727703
+
+Timestep #1047: 0.116285s
+SOR iterations: 84
+u-change: 4.42297e-07, v-change: 0.0171152, streamfunc-change: 2.0002e-07, vorticity-change: 0.000783167
+
+Timestep #1048: 0.116396s
+SOR iterations: 84
+u-change: 3.7865e-07, v-change: 0.0180884, streamfunc-change: 3.31174e-07, vorticity-change: 0.000603365
+
+Timestep #1049: 0.116507s
+SOR iterations: 84
+u-change: 8.54612e-07, v-change: 0.0232767, streamfunc-change: 2.43961e-07, vorticity-change: 0.000683251
+
+Timestep #1050: 0.116618s
+SOR iterations: 84
+u-change: 3.64483e-07, v-change: 0.0210573, streamfunc-change: 3.04013e-07, vorticity-change: 0.00052893
+
+Timestep #1051: 0.116729s
+SOR iterations: 84
+u-change: 5.32473e-07, v-change: 0.0226412, streamfunc-change: 3.24871e-07, vorticity-change: 0.000612404
+
+Timestep #1052: 0.11684s
+SOR iterations: 84
+u-change: 6.35371e-07, v-change: 0.0310656, streamfunc-change: 3.85725e-07, vorticity-change: 0.000477845
+
+Timestep #1053: 0.116951s
+SOR iterations: 84
+u-change: 6.85059e-07, v-change: 0.0169733, streamfunc-change: 2.38997e-07, vorticity-change: 0.000559294
+
+Timestep #1054: 0.117062s
+SOR iterations: 84
+u-change: 3.78254e-07, v-change: 0.014778, streamfunc-change: 1.86914e-07, vorticity-change: 0.000438057
+
+Timestep #1055: 0.117173s
+SOR iterations: 84
+u-change: 3.04647e-07, v-change: 0.0146281, streamfunc-change: 2.23947e-07, vorticity-change: 0.00051902
+
+Timestep #1056: 0.117284s
+SOR iterations: 84
+u-change: 3.10734e-07, v-change: 0.0167762, streamfunc-change: 2.66965e-07, vorticity-change: 0.000408026
+
+Timestep #1057: 0.117396s
+SOR iterations: 84
+u-change: 6.61978e-07, v-change: 0.0215268, streamfunc-change: 2.55311e-07, vorticity-change: 0.000486923
+
+Timestep #1058: 0.117507s
+SOR iterations: 84
+u-change: 5.84585e-07, v-change: 0.026743, streamfunc-change: 2.86657e-07, vorticity-change: 0.000384933
+
+Timestep #1059: 0.117618s
+SOR iterations: 84
+u-change: 5.21788e-07, v-change: 0.0295391, streamfunc-change: 3.16301e-07, vorticity-change: 0.000459895
+
+Timestep #1060: 0.117729s
+SOR iterations: 84
+u-change: 4.84325e-07, v-change: 0.0276362, streamfunc-change: 3.49019e-07, vorticity-change: 0.000366559
+
+Timestep #1061: 0.11784s
+SOR iterations: 84
+u-change: 5.95815e-07, v-change: 0.0306277, streamfunc-change: 2.93622e-07, vorticity-change: 0.000439164
+
+Timestep #1062: 0.117951s
+SOR iterations: 84
+u-change: 5.57339e-07, v-change: 0.0228175, streamfunc-change: 2.63399e-07, vorticity-change: 0.000352261
+
+Timestep #1063: 0.118062s
+SOR iterations: 84
+u-change: 3.16434e-07, v-change: 0.0225866, streamfunc-change: 1.67326e-07, vorticity-change: 0.000415884
+
+Timestep #1064: 0.118173s
+SOR iterations: 84
+u-change: 2.54586e-07, v-change: 0.0116162, streamfunc-change: 2.30506e-07, vorticity-change: 0.000335245
+
+Timestep #1065: 0.118284s
+SOR iterations: 84
+u-change: 3.81773e-07, v-change: 0.0229272, streamfunc-change: 1.68373e-07, vorticity-change: 0.000399015
+
+Timestep #1066: 0.118395s
+SOR iterations: 84
+u-change: 2.09306e-07, v-change: 0.0168888, streamfunc-change: 2.38586e-07, vorticity-change: 0.000322972
+
+Timestep #1067: 0.118506s
+SOR iterations: 84
+u-change: 3.64282e-07, v-change: 0.015959, streamfunc-change: 2.05155e-07, vorticity-change: 0.000383473
+
+Timestep #1068: 0.118617s
+SOR iterations: 84
+u-change: 3.10532e-07, v-change: 0.021973, streamfunc-change: 4.62337e-07, vorticity-change: 0.000313446
+
+Timestep #1069: 0.118728s
+SOR iterations: 84
+u-change: 8.51787e-07, v-change: 0.0257996, streamfunc-change: 3.10245e-07, vorticity-change: 0.000338763
+
+Timestep #1070: 0.118839s
+SOR iterations: 84
+u-change: 1.32026e-06, v-change: 0.0273623, streamfunc-change: 2.70505e-07, vorticity-change: 0.000337344
+
+Timestep #1071: 0.11895s
+SOR iterations: 84
+u-change: 3.58373e-07, v-change: 0.030027, streamfunc-change: 2.26582e-07, vorticity-change: 0.000345137
+
+Timestep #1072: 0.119062s
+SOR iterations: 84
+u-change: 4.12649e-07, v-change: 0.0212437, streamfunc-change: 2.58788e-07, vorticity-change: 0.000493354
+
+Timestep #1073: 0.119173s
+SOR iterations: 84
+u-change: 4.64101e-07, v-change: 0.0286037, streamfunc-change: 3.1829e-07, vorticity-change: 0.000604901
+
+Timestep #1074: 0.119284s
+SOR iterations: 84
+u-change: 6.90951e-07, v-change: 0.0297603, streamfunc-change: 3.40431e-07, vorticity-change: 0.000720726
+
+Timestep #1075: 0.119395s
+SOR iterations: 84
+u-change: 6.80619e-07, v-change: 0.0372298, streamfunc-change: 2.28272e-07, vorticity-change: 0.000919385
+
+Timestep #1076: 0.119506s
+SOR iterations: 84
+u-change: 5.03124e-07, v-change: 0.0208489, streamfunc-change: 3.31801e-07, vorticity-change: 0.00110686
+
+Timestep #1077: 0.119617s
+SOR iterations: 84
+u-change: 4.38283e-07, v-change: 0.0311655, streamfunc-change: 2.23363e-07, vorticity-change: 0.0012704
+
+Timestep #1078: 0.119728s
+SOR iterations: 84
+u-change: 3.08746e-07, v-change: 0.0297019, streamfunc-change: 2.40133e-07, vorticity-change: 0.00159377
+
+Timestep #1079: 0.119839s
+SOR iterations: 84
+u-change: 4.93793e-07, v-change: 0.0297141, streamfunc-change: 2.13511e-07, vorticity-change: 0.00188701
+
+Timestep #1080: 0.11995s
+SOR iterations: 84
+u-change: 4.69601e-07, v-change: 0.0194057, streamfunc-change: 2.19682e-07, vorticity-change: 0.00231219
+
+Timestep #1081: 0.120061s
+SOR iterations: 84
+u-change: 4.93463e-07, v-change: 0.0176284, streamfunc-change: 1.69905e-07, vorticity-change: 0.00296978
+
+Timestep #1082: 0.120172s
+SOR iterations: 84
+u-change: 2.0159e-07, v-change: 0.0127938, streamfunc-change: 1.55187e-07, vorticity-change: 0.00454889
+
+Timestep #1083: 0.120283s
+SOR iterations: 84
+u-change: 2.92612e-07, v-change: 0.00638562, streamfunc-change: 2.09888e-07, vorticity-change: 0.0139731
+
+Timestep #1084: 0.120394s
+SOR iterations: 84
+u-change: 6.75759e-07, v-change: 0.00901983, streamfunc-change: 1.37673e-07, vorticity-change: 0.012693
+
+Timestep #1085: 0.120505s
+SOR iterations: 84
+u-change: 2.45871e-07, v-change: 0.00490356, streamfunc-change: 1.35652e-07, vorticity-change: 0.0116363
+
+Timestep #1086: 0.120616s
+SOR iterations: 84
+u-change: 2.05951e-07, v-change: 0.0044915, streamfunc-change: 1.45811e-07, vorticity-change: 0.0044228
+
+Timestep #1087: 0.120727s
+SOR iterations: 84
+u-change: 3.31616e-07, v-change: 0.00463031, streamfunc-change: 1.87275e-07, vorticity-change: 0.00419573
+
+Timestep #1088: 0.120839s
+SOR iterations: 84
+u-change: 4.60095e-07, v-change: 0.007335, streamfunc-change: 1.46793e-07, vorticity-change: 0.00542846
+
+Timestep #1089: 0.12095s
+SOR iterations: 84
+u-change: 3.8964e-07, v-change: 0.00333553, streamfunc-change: 1.46055e-07, vorticity-change: 0.00678736
+
+Timestep #1090: 0.121061s
+SOR iterations: 84
+u-change: 2.78701e-07, v-change: 0.0075537, streamfunc-change: 1.26365e-07, vorticity-change: 0.00836242
+
+Timestep #1091: 0.121172s
+SOR iterations: 84
+u-change: 1.73078e-07, v-change: 0.00480819, streamfunc-change: 8.83301e-08, vorticity-change: 0.0136136
+
+Timestep #1092: 0.121283s
+SOR iterations: 84
+u-change: 1.65801e-07, v-change: 0.0028216, streamfunc-change: 1.27288e-07, vorticity-change: 0.0108205
+
+Timestep #1093: 0.121394s
+SOR iterations: 84
+u-change: 1.82658e-07, v-change: 0.00587759, streamfunc-change: 1.22799e-07, vorticity-change: 0.00690819
+
+Timestep #1094: 0.121505s
+SOR iterations: 84
+u-change: 2.01605e-07, v-change: 0.00044433, streamfunc-change: 1.44433e-07, vorticity-change: 0.00750711
+
+Timestep #1095: 0.121616s
+SOR iterations: 84
+u-change: 3.82402e-07, v-change: 0.00483347, streamfunc-change: 1.26638e-07, vorticity-change: 0.00856162
+
+Timestep #1096: 0.121727s
+SOR iterations: 84
+u-change: 2.32947e-07, v-change: 0.00460295, streamfunc-change: 1.33896e-07, vorticity-change: 0.0109442
+
+Timestep #1097: 0.121838s
+SOR iterations: 84
+u-change: 1.4061e-07, v-change: 0.00390859, streamfunc-change: 1.25697e-07, vorticity-change: 0.00516666
+
+Timestep #1098: 0.121949s
+SOR iterations: 84
+u-change: 1.67852e-07, v-change: 0.0104302, streamfunc-change: 1.4865e-07, vorticity-change: 0.0904308
+
+Timestep #1099: 0.12206s
+SOR iterations: 84
+u-change: 3.01491e-07, v-change: 0.00297095, streamfunc-change: 1.20824e-07, vorticity-change: 0.00456166
+
+Timestep #1100: 0.122171s
+SOR iterations: 84
+u-change: 4.04473e-07, v-change: 0.00359267, streamfunc-change: 1.12305e-07, vorticity-change: 0.00481212
+
+Timestep #1101: 0.122282s
+SOR iterations: 84
+u-change: 2.09476e-07, v-change: 0.00362705, streamfunc-change: 1.15281e-07, vorticity-change: 0.0106036
+
+Timestep #1102: 0.122393s
+SOR iterations: 84
+u-change: 1.56252e-07, v-change: 0.00834603, streamfunc-change: 1.14766e-07, vorticity-change: 0.0122676
+
+Timestep #1103: 0.122505s
+SOR iterations: 84
+u-change: 2.4726e-07, v-change: 0.00121205, streamfunc-change: 1.36376e-07, vorticity-change: 0.00845616
+
+Timestep #1104: 0.122616s
+SOR iterations: 84
+u-change: 2.29077e-07, v-change: 0.00480393, streamfunc-change: 1.17112e-07, vorticity-change: 0.00838919
+
+Timestep #1105: 0.122727s
+SOR iterations: 84
+u-change: 2.64416e-07, v-change: 0.00105026, streamfunc-change: 1.08389e-07, vorticity-change: 0.00387423
+
+Timestep #1106: 0.122838s
+SOR iterations: 84
+u-change: 1.05653e-07, v-change: 0.00339391, streamfunc-change: 1.4329e-07, vorticity-change: 0.00291449
+
+Timestep #1107: 0.122949s
+SOR iterations: 84
+u-change: 2.71182e-07, v-change: 0.000741562, streamfunc-change: 8.02903e-08, vorticity-change: 0.00265938
+
+Timestep #1108: 0.12306s
+SOR iterations: 84
+u-change: 1.47744e-07, v-change: 0.00214316, streamfunc-change: 1.49728e-07, vorticity-change: 0.00288282
+
+Timestep #1109: 0.123171s
+SOR iterations: 84
+u-change: 3.05738e-07, v-change: 0.00374445, streamfunc-change: 1.45035e-07, vorticity-change: 0.0193187
+
+Timestep #1110: 0.123282s
+SOR iterations: 84
+u-change: 2.40808e-07, v-change: 0.00500032, streamfunc-change: 1.27444e-07, vorticity-change: 0.00268549
+
+Timestep #1111: 0.123393s
+SOR iterations: 84
+u-change: 4.77105e-07, v-change: 0.00370288, streamfunc-change: 1.42282e-07, vorticity-change: 0.00203799
+
+Timestep #1112: 0.123504s
+SOR iterations: 84
+u-change: 3.12608e-07, v-change: 0.00853095, streamfunc-change: 9.15499e-08, vorticity-change: 0.00178539
+
+Timestep #1113: 0.123615s
+SOR iterations: 84
+u-change: 3.89549e-07, v-change: 0.00221493, streamfunc-change: 1.20978e-07, vorticity-change: 0.0017284
+
+Timestep #1114: 0.123726s
+SOR iterations: 84
+u-change: 2.11003e-07, v-change: 0.00444572, streamfunc-change: 1.95311e-07, vorticity-change: 0.00159343
+
+Timestep #1115: 0.123837s
+SOR iterations: 84
+u-change: 6.40628e-07, v-change: 0.0130337, streamfunc-change: 1.12033e-07, vorticity-change: 0.00150384
+
+Timestep #1116: 0.123948s
+SOR iterations: 84
+u-change: 1.7604e-07, v-change: 0.00746603, streamfunc-change: 1.11885e-07, vorticity-change: 0.00144119
+
+Timestep #1117: 0.124059s
+SOR iterations: 84
+u-change: 1.91479e-07, v-change: 0.00430735, streamfunc-change: 1.50013e-07, vorticity-change: 0.00139805
+
+Timestep #1118: 0.12417s
+SOR iterations: 84
+u-change: 2.52242e-07, v-change: 0.0073415, streamfunc-change: 1.12034e-07, vorticity-change: 0.00137097
+
+Timestep #1119: 0.124282s
+SOR iterations: 84
+u-change: 2.18276e-07, v-change: 0.00423245, streamfunc-change: 1.38041e-07, vorticity-change: 0.00135984
+
+Timestep #1120: 0.124393s
+SOR iterations: 84
+u-change: 3.13583e-07, v-change: 0.00176447, streamfunc-change: 1.04961e-07, vorticity-change: 0.0014009
+
+Timestep #1121: 0.124504s
+SOR iterations: 84
+u-change: 1.86448e-07, v-change: 0.0011915, streamfunc-change: 9.3402e-08, vorticity-change: 0.00143316
+
+Timestep #1122: 0.124615s
+SOR iterations: 84
+u-change: 1.39503e-07, v-change: 0.00111255, streamfunc-change: 8.0251e-08, vorticity-change: 0.00148776
+
+Timestep #1123: 0.124726s
+SOR iterations: 84
+u-change: 1.64976e-07, v-change: 0.00102628, streamfunc-change: 1.20782e-07, vorticity-change: 0.00161445
+
+Timestep #1124: 0.124837s
+SOR iterations: 84
+u-change: 3.86229e-07, v-change: 0.00101815, streamfunc-change: 9.04987e-08, vorticity-change: 0.0019683
+
+Timestep #1125: 0.124948s
+SOR iterations: 84
+u-change: 2.81004e-07, v-change: 0.00427622, streamfunc-change: 1.16844e-07, vorticity-change: 0.00511013
+
+Timestep #1126: 0.125059s
+SOR iterations: 84
+u-change: 1.81123e-07, v-change: 0.00243945, streamfunc-change: 9.10482e-08, vorticity-change: 0.00252491
+
+Timestep #1127: 0.12517s
+SOR iterations: 84
+u-change: 2.87588e-07, v-change: 0.000523622, streamfunc-change: 8.99538e-08, vorticity-change: 0.00177822
+
+Timestep #1128: 0.125281s
+SOR iterations: 84
+u-change: 2.47783e-07, v-change: 0.00388925, streamfunc-change: 1.29042e-07, vorticity-change: 0.00161528
+
+Timestep #1129: 0.125392s
+SOR iterations: 84
+u-change: 3.20343e-07, v-change: 0.00220163, streamfunc-change: 1.04081e-07, vorticity-change: 0.00159106
+
+Timestep #1130: 0.125503s
+SOR iterations: 84
+u-change: 4.42016e-07, v-change: 0.00163546, streamfunc-change: 8.71192e-08, vorticity-change: 0.00165684
+
+Timestep #1131: 0.125614s
+SOR iterations: 84
+u-change: 1.62743e-07, v-change: 0.0034148, streamfunc-change: 9.61243e-08, vorticity-change: 0.00185339
+
+Timestep #1132: 0.125725s
+SOR iterations: 84
+u-change: 8.96904e-08, v-change: 3.42387e-05, streamfunc-change: 9.86344e-08, vorticity-change: 0.00257969
+
+Timestep #1133: 0.125836s
+SOR iterations: 84
+u-change: 1.66537e-07, v-change: 0.000549056, streamfunc-change: 1.26547e-07, vorticity-change: 0.0116281
+
+Timestep #1134: 0.125948s
+SOR iterations: 84
+u-change: 2.50946e-07, v-change: 0.00719295, streamfunc-change: 1.16067e-07, vorticity-change: 0.00264244
+
+Timestep #1135: 0.126059s
+SOR iterations: 84
+u-change: 1.52654e-07, v-change: 0.00855676, streamfunc-change: 1.20634e-07, vorticity-change: 0.00274411
+
+Timestep #1136: 0.12617s
+SOR iterations: 84
+u-change: 5.22465e-07, v-change: 0.00159212, streamfunc-change: 1.33394e-07, vorticity-change: 0.011625
+
+Timestep #1137: 0.126281s
+SOR iterations: 84
+u-change: 3.0236e-07, v-change: 0.00210746, streamfunc-change: 9.0179e-08, vorticity-change: 0.00362903
+
+Timestep #1138: 0.126392s
+SOR iterations: 84
+u-change: 1.72419e-07, v-change: 0.00404208, streamfunc-change: 1.24993e-07, vorticity-change: 0.0103929
+
+Timestep #1139: 0.126503s
+SOR iterations: 84
+u-change: 4.22559e-07, v-change: 0.000569756, streamfunc-change: 1.18706e-07, vorticity-change: 0.00341641
+
+Timestep #1140: 0.126614s
+SOR iterations: 84
+u-change: 4.01973e-07, v-change: 0.00135551, streamfunc-change: 1.14214e-07, vorticity-change: 0.0070086
+
+Timestep #1141: 0.126725s
+SOR iterations: 84
+u-change: 2.29912e-07, v-change: 0.00318261, streamfunc-change: 1.23903e-07, vorticity-change: 0.00241343
+
+Timestep #1142: 0.126836s
+SOR iterations: 84
+u-change: 2.54803e-07, v-change: 0.00467525, streamfunc-change: 1.00368e-07, vorticity-change: 0.00218496
+
+Timestep #1143: 0.126947s
+SOR iterations: 84
+u-change: 1.89663e-07, v-change: 0.00926254, streamfunc-change: 1.37911e-07, vorticity-change: 0.00247046
+
+Timestep #1144: 0.127058s
+SOR iterations: 84
+u-change: 2.63081e-07, v-change: 0.00725916, streamfunc-change: 1.29112e-07, vorticity-change: 0.014764
+
+Timestep #1145: 0.127169s
+SOR iterations: 84
+u-change: 1.99109e-07, v-change: 0.00625334, streamfunc-change: 1.13593e-07, vorticity-change: 0.00211812
+
+Timestep #1146: 0.12728s
+SOR iterations: 84
+u-change: 2.05499e-07, v-change: 0.00329622, streamfunc-change: 1.08629e-07, vorticity-change: 0.00154761
+
+Timestep #1147: 0.127391s
+SOR iterations: 84
+u-change: 4.72772e-07, v-change: 0.00238046, streamfunc-change: 1.31755e-07, vorticity-change: 0.00132153
+
+Timestep #1148: 0.127502s
+SOR iterations: 84
+u-change: 2.62655e-07, v-change: 0.00824135, streamfunc-change: 1.18428e-07, vorticity-change: 0.00129436
+
+Timestep #1149: 0.127613s
+SOR iterations: 84
+u-change: 2.67601e-07, v-change: 0.00779683, streamfunc-change: 8.35431e-08, vorticity-change: 0.00117814
+
+Timestep #1150: 0.127725s
+SOR iterations: 84
+u-change: 1.67781e-07, v-change: 0.00307957, streamfunc-change: 1.05386e-07, vorticity-change: 0.00110409
+
+Timestep #1151: 0.127836s
+SOR iterations: 84
+u-change: 3.32963e-07, v-change: 0.000185832, streamfunc-change: 8.36342e-08, vorticity-change: 0.00119787
+
+Timestep #1152: 0.127947s
+SOR iterations: 84
+u-change: 1.27036e-07, v-change: 4.42577e-05, streamfunc-change: 1.13583e-07, vorticity-change: 0.00115391
+
+Timestep #1153: 0.128058s
+SOR iterations: 84
+u-change: 5.06088e-07, v-change: 0.0024067, streamfunc-change: 1.06584e-07, vorticity-change: 0.00118851
+
+Timestep #1154: 0.128169s
+SOR iterations: 84
+u-change: 3.35641e-07, v-change: 0.00183044, streamfunc-change: 7.90077e-08, vorticity-change: 0.00672971
+
+Timestep #1155: 0.12828s
+SOR iterations: 84
+u-change: 1.24319e-07, v-change: 0.00791096, streamfunc-change: 1.13545e-07, vorticity-change: 0.00194013
+
+Timestep #1156: 0.128391s
+SOR iterations: 84
+u-change: 4.22667e-07, v-change: 0.00645866, streamfunc-change: 1.04539e-07, vorticity-change: 0.00127299
+
+Timestep #1157: 0.128502s
+SOR iterations: 84
+u-change: 1.77296e-07, v-change: 0.00342043, streamfunc-change: 1.28364e-07, vorticity-change: 0.00104627
+
+Timestep #1158: 0.128613s
+SOR iterations: 84
