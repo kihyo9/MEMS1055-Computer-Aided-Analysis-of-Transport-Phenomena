@@ -10,41 +10,171 @@ class twoDimFlow
 {
 public:
 	void mainSolver(double dx, double dy, double dt, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double Re) {
-
-		int size = dx_steps * dy_steps;
+		int timestep = 0;
+		cout << "\nTimestep #" << timestep << ": " << dt * timestep << "s\n";
 
 		//calculate initial vorticies
 		solverA(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps);
 
 		//calculate the initial stream function
+		cout << "Writing initial stream function..." << "\n";
+		int size = dx_steps * dy_steps;
 		double* answer = new double[size]{};
 		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer); //get vorticities for timestep 0
 
-		//first iteration
-		solverB(dt, dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, Re);
-		int x = 0;
-
 		/*
 		Start of timestep iterations
-		*/		
-		//while (!isConverged(w,phi,wm1,phim1)) {
-		//	//retained data
-		//	double wm1 = 0;
-		//	double phim1 = 0;
+		*/
+		while (!FileAndConvergenceCheck(dt, timestep, dx_steps, dy_steps, block_xsteps, block_ysteps)) {
+			timestep++;
+			cout << "\nTimestep #" << timestep << ": " << dt * timestep << "s\n";
+			//new vorticies
+			solverB(dt, dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, Re);
 
-		//	//new vorticies
-		//	solverB(u, v);
+			//new stream function
+			answer = new double[size] {};
+			solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer);
 
-		//	//new stream function
-		//	solverC(dx_steps, dy_steps);
-
-		//	//new velocities
-		//	solverDu(phi);
-		//	solverDv(phi);
-		//}
+			//new velocities
+			solverD(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps);
+		}
 		/*
 		End of timestep iterations
 		*/
+	}
+
+	/*
+	Purpose: Compare files, if they exist, for convergence and do some file clean-up
+	Notes: Throws if files do not exist; returns true if converged, false otherwise
+	Criterion: (new+old)/(new) < threshold
+	*/
+	bool FileAndConvergenceCheck(double dt, int& timestep, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double threshold = 0.0001) {
+		if (timestep != 0) {
+			//check if files exist
+			if (!(exists_test0("u2.txt") && exists_test0("v2.txt") && exists_test0("stream2.txt") && exists_test0("vort2.txt")))
+				throw std::exception("Missing new file.");
+
+			if (!(exists_test0("u.txt") && exists_test0("v.txt") && exists_test0("stream.txt") && exists_test0("vort.txt")))
+				throw std::exception("Missing base file.");
+
+			//compare
+			double uchange = compare("u.txt", "u2.txt", dx_steps, dy_steps, block_xsteps, block_ysteps);
+			double vchange = compare("v.txt", "v2.txt", dx_steps, dy_steps, block_xsteps, block_ysteps);
+			double streamchange = compare("stream.txt", "stream2.txt", dx_steps, dy_steps, block_xsteps, block_ysteps);
+			double vortchange = compare("vort.txt", "vort2.txt", dx_steps, dy_steps, block_xsteps, block_ysteps);
+
+			if (uchange < threshold && vchange < threshold && streamchange < threshold && vortchange < threshold)
+				return true;
+
+			//delete old
+			if (exists_test0("u.txt")) {
+				if (remove("u.txt") != 0)
+					throw std::exception("Base file removal failure.");
+			}
+			if (exists_test0("v.txt")) {
+				if (remove("v.txt") != 0)
+					throw std::exception("Base file removal failure.");
+			}
+			if (exists_test0("stream.txt")) {
+				if (remove("stream.txt") != 0)
+					throw std::exception("Base file removal failure.");
+			}
+			if (exists_test0("vort.txt")) {
+				if (remove("vort.txt") != 0)
+					throw std::exception("Base file removal failure.");
+			}
+
+			//rename
+			if (rename("u2.txt", "u.txt") != 0)
+				throw std::exception("Renaming failure.");
+			if (rename("v2.txt", "v.txt") != 0)
+				throw std::exception("Renaming failure.");
+			if (rename("stream2.txt", "stream.txt") != 0)
+				throw std::exception("Renaming failure.");
+			if (rename("vort2.txt", "vort.txt") != 0)
+				throw std::exception("Renaming failure.");
+
+			cout << "u-change: " << uchange << ", v-change: " << vchange << ", streamfunc-change: " << streamchange << ", vorticity-change: " << vortchange << "\n";
+
+			return false;
+		}
+		else {
+			//check if files exist
+			if (!(exists_test0("u2.txt") && exists_test0("v2.txt") && exists_test0("stream2.txt") && exists_test0("vort2.txt")))
+				throw std::exception("Missing new file.");
+
+			//delete old
+			if (exists_test0("u.txt")) {
+				if (remove("u.txt") != 0)
+					throw std::exception("Base file removal failure.");
+			}
+			if (exists_test0("v.txt")) {
+				if (remove("v.txt") != 0)
+					throw std::exception("Base file removal failure.");
+			}
+			if (exists_test0("stream.txt")) {
+				if (remove("stream.txt") != 0)
+					throw std::exception("Base file removal failure.");
+			}
+			if (exists_test0("vort.txt")) {
+				if (remove("vort.txt") != 0)
+					throw std::exception("Base file removal failure.");
+			}
+
+			//rename
+			if (rename("u2.txt", "u.txt") != 0)
+				throw std::exception("Renaming failure.");
+			if (rename("v2.txt", "v.txt") != 0)
+				throw std::exception("Renaming failure.");
+			if (rename("stream2.txt", "stream.txt") != 0)
+				throw std::exception("Renaming failure.");
+			if (rename("vort2.txt", "vort.txt") != 0)
+				throw std::exception("Renaming failure.");
+
+			return false;
+		}
+	}
+
+	inline bool exists_test0(const std::string& name) {
+		ifstream f(name.c_str());
+		return f.good();
+	}
+
+	//hard-coded
+	double compare(string old_file, string new_file, int dx_steps = 91, int dy_steps = 11, int block_xsteps = 16, int block_ysteps = 6) {
+		int size = dx_steps * dy_steps;
+
+		ifstream oldf;
+		oldf.open(old_file);
+
+		ifstream newf;
+		newf.open(new_file);
+
+		double diffsum = 0;
+		for (int i = 0; i < size; i++) {
+			int x = i / dy_steps;
+			int y = i % dy_steps;
+
+			if ((x >= block_xsteps - 1 || y <= dy_steps - block_ysteps) && (x < dx_steps)) {
+				double old_value;
+				oldf >> old_value;
+
+				double new_value;
+				newf >> new_value;
+
+				if (new_value != 0.) {
+					diffsum += abs((old_value - new_value)/new_value);
+				}
+				else {
+					diffsum += abs(old_value - new_value);
+				}
+				
+			}
+		}
+		oldf.close();
+		newf.close();
+
+		return diffsum / size;
 	}
 
 	/*
@@ -60,7 +190,7 @@ public:
 		ofstream vort;
 		ufile.open("u.txt");
 		vfile.open("v.txt");
-		vort.open("vort.txt");
+		vort.open("vort2.txt");
 
 		//hard-coded
 		double u1[11] = {};
@@ -264,7 +394,7 @@ public:
 		streamfile.close();
 		
 		ofstream new_w;
-		new_w.open("new_w.txt");
+		new_w.open("vort2.txt");
 		//write out coefficients
 		int gridpoints = dx_steps * dy_steps;
 		for (int i = 0; i < gridpoints; i++) {
@@ -420,11 +550,12 @@ public:
 		}
 		vort.close();
 
+		//SOR
 		double w = 1.3;
 		int count = 0;
 		double threshold = 0.0001 / size;
-		//SOR
-		while (!converged(coeff, answer, b, gridpoints, threshold, count)) {
+		
+		while (!converged(coeff, answer, b, gridpoints, threshold)) {
 			count++;
 			for (int i = 0; i < gridpoints; i++) {
 				double sigma = 0;
@@ -434,13 +565,14 @@ public:
 					}
 				}
 				answer[i] = (1 - w) * answer[i] + (w / coeff[i][i]) * (b[i] - sigma);
-				//cout << "answer[" << i << "]: " << answer[i] << "\n";
 			}
 		}
 
+		cout << "SOR iterations: " << count << "\n";
+
 		//write to file
 		ofstream stream;
-		stream.open("stream.txt");
+		stream.open("stream2.txt");
 
 		for (int i = 0; i < size; i++) {
 			int x = i / dy_steps;
@@ -459,7 +591,7 @@ public:
 		stream.close();
 	}
 
-	bool converged(double** coeff, double answer[], double b[], int size, double threshold, int count) {
+	bool converged(double** coeff, double answer[], double b[], int size, double threshold) {
 		double bigsum = 0;
 		for (int i = 0; i < size; i++) {
 			double sum = 0;
@@ -468,7 +600,6 @@ public:
 			}
 			bigsum += sum - b[i];
 		}
-		cout << "Iteration " << count << ": " << bigsum << "\n";
 		return bigsum < threshold && bigsum > -1*(threshold);
 	}
 
@@ -478,32 +609,89 @@ public:
 	Complexity: O(xy), simple first-order scheme for each gridpoint
 	Equation: u = dPhi/dy, v = -dPhi/dx
 	*/
-	void solverDu(double phi) {
-
-	}
-
-	void solverDv(double phi) {
-
-	}
-
-
-	/*
-	Purpose: Evaulate if the timesteps have converged to steady-state
-	Complexity: O(xy), differencing every gridpoint
-	Equation: (new+old)/(new) < 0.001
-	*/
-	bool isConverged(double w, double phi, double wm1, double phim1) {
-
-		//compare between current iteration and last
-		bool wConverged = true;
-		bool phiConverged = true;
-		
-		if (wConverged && phiConverged) {
-			return true;
+	void solverD(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps) {
+		int size = dx_steps * dy_steps;
+		ifstream streamfile;
+		streamfile.open("stream.txt");
+		double** streamdata = new double* [dx_steps];
+		for (int i = 0; i < dx_steps; i++)
+			streamdata[i] = new double[dy_steps] {};
+		for (int i = 0; i < size; i++) {
+			int x = i / dy_steps;
+			int y = i % dy_steps;
+			int stop = x < block_xsteps - 1 ? block_ysteps : dy_steps;
+			if ((x >= block_xsteps - 1 || y <= dy_steps - block_ysteps) && (x < dx_steps)) {
+				streamfile >> streamdata[x][y];
+			}
 		}
-		else {
-			return false;
+		streamfile.close();
+
+		ofstream ufile;
+		ufile.open("u2.txt");
+		ofstream vfile;
+		vfile.open("v2.txt");
+
+		int gridpoints = dx_steps * dy_steps;
+		for (int i = 0; i < gridpoints; i++) {
+			int x = i / dy_steps;
+			int y = i % dy_steps;
+
+			//inlet
+			if (x == 0 && y < dy_steps - block_ysteps && y > 0) {
+				//hard-coded
+				ufile << init1(y*dy);
+				vfile << 0;
+			}
+			//black wall
+			else if (y == 0) {
+				ufile << 0;
+				vfile << 0;
+			}
+			//red wall A
+			else if (y == dy_steps - block_ysteps && x < block_xsteps) {
+				ufile << 0;
+				vfile << 0;
+			}
+			//red wall B
+			else if (y == dy_steps - 1 && x >= block_xsteps - 1) {
+				ufile << 0;
+				vfile << 0;
+			}
+			//red wall cliff
+			else if (x == block_xsteps - 1 && y >= dy_steps - block_ysteps) {
+				ufile << 0;
+				vfile << 0;
+			}
+			//outlet
+			else if (x == dx_steps - 1) {
+				//hard-coded
+				ufile << init2(y*dy);
+				vfile << 0;
+			}
+			//interior points
+			else if (x >= block_xsteps - 1 || y <= dy_steps - block_ysteps) {
+				ufile << (streamdata[x][y+1] - streamdata[x][y-1]) / (2*dy);
+				vfile << (streamdata[x+1][y] - streamdata[x-1][y]) / (2*dx);
+			}
+			//wall
+			else {
+			}
+
+			int stop = x < block_xsteps - 1 ? block_ysteps : dy_steps;
+			if ((x >= block_xsteps - 1 || y <= dy_steps - block_ysteps) && (x < dx_steps)) {
+				if (y == stop - 1) {
+					ufile << "\n";
+					vfile << "\n";
+				}
+				else {
+					ufile << " ";
+					vfile << " ";
+				}
+			}
 		}
+
+		ufile.close();
+		vfile.close();
 	}
 
 
@@ -518,8 +706,8 @@ public:
 		ofstream ufile;
 		ofstream vfile;
 		cout << "Writing initial conditions...\n";
-		ufile.open("u.txt");
-		vfile.open("v.txt");
+		ufile.open("u2.txt");
+		vfile.open("v2.txt");
 
 		int dx_steps = int(round(totalLength / dx)) + 1;
 		int dy_steps = int(round(totalHeight / dy)) + 1;
@@ -532,8 +720,8 @@ public:
 				double y = dy * j;
 				
 				if (i < block_xsteps - 1) {
-					if (j < block_ysteps) {
-						ufile << init1(u_m, aHeight, y);
+					if (j < block_ysteps) { //region A
+						ufile << init1(y, u_m, aHeight);
 						vfile << 0;
 					}
 					else {
@@ -542,14 +730,14 @@ public:
 						break; //wall
 					}					
 				}
-				else {
+				else { //region B
 					vfile << 0;
 					double yLimit = aHeight + (x - aLength) * (bHeight / bLength);
-					if (y > yLimit) {
+					if (y > yLimit) { //red wall B
 						ufile << 0;
 					}
 					else {
-						ufile << init2(u_m, aHeight, y, yLimit);
+						ufile << init2(y, u_m, aHeight, yLimit);
 					}
 				}
 				if (j < dy_steps - 1) {
@@ -566,12 +754,12 @@ public:
 		vfile.close();
 	}
 
-	double init1(double u_m, double aHeight, double y){
-		return -(6 * u_m) * (y - aHeight) * (y) / (aHeight);
+	double init1(double y, double u_m = 0.03, double aHeight = 0.5){
+		return -(6 * u_m) * (y - aHeight) * (y) / pow(aHeight, 2);
 	}
 
-	double init2(double u_m, double aHeight, double y, double yLimit) {
-		return -(6 * u_m * aHeight/yLimit) * (y - yLimit) * (y) / (yLimit);
+	double init2(double y, double u_m = 0.03, double aHeight = 0.5, double yLimit = 1) {
+		return -(6 * u_m * aHeight/yLimit) * (y - yLimit) * (y) / pow(yLimit,2);
 	}
 
 
