@@ -9,31 +9,40 @@ using namespace std;
 class twoDimFlow
 {
 public:
-	void mainSolver(double dx, double dy, double dt, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double Re) {
+	int mainSolver(double dx, double dy, double dt, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double Re, string histfile) {
 		int timestep = 0;
+		ofstream hist;
+		hist.open(histfile, std::ios_base::app);
 		cout << "\nTimestep #" << timestep << ": " << dt * timestep << "s\n";
+		hist << "\nTimestep #" << timestep << ": " << dt * timestep << "s\n";
 
 		//calculate initial vorticies
 		solverA(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps);
 
 		//calculate the initial stream function
 		cout << "Writing initial stream function..." << "\n";
+		hist << "Writing initial stream function..." << "\n";
+		hist.close();
 		int size = dx_steps * dy_steps;
 		double* answer = new double[size]{};
-		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer); //get vorticities for timestep 0
+		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer, histfile); //get vorticities for timestep 0
 
 		/*
 		Start of timestep iterations
 		*/
-		while (!FileAndConvergenceCheck(dt, timestep, dx_steps, dy_steps, block_xsteps, block_ysteps)) {
+		while (!FileAndConvergenceCheck(dt, timestep, dx_steps, dy_steps, block_xsteps, block_ysteps, histfile)) {
 			timestep++;
+			hist.open(histfile, std::ios_base::app);
 			cout << "\nTimestep #" << timestep << ": " << dt * timestep << "s\n";
+			hist << "\nTimestep #" << timestep << ": " << dt * timestep << "s\n";
+			hist.close();
+
 			//new vorticies
 			solverB(dt, dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, Re);
 
 			//new stream function
 			answer = new double[size] {};
-			solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer);
+			solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer, histfile);
 
 			//new velocities
 			solverD(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps);
@@ -41,6 +50,8 @@ public:
 		/*
 		End of timestep iterations
 		*/
+
+		return timestep;
 	}
 
 	/*
@@ -48,7 +59,7 @@ public:
 	Notes: Throws if files do not exist; returns true if converged, false otherwise
 	Criterion: (new+old)/(new) < threshold
 	*/
-	bool FileAndConvergenceCheck(double dt, int& timestep, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double threshold = 0.0001) {
+	bool FileAndConvergenceCheck(double dt, int& timestep, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, string histfile, double threshold = 0.0001) {
 		if (timestep != 0) {
 			//check if files exist
 			if (!(exists_test0("u2.txt") && exists_test0("v2.txt") && exists_test0("stream2.txt") && exists_test0("vort2.txt")))
@@ -94,7 +105,17 @@ public:
 			if (rename("vort2.txt", "vort.txt") != 0)
 				throw std::exception("Renaming failure.");
 
+			ofstream hist;
+			hist.open(histfile, std::ios_base::app);
+			ofstream info;
+			info.open("info-" + histfile, std::ios_base::app);
+
 			cout << "u-change: " << uchange << ", v-change: " << vchange << ", streamfunc-change: " << streamchange << ", vorticity-change: " << vortchange << "\n";
+			hist << "u-change: " << uchange << ", v-change: " << vchange << ", streamfunc-change: " << streamchange << ", vorticity-change: " << vortchange << "\n";
+			info << uchange << " " << vchange << " " << streamchange << " " << vortchange << "\n";
+
+			hist.close();
+			info.close();
 
 			return false;
 		}
@@ -192,15 +213,13 @@ public:
 		vfile.open("v.txt");
 		vort.open("vort2.txt");
 
-		//hard-coded
-		double u1[11] = {};
-		double u2[11] = {};
-		double u3[11] = {};
+		double* u1 = new double[dy_steps]{};
+		double* u2 = new double[dy_steps] {};
+		double* u3 = new double[dy_steps] {};
 
-		//hard-coded
-		double v1[11] = {};
-		double v2[11] = {};
-		double v3[11] = {};
+		double* v1 = new double[dy_steps] {};
+		double* v2 = new double[dy_steps] {};
+		double* v3 = new double[dy_steps] {};
 		
 
 		//walls: i = 0, i = block_xsteps, i = dx_steps, j = 0, j = block_ysteps, j = dy_steps
@@ -463,7 +482,7 @@ public:
 	Equation: Successive over-relaxtion iterative method (SOR)
 	Notes: convergence criteria is (new+old)/(new) < 0.001; not necessary for timestep 0
 	*/
-	void solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer) {
+	void solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer, string histfile) {
 		int size = dx_steps * dy_steps;
 		//const int size = 1100;
 		double* b = new double[size] {};
@@ -492,7 +511,7 @@ public:
 			//inlet wall
 			if (x == 0 && y <= dy_steps - block_ysteps) {				
 				vort >> b[i];
-				//hard-coded
+				//hard-coded - affected by pipe geometry and mean intial velocity
 				b[i] = -(9. / 25.) * ((2. / 3.) * pow(y*dy, 3) - (1. / 2.) * pow(y*dy, 2));
 				coeff[i][i] = 1.;
 			}
@@ -506,28 +525,28 @@ public:
 			//red wall A
 			else if (y == dy_steps - block_ysteps && x < block_xsteps) {
 				vort >> b[i];
-				//hard-coded
+				//hard-coded - affected by pipe geometry and mean intial velocity
 				b[i] = 0.015;
 				coeff[i][i] = 1.;
 			}
 			//red wall B
 			else if (y == dy_steps-1 && x >= block_xsteps - 1) {
 				vort >> b[i];
-				//hard-coded
+				//hard-coded - affected by pipe geometry and mean intial velocity
 				b[i] = 0.015;
 				coeff[i][i] = 1.;
 			}
 			//red wall cliff
 			else if (x == block_xsteps - 1 && y >= dy_steps - block_ysteps) {
 				vort >> b[i];
-				//hard-coded
+				//hard-coded - affected by pipe geometry and mean intial velocity
 				b[i] = 0.015;
 				coeff[i][i] = 1.;
 			}
 			//outlet
 			else if (x == dx_steps - 1) {
 				vort >> b[i];
-				//hard-coded
+				//hard-coded - affected by pipe geometry and mean intial velocity
 				b[i] = -(9./100.)*((1./3.)*pow(y * dy,3) - (1./2.)*pow(y * dy,2));
 				coeff[i][i] = 1;
 			}
@@ -567,8 +586,11 @@ public:
 				answer[i] = (1 - w) * answer[i] + (w / coeff[i][i]) * (b[i] - sigma);
 			}
 		}
-
+		ofstream hist;
+		hist.open(histfile, std::ios_base::app);
+		hist << "SOR iterations: " << count << "\n";
 		cout << "SOR iterations: " << count << "\n";
+		hist.close();
 
 		//write to file
 		ofstream stream;
@@ -638,7 +660,7 @@ public:
 
 			//inlet
 			if (x == 0 && y < dy_steps - block_ysteps && y > 0) {
-				//hard-coded
+				//hard-coded - maybe not anymore?
 				ufile << init1(y*dy);
 				vfile << 0;
 			}
@@ -664,7 +686,7 @@ public:
 			}
 			//outlet
 			else if (x == dx_steps - 1) {
-				//hard-coded
+				//hard-coded - maybe not anymore?
 				ufile << init2(y*dy);
 				vfile << 0;
 			}
