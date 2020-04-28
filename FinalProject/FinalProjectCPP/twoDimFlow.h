@@ -4,12 +4,13 @@
 #include <cmath>
 #include <algorithm>
 #include <stdlib.h>
-#define MAX_SIZE 7000000
+#define MAX_SIZE 500000000
 using namespace std;
 class twoDimFlow
 {
-public:
-	int mainSolver(double dx, double dy, double dt, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double Re, string histfile) {
+public:	
+
+	int mainSolver(double dx, double dy, double dt, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double Re, string histfile, double** coeff) {
 		int timestep = 0;
 		ofstream hist;
 		hist.open(histfile, std::ios_base::app);
@@ -25,7 +26,7 @@ public:
 		hist.close();
 		int size = dx_steps * dy_steps;
 		double* answer = new double[size]{};
-		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer, histfile); //get vorticities for timestep 0
+		solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer, histfile, coeff); //get vorticities for timestep 0
 
 		/*
 		Start of timestep iterations
@@ -42,7 +43,7 @@ public:
 
 			//new stream function
 			answer = new double[size] {};
-			solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer, histfile);
+			solverC(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps, answer, histfile, coeff);
 
 			//new velocities
 			solverD(dx, dy, dx_steps, dy_steps, block_xsteps, block_ysteps);
@@ -59,7 +60,7 @@ public:
 	Notes: Throws if files do not exist; returns true if converged, false otherwise
 	Criterion: (new+old)/(new) < threshold
 	*/
-	bool FileAndConvergenceCheck(double dt, int& timestep, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, string histfile, double threshold = 0.0001) {
+	bool FileAndConvergenceCheck(double dt, int& timestep, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, string histfile, double threshold = 0.001) {
 		if (timestep != 0) {
 			//check if files exist
 			if (!(exists_test0("u2.txt") && exists_test0("v2.txt") && exists_test0("stream2.txt") && exists_test0("vort2.txt")))
@@ -482,21 +483,9 @@ public:
 	Equation: Successive over-relaxtion iterative method (SOR)
 	Notes: convergence criteria is (new+old)/(new) < 0.001; not necessary for timestep 0
 	*/
-	void solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer, string histfile) {
+	void solverC(double dx, double dy, int dx_steps, int dy_steps, int block_xsteps, int block_ysteps, double * answer, string histfile, double** coeff) {
 		int size = dx_steps * dy_steps;
-		//const int size = 1100;
 		double* b = new double[size] {};
-		//double coeff[900][900] = {};
-		//double* coeff[900];
-		//for (int i = 0; i < 900; i++)
-		//	coeff[i] = (double*)malloc(900 * sizeof(double));
-
-		double** coeff = new double* [size];
-		for (int i = 0; i < size; i++)
-			coeff[i] = new double[size] {};
-		//for (int i = 0; i < size; i++)
-		//	for (int j = 0; j < size; j++)
-		//		coeff[i][j] = 0.;
 
 		//vorticity data
 		ifstream vort;
@@ -570,12 +559,31 @@ public:
 		vort.close();
 
 		//SOR
-		double w = 1.3;
+		double w = 1.5;
 		int count = 0;
-		double threshold = 0.0001 / size;
+		double threshold = 0.001 / size;
+
+		double bigsum = 0;
+		for (int i = 0; i < size; i++) {
+			double sum = 0;
+			for (int j = 0; j < size; j++) {
+				sum += answer[j] * coeff[i][j];
+			}
+			bigsum += sum - b[i];
+		}
+
+		bigsum /= size;
 		
-		while (!converged(coeff, answer, b, gridpoints, threshold)) {
+		while (abs(bigsum) > threshold) {
 			count++;
+
+			//hold onto previous iteration
+			double* hold = new double[size] {};
+			for (int i = 0; i < size; i++) {
+				hold[i] = answer[i];
+			}
+
+			//the actual SOR part
 			for (int i = 0; i < gridpoints; i++) {
 				double sigma = 0;
 				for (int j = 0; j < gridpoints; j++) {
@@ -584,6 +592,29 @@ public:
 					}
 				}
 				answer[i] = (1 - w) * answer[i] + (w / coeff[i][i]) * (b[i] - sigma);
+			}
+
+			//calculate difference between iters
+			double diffsum = 0;
+			for (int i = 0; i < size; i++) {
+				diffsum += abs(hold[i] - answer[i]);
+			}
+
+			//calculate difference from solution
+			bigsum = 0;
+			for (int i = 0; i < size; i++) {
+				double sum = 0;
+				for (int j = 0; j < size; j++) {
+					sum += answer[j] * coeff[i][j];
+				}
+				bigsum += sum - b[i];
+			}
+
+			bigsum /= size;
+			if (count % 20 == 0) {
+				cout << "SOR iterations: " << count << "\n";
+				cout << "Avg diff between iter per element: " << diffsum / size << "\n";
+				cout << "bigsum: " << bigsum << " ? " << "threshold: " << threshold << "\n\n";
 			}
 		}
 		ofstream hist;
@@ -614,6 +645,7 @@ public:
 	}
 
 	bool converged(double** coeff, double answer[], double b[], int size, double threshold) {
+
 		double bigsum = 0;
 		for (int i = 0; i < size; i++) {
 			double sum = 0;
@@ -622,6 +654,11 @@ public:
 			}
 			bigsum += sum - b[i];
 		}
+
+		bigsum /= size;
+
+		cout << "bigsum: " << bigsum << " ? " << "threshold: " << threshold << "\n";
+
 		return bigsum < threshold && bigsum > -1*(threshold);
 	}
 

@@ -70,7 +70,13 @@ int main()
 	int block_xsteps = int(round(aLength / dx)) + 1;
 	int block_ysteps = int(round(bHeight / dy)) + 1;
 
-	int timesteps = tdf.mainSolver(dx, dy, dt, dx_steps, dy_steps, block_xsteps, block_ysteps, Re, histfile);
+	//large array
+	int size = dx_steps * dy_steps;
+	double** coeff = new double* [size];
+	for (int i = 0; i < size; i++)
+		coeff[i] = new double[size] {};
+
+	int timesteps = tdf.mainSolver(dx, dy, dt, dx_steps, dy_steps, block_xsteps, block_ysteps, Re, histfile, coeff);
 
 	//performance
 	ofstream perf;
